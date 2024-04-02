@@ -4,7 +4,7 @@
 { pkgs
 , lib
 , stable-diffusion-webui-git
-, python
+, stable-diffusion-webui-python-raw
 , jq
 , gnugrep
 , findutils
@@ -13,7 +13,8 @@
 , gawk
 }:
 let
-  basic-python = python.withPackages (pyPkgs: [
+  # Use the raw python with a few custom packages
+  basic-python = stable-diffusion-webui-python-raw.withPackages (pyPkgs: [
     pyPkgs.pip
     pyPkgs.virtualenv
     pyPkgs.wheel

@@ -1,13 +1,9 @@
 { pkgs
-, python
 
 # Extra parameters
 , stable-diffusion-webui-git
-, stable-diffusion-requirements
+, stable-diffusion-webui-python
 }:
-let
-  pythonEnv = python.withPackages (_: stable-diffusion-requirements.allRequirements);
-in
 pkgs.writeShellScriptBin "stable-diffusion-webui" ''
   prog_args=("$@")
 
@@ -25,9 +21,9 @@ pkgs.writeShellScriptBin "stable-diffusion-webui" ''
     prog_args+=("--data-dir" "$dataDirOverride")
   fi
 
-  # exec ${pythonEnv}/bin/python
+  # exec ${stable-diffusion-webui-python}/bin/python
   export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/opengl-driver/lib:/run/opengl-driver-32/lib"
 
   cd ${stable-diffusion-webui-git}
-  exec ${pythonEnv}/bin/python ${stable-diffusion-webui-git}/webui.py "''${prog_args[@]}"
+  exec ${stable-diffusion-webui-python}/bin/python ${stable-diffusion-webui-git}/webui.py "''${prog_args[@]}"
 ''

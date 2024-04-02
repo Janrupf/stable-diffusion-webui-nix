@@ -1,81 +1,122 @@
-# Automatically parse all the requirements from frozen-requirements.txt
-{ lib
-, newScope
+{ pkgs
+, stable-diffusion-webui-git
 }:
 let
-  # Read the locked data
-  requirementsData = builtins.fromJSON (builtins.readFile ./requirements.json);
+  # The python version we use
+  python = pkgs.python310;
+  pythonPkgs = python.pkgs;
 
-  # Convert a package name to a Pypi name
-  toPypiName = name:
+  # Some packages need fixups
+  requirementsOverlay = final: prev: 
   let
-    strings = lib.strings;
+    # Add dependencies to a package
+    withExtraDependencies = pkg: extraDeps: pkg.overridePythonAttrs (prev: {
+      dependencies = prev.dependencies ++ extraDeps;
+    });
+
+    # Add zlib to a package
+    withZlib = pkg: withExtraDependencies pkg [ pkgs.zlib ]; 
+
+    # Hook for removing all compiled bytecode
+    pythonRemoveBytecodeHook = pythonPkgs.callPackage ({ makePythonHook }:
+      makePythonHook {
+        name = "python-remove-bytecode-hook";
+        propagatedBuildInputs = [];
+      } ./python-remove-bytecode-hook.sh
+    ) {};
+
+    # Remove all bytecode from the package
+    removePythonBytecode = pkg: pkg.overridePythonAttrs (prev: {
+      nativeBuildInputs = prev.nativeBuildInputs ++ [ pythonRemoveBytecodeHook ];
+    });
+
+    # Remove the explicit dependency on the torch native libraries
+    withImplicitTorchLibs = pkg: pkg.overridePythonAttrs (prev: {
+      autoPatchelfIgnoreMissingDeps = [
+        "libtorch.so"
+        "libtorch_cpu.so"
+        "libtorch_python.so"
+        "libtorch_cuda.so"
+        "libc10_cuda.so"
+        "libc10.so"
+      ];
+    });
   in
-    strings.stringAsChars (x: if x == "-" then "_" else x) (strings.toLower name);
+  with pkgs;
+  {
+    # A bunch of packages require zlib
+    llvmlite = withZlib prev.llvmlite;
+    tokenizers = withZlib prev.tokenizers;
+    numpy = withZlib prev.numpy;
+    pillow = withZlib prev.pillow;
+    triton = withZlib (prev.triton.overridePythonAttrs (prev: {
+      # https://github.com/NixOS/nixpkgs/issues/96654
+      dontStrip = 1;
+    }));
+    nvidia_cudnn_cu12 = removePythonBytecode (withZlib prev.nvidia_cudnn_cu12);
 
-  # Called with callPackaged makePythonPackage { inherit requirementData; };
-  makePythonPackage = 
-  { buildPythonPackage
-  , pkgs
-  , selfPkgs
-  , fetchurl
-  , fetchzip
-  
-  # Hooks
-  , autoPatchelfHook
+    # Random other dependencies
+    opencv_python = withExtraDependencies prev.opencv_python [
+      libGL
+      glib
 
-    # Dependencies
-  , setuptools
-  , pip
+      xorg.libxcb
+      xorg.libICE
+      xorg.libSM
+    ];
 
-    # Extra data
-  , requirementData
-  }: buildPythonPackage {
-    pname = requirementData.name;
-    version = requirementData.version;
+    # Cuda stuff
+    nvidia_cusparse_cu12 = removePythonBytecode (withExtraDependencies prev.nvidia_cusparse_cu12 [ cudaPackages.libnvjitlink ]);
+    nvidia_cusolver_cu12 = removePythonBytecode (withExtraDependencies prev.nvidia_cusolver_cu12 [ cudaPackages.libcublas cudaPackages.libcusolver ]);
+    torch = withExtraDependencies prev.torch [
+      # To pull in graphics drivers
+      cudaPackages.cuda_cupti
+      cudaPackages.cuda_cudart
+      cudaPackages.cuda_nvrtc
+      cudaPackages.cuda_nvtx
+      cudaPackages.libcufft
+      cudaPackages.cudnn
+      cudaPackages.nccl
+      cudaPackages.libcurand
+    ];
 
-    # Some packages are not wheels and have to be built, detect that here
-    format = if requirementData.is-wheel then "wheel" else null;
+    numba = withExtraDependencies prev.numba [ tbb_2021_8 ];
 
-    # Use fetchurl for wheels since they are auto extracted by nix,
-    # for everything else extract the source
-    src = (if requirementData.is-wheel then fetchurl else fetchzip) {
-      url = requirementData.url;
-      hash = requirementData.hash;
+    filterpy = prev.filterpy.overridePythonAttrs (prev: {
+      # Fails for some reason
+      doCheck = false;
+    });
+
+    jsonmerge = prev.jsonmerge.overridePythonAttrs (prev: {
+      # No idea either, 2 tests fail
+      doCheck = false;
+    });
+
+    # Torchvision and xformers requires the native libraries from torch -
+    # since both packages depend on torch, they'll be available via python
+    torchvision = withImplicitTorchLibs prev.torchvision;
+    xformers = withImplicitTorchLibs prev.xformers;
+
+    # Bytecode removal (thanks NVIDIA for shipping libraries with overlapping bytecode..)
+    nvidia_cuda_cupti_cu12 = removePythonBytecode prev.nvidia_cuda_cupti_cu12;
+    nvidia_cublas_cu12 = removePythonBytecode prev.nvidia_cublas_cu12;
+    nvidia_cuda_nvrtc_cu12 = removePythonBytecode prev.nvidia_cuda_nvrtc_cu12;
+    nvidia_cuda_runtime_cu12 = removePythonBytecode prev.nvidia_cuda_runtime_cu12;
+    nvidia_curand_cu12 = removePythonBytecode prev.nvidia_curand_cu12;
+    nvidia_cufft_cu12 = removePythonBytecode prev.nvidia_cufft_cu12;
+    nvidia_nvjitlink_cu12 = removePythonBytecode prev.nvidia_nvjitlink_cu12;
+    nvidia_nccl_cu12 = removePythonBytecode prev.nvidia_nccl_cu12;
+
+    # Extra packages
+    inherit stable-diffusion-webui-git;
+    stable-diffusion-webui-python-raw = python;
+    stable-diffusion-webui-python = python.withPackages (_: final.allRequirements);
+
+    stable-diffusion-webui-update-requirements = pythonPkgs.callPackage ./update.nix {
+      # Inherit the final versions of the dependencies
+      inherit (final) stable-diffusion-webui-git;
+      inherit (final) stable-diffusion-webui-python-raw;
     };
-
-    # Supply setuptools and pip for everything that is NOT a wheel
-    build-system = if requirementData.is-wheel then [] else [
-      setuptools
-      pip
-    ];
-
-    nativeBuildInputs = [
-      # Patch ELF binaries afterwards, they WILL be wrong for wheels
-      autoPatchelfHook
-    ];
-
-    # Add the dependencies from the packages set
-    dependencies = map (dep: 
-      # Handle setuptools and pip special
-      if dep == "setuptools"
-        then setuptools
-      else if dep == "pip"
-        then pip
-      else
-        selfPkgs.${toPypiName dep}
-    ) requirementData.dependencies;
   };
-
-  # Convert the requirementsData to a key-value set that can be passed to
-  # builtins.listToAttrs
-  mappedPackages = pkgs: (map (requirementData: {
-    name = toPypiName requirementData.name;
-    value = pkgs.callPackage makePythonPackage { inherit requirementData; selfPkgs = pkgs; };
-  }) requirementsData) ++ [{
-    name = "allRequirements";
-    value = map (requirementData: pkgs.${toPypiName requirementData.name}) requirementsData;
-  }];
-
-  packages = lib.makeScope newScope (self: builtins.listToAttrs (mappedPackages self));
-in packages
+in
+  (pythonPkgs.callPackage ./raw.nix {}).overrideScope requirementsOverlay
