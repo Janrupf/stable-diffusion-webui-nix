@@ -1,0 +1,25 @@
+From d21491924a1a1d911ace848d031e0091f9b3e42d Mon Sep 17 00:00:00 2001
+From: Janrupf <business.janrupf@gmail.com>
+Date: Tue, 2 Apr 2024 21:05:31 +0200
+Subject: [PATCH 3/3] Move config states to data path
+
+---
+ modules/paths_internal.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/modules/paths_internal.py b/modules/paths_internal.py
+index cf9da45a..7f1647f6 100644
+--- a/modules/paths_internal.py
++++ b/modules/paths_internal.py
+@@ -31,7 +31,7 @@ data_path = cmd_opts_pre.data_dir
+ models_path = os.path.join(data_path, "models")
+ extensions_dir = os.path.join(data_path, "extensions")
+ extensions_builtin_dir = os.path.join(script_path, "extensions-builtin")
+-config_states_dir = os.path.join(script_path, "config_states")
++config_states_dir = os.path.join(data_path, "config_states")
+ default_output_dir = os.path.join(data_path, "outputs")
+ 
+ roboto_ttf_file = os.path.join(modules_path, 'Roboto-Regular.ttf')
+-- 
+2.44.0
+

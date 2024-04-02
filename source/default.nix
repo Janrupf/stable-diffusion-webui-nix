@@ -67,9 +67,10 @@ stdenv.mkDerivation rec {
     # Fixes an invalid import which references an old pytorch_lightning version
     ./fix-import.patch
 
-    # Move the config_states directory to the user data directory because else it
-    # will end up in the nix store
-    ./move-config-states.patch
+    # Web UI feature patches
+    ./0001-Add-uvicorn-option.patch
+    ./0002-Add-idle-exit-option.patch
+    ./0003-Move-config-states-to-data-path.patch
   ];
 
   unpackPhase = ''
