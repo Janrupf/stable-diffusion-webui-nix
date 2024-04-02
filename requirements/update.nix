@@ -200,5 +200,5 @@ pkgs.writeShellScriptBin "stable-diffusion-webui-update-requirements" ''
   deactivate
   echo "$final_json" > "$output"
   echo "Written json to $output"
-  # rm -rf "$temporary_dir"
+  rm -rf "$temporary_dir"
 ''
