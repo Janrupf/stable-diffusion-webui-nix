@@ -57,3 +57,11 @@ NOTE: If you get an error that you have run out of disk space during step 2, you
 set to a different directory. Generally, if step 2 fails the temporary directory 
 may not be deleted, you are free to `rm -rf` it, but it can be useful for inspecting
 why it failed.
+
+## Working on the Web UI itself
+
+This flake supports the usual mechanism of opening a development shell with a proper
+python environment set up already. Run `nix develop` to open this shell.
+
+Please note that this shell does not come with a virtual environment. If you need to
+update requirements, do so as described above.

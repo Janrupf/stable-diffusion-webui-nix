@@ -20,4 +20,7 @@ in
 
   # Requirements update helper
   inherit (stable-diffusion-requirements) stable-diffusion-webui-update-requirements;
+
+  # Python environment for development purpose
+  inherit (stable-diffusion-requirements) stable-diffusion-webui-python;
 }

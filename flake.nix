@@ -33,6 +33,16 @@
       drv = packages.stable-diffusion-webui-update-requirements;
     };
 
+    devShells.default = legacyPackages.mkShell {
+      packages = [
+        # Add the python interpreter with all the requirements set up
+        legacyPackages.stable-diffusion-webui-python
+
+        # Tool for updating the requirements json
+        legacyPackages.stable-diffusion-webui-update-requirements
+      ];
+    };
+
     # Final application
     apps.stable-diffusion-webui = flake-utils.lib.mkApp {
       drv = packages.stable-diffusion-webui;
