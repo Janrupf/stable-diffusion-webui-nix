@@ -80,7 +80,7 @@ let
       cudaPackages.libcurand
     ];
 
-    numba = withExtraDependencies prev.numba [ tbb_2021_8 ];
+    numba = withExtraDependencies prev.numba [ tbb_2021_11 ];
 
     filterpy = prev.filterpy.overridePythonAttrs (prev: {
       # Fails for some reason
