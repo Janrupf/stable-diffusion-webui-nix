@@ -97,6 +97,11 @@ let
       doCheck = false;
     });
 
+    clip = prev.clip.overridePythonAttrs (prev: {
+      # Works in this workspace, fails in system configuration
+      doCheck = false;
+    });
+
     # Torchvision and xformers requires the native libraries from torch -
     # since both packages depend on torch, they'll be available via python
     torchvision = withImplicitTorchLibs prev.torchvision;
