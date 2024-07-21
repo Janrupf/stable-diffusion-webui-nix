@@ -43,7 +43,12 @@ let
     });
   in
   with pkgs;
-  {
+  rec {
+    # Replace scipy with the one from nixpkgs
+    scipy = pythonPkgs.scipy.override (scipyPrev: {
+      numpy = final.numpy;
+    });
+
     # A bunch of packages require zlib
     llvmlite = withZlib prev.llvmlite;
     tokenizers = withZlib prev.tokenizers;

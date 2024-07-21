@@ -5,7 +5,6 @@
 , lib
 , stable-diffusion-webui-git
 , stable-diffusion-webui-python-raw
-, jq
 , gnugrep
 , findutils
 , nix
@@ -114,7 +113,7 @@ pkgs.writeShellScriptBin "stable-diffusion-webui-update-requirements" ''
   echo "Freezing environment via pip list"
   python -m pip list --format json > requirements.json
 
-  packages_with_version="$(${jq}/bin/jq -r '.[] | (.name + " " + .version)' requirements.json)"
+  packages_with_version="$(${pkgs.jq}/bin/jq -r '.[] | (.name + " " + .version)' requirements.json)"
   echo "Locking the following packages:"
   echo "$packages_with_version"
 
@@ -181,13 +180,13 @@ pkgs.writeShellScriptBin "stable-diffusion-webui-update-requirements" ''
     dependencies_line="$(python -m pip show "$package_name" | grep "^Requires: ")"
     dependencies_str="''${dependencies_line#Requires:}"
     dependencies_str_no_whitespace="''${dependencies_str// /}"
-    dependencies_json="$(${jq}/bin/jq -Rc 'split(",")' <<< "$dependencies_str_no_whitespace")"
+    dependencies_json="$(${pkgs.jq}/bin/jq -Rc 'split(",")' <<< "$dependencies_str_no_whitespace")"
     echo "$dependencies_json"
 
     # Append the JSON array
     json_template='. += [{ "name": $name, "version": $version, "url": $url, "hash": $hash, "is-wheel": $is_wheel, "dependencies": $dependencies }]'
     final_json="$(
-      ${jq}/bin/jq \
+      ${pkgs.jq}/bin/jq \
       --arg name "$package_name" \
       --arg version "$package_version" \
       --arg url "$download_url" \

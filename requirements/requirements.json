@@ -31,9 +31,9 @@
   },
   {
     "name": "aiohttp",
-    "version": "3.9.3",
-    "url": "https://files.pythonhosted.org:443/packages/93/40/d3decda219ebd5410eba627601d537ec3782efbcadba308e9ce381cc0b71/aiohttp-3.9.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-q0DmJRw4c9huqbMKGsbXR4wJJ3sy4UdF0NPG5248fik=",
+    "version": "3.9.5",
+    "url": "https://files.pythonhosted.org:443/packages/a0/09/e7637f4f0760cad4d67347bbd8311c6ad0259a3fc01f04555af9e84bd378/aiohttp-3.9.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-wmlZynt1/3aOJ3bYBVv5WCpiZ+JFVrt/e9KeZ3kyvnI=",
     "is-wheel": true,
     "dependencies": [
       "aiosignal",
@@ -121,9 +121,9 @@
   },
   {
     "name": "certifi",
-    "version": "2024.2.2",
-    "url": "https://files.pythonhosted.org:443/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl",
-    "hash": "sha256-3Dg8B7dhCfNo9hBu7itZOwSgEepNVfZSxsokp1TRzdE=",
+    "version": "2024.7.4",
+    "url": "https://files.pythonhosted.org:443/packages/1c/d5/c84e1a17bf61d4df64ca866a1c9a913874b4e9bdc131ec689a0ad013fb36/certifi-2024.7.4-py3-none-any.whl",
+    "hash": "sha256-wZjiGxKJwquF7k5nu0tO8+rQiSBZkBqNW2IvJKEQHpA=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -175,9 +175,9 @@
   },
   {
     "name": "contourpy",
-    "version": "1.2.0",
-    "url": "https://files.pythonhosted.org:443/packages/58/56/e2c43dcfa1f9c7db4d5e3d6f5134b24ed953f4e2133a4b12f0062148db58/contourpy-1.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-tpMDzrLk1PFGv4L9p4iR73vNgMQb8Wv8o9DX61RUSKo=",
+    "version": "1.2.1",
+    "url": "https://files.pythonhosted.org:443/packages/67/0f/6e5b4879594cd1cbb6a2754d9230937be444f404cf07c360c07a10b36aac/contourpy-1.2.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-OfPsr3bNmOgC8JTg1PvG3JxFqNDE0YXw9sIjThTl91s=",
     "is-wheel": true,
     "dependencies": [
       "numpy"
@@ -219,9 +219,9 @@
   },
   {
     "name": "exceptiongroup",
-    "version": "1.2.0",
-    "url": "https://files.pythonhosted.org:443/packages/b8/9a/5028fd52db10e600f1c4674441b968cf2ea4959085bfb5b99fb1250e5f68/exceptiongroup-1.2.0-py3-none-any.whl",
-    "hash": "sha256-S/05lqxztB6bliiwTgefGThQcg6llF/JaghjPGaRLxQ=",
+    "version": "1.2.2",
+    "url": "https://files.pythonhosted.org:443/packages/02/cc/b7e31358aac6ed1ef2bb790a9746ac2c69bcb3c8588b41616914eb106eaf/exceptiongroup-1.2.2-py3-none-any.whl",
+    "hash": "sha256-MRG50THCOL7C+PUW4SPhS6JDVj+xNdP+iFmQWFqneVs=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -264,9 +264,9 @@
   },
   {
     "name": "filelock",
-    "version": "3.13.3",
-    "url": "https://files.pythonhosted.org:443/packages/8b/69/acdf492db27dea7be5c63053230130e0574fd8a376de3555d5f8bbc3d3ad/filelock-3.13.3-py3-none-any.whl",
-    "hash": "sha256-X/qEUwOYPnoLeuF2NlCbyXmX1Yr+r6cvsUGhexUihMs=",
+    "version": "3.15.4",
+    "url": "https://files.pythonhosted.org:443/packages/ae/f0/48285f0262fe47103a4a45972ed2f9b93e4c80b8fd609fa98da78b2a5706/filelock-3.15.4-py3-none-any.whl",
+    "hash": "sha256-bKH/+uliJdq0xurxxPTyjNJWjT7CpE4VoIUgUE3kaOc=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -284,9 +284,9 @@
   },
   {
     "name": "fonttools",
-    "version": "4.50.0",
-    "url": "https://files.pythonhosted.org:443/packages/f1/64/9be0559ad8651c9b1cd5ba9aabc9f9b59a8618e931d33ceb40297056445e/fonttools-4.50.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-1A/JhUD6U2Dn7PLFbd88bn3QSSlUNhj9e1zHbmY5BWI=",
+    "version": "4.53.1",
+    "url": "https://files.pythonhosted.org:443/packages/56/61/ad19cad430aacbc3418be503e1f6daed9375c997a4e32b78a91195b3054a/fonttools-4.53.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-ocfFqhjdOxeZWJi0qbWSnWnvauKvW5bVhf9ABQM9gvA=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -300,9 +300,9 @@
   },
   {
     "name": "fsspec",
-    "version": "2024.3.1",
-    "url": "https://files.pythonhosted.org:443/packages/93/6d/66d48b03460768f523da62a57a7e14e5e95fdf339d79e996ce3cecda2cdb/fsspec-2024.3.1-py3-none-any.whl",
-    "hash": "sha256-kY0Y1Bv3Pw4rJhgkuusbEkvPdxdn46JkJc197DMy9RI=",
+    "version": "2024.6.1",
+    "url": "https://files.pythonhosted.org:443/packages/5e/44/73bea497ac69bafde2ee4269292fa3b41f1198f4bb7bbaaabde30ad29d4a/fsspec-2024.6.1-py3-none-any.whl",
+    "hash": "sha256-PLRD+LzS77MSlaW5/bAq7oHYRSyA0o+XptCVnmzuEB4=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -422,9 +422,9 @@
   },
   {
     "name": "huggingface-hub",
-    "version": "0.22.2",
-    "url": "https://files.pythonhosted.org:443/packages/05/c0/779afbad8e75565c09ffa24a88b5dd7e293c92b74eb09df6435fc58ac986/huggingface_hub-0.22.2-py3-none-any.whl",
-    "hash": "sha256-NCniXzjMuDTTEIBKO3EefklT21qeQgzBR6XhlMqQ/Rc=",
+    "version": "0.24.0",
+    "url": "https://files.pythonhosted.org:443/packages/57/c0/cf4435f3186655e3bafdca08cd6c794e3866f1f89ed99595504e7240b6a2/huggingface_hub-0.24.0-py3-none-any.whl",
+    "hash": "sha256-etku3vuT2BRcBh9t+Nmd8v+F+DebpfrIqVrKBkKvpdc=",
     "is-wheel": true,
     "dependencies": [
       "filelock",
@@ -438,17 +438,17 @@
   },
   {
     "name": "idna",
-    "version": "3.6",
-    "url": "https://files.pythonhosted.org:443/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl",
-    "hash": "sha256-wFVn6cJKa5+qqDXEghutBZD7udV3nnyqbhzEl45+sk8=",
+    "version": "3.7",
+    "url": "https://files.pythonhosted.org:443/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl",
+    "hash": "sha256-gv7h/Hit1DSS06GJi/ptipBMyX2EJ/aD7Y55jQd2GqA=",
     "is-wheel": true,
     "dependencies": []
   },
   {
     "name": "imageio",
-    "version": "2.34.0",
-    "url": "https://files.pythonhosted.org:443/packages/02/25/66533a8390e3763cf8254dee143dbf8a830391ea60d2762512ba7f9ddfbe/imageio-2.34.0-py3-none-any.whl",
-    "hash": "sha256-CAgr9HzLVIQ9nHP+n8jzqIxyRSq2drWKynTzYWfozLo=",
+    "version": "2.34.2",
+    "url": "https://files.pythonhosted.org:443/packages/3d/84/f1647217231f6cc46883e5d26e870cc3e1520d458ecd52d6df750810d53c/imageio-2.34.2-py3-none-any.whl",
+    "hash": "sha256-oLsn7J1bqzap9INeUbIdLLCZ4feEUUQflGh/80BLefg=",
     "is-wheel": true,
     "dependencies": [
       "numpy",
@@ -473,9 +473,9 @@
   },
   {
     "name": "Jinja2",
-    "version": "3.1.3",
-    "url": "https://files.pythonhosted.org:443/packages/30/6d/6de6be2d02603ab56e72997708809e8a5b0fbfee080735109b40a3564843/Jinja2-3.1.3-py3-none-any.whl",
-    "hash": "sha256-fW1Q3ZfVLLw1VZe9hF+r+6w/VR4fmWGeOaNc6MNwtfo=",
+    "version": "3.1.4",
+    "url": "https://files.pythonhosted.org:443/packages/31/80/3a54838c3fb461f6fec263ebf3a3a41771bd05190238de3486aae8540c36/jinja2-3.1.4-py3-none-any.whl",
+    "hash": "sha256-vF3Sq7cnpTGVZ7eoE+ai5zGMOfT0h8/myJxvnH0lGX0=",
     "is-wheel": true,
     "dependencies": [
       "MarkupSafe"
@@ -493,9 +493,9 @@
   },
   {
     "name": "jsonschema",
-    "version": "4.21.1",
-    "url": "https://files.pythonhosted.org:443/packages/39/9d/b035d024c62c85f2e2d4806a59ca7b8520307f34e0932fbc8cc75fe7b2d9/jsonschema-4.21.1-py3-none-any.whl",
-    "hash": "sha256-eZZQevrjFjBvniKQQHdhFXxveAAtz3QZrLmYIhQ9HG8=",
+    "version": "4.23.0",
+    "url": "https://files.pythonhosted.org:443/packages/69/4a/4f9dbeb84e8850557c02365a0eee0649abe5eb1d84af92a25731c6c0f922/jsonschema-4.23.0-py3-none-any.whl",
+    "hash": "sha256-+622+LFEqPjPnwuJupRQHRQ+UEEaEnhjP1anrPf9VWY=",
     "is-wheel": true,
     "dependencies": [
       "attrs",
@@ -543,17 +543,19 @@
   },
   {
     "name": "lazy_loader",
-    "version": "0.3",
-    "url": "https://files.pythonhosted.org:443/packages/a1/c3/65b3814e155836acacf720e5be3b5757130346670ac454fee29d3eda1381/lazy_loader-0.3-py3-none-any.whl",
-    "hash": "sha256-Hp527oYx4mTGLOEABnGOgLLPx0NA0X0QMeD4SvdHhVQ=",
+    "version": "0.4",
+    "url": "https://files.pythonhosted.org:443/packages/83/60/d497a310bde3f01cb805196ac61b7ad6dc5dcf8dce66634dc34364b20b4f/lazy_loader-0.4-py3-none-any.whl",
+    "hash": "sha256-NCqo4U1UOhVAR6+0uo7xf1Vjuq0/xhDXsVshOw8Rnvw=",
     "is-wheel": true,
-    "dependencies": []
+    "dependencies": [
+      "packaging"
+    ]
   },
   {
     "name": "lightning-utilities",
-    "version": "0.11.2",
-    "url": "https://files.pythonhosted.org:443/packages/5e/9e/e7768a8e363fc6f0c978bb7a0aa7641f10d80be60000e788ef2f01d34a7c/lightning_utilities-0.11.2-py3-none-any.whl",
-    "hash": "sha256-VB9HHtlOGKKNcoeTOMjFLoc7tG9MR2RNiSKPrrZ1EVk=",
+    "version": "0.11.5",
+    "url": "https://files.pythonhosted.org:443/packages/36/bb/8577ddf395654b1790fd433d83c26bd3b236f515a3f7b02e445d4a0797a6/lightning_utilities-0.11.5-py3-none-any.whl",
+    "hash": "sha256-qyEXzJJqnjdXkZ4loNpXS62xwPBPyTGEkjVzG3gBao0=",
     "is-wheel": true,
     "dependencies": [
       "packaging",
@@ -563,9 +565,9 @@
   },
   {
     "name": "llvmlite",
-    "version": "0.42.0",
-    "url": "https://files.pythonhosted.org:443/packages/2b/01/764489e364948f52aa7cb958a91a8dafd489357d2401f66946542bbc1764/llvmlite-0.42.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-dj+NhxepBzueAkaZjeiZKQcdFbR/JUwQ7vIxC5qsAz0=",
+    "version": "0.43.0",
+    "url": "https://files.pythonhosted.org:443/packages/c6/21/2ffbab5714e72f2483207b4a1de79b2eecd9debbf666ff4e7067bcc5c134/llvmlite-0.43.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-aRKod4Ks3/bri/AWde0B1gyh8lUfgXajAKiG8J6Damo=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -579,9 +581,9 @@
   },
   {
     "name": "matplotlib",
-    "version": "3.8.3",
-    "url": "https://files.pythonhosted.org:443/packages/c1/f2/325897d6c498278b0f8b460d44b516f5db865ddb4ba9018e9fe58a3e4633/matplotlib-3.8.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-s8X5b1ewNpwoi/b5tSdLpFeH9+BYmjTSS9uvbTNEYy8=",
+    "version": "3.9.1",
+    "url": "https://files.pythonhosted.org:443/packages/32/ad/58902b481f5a294101a53ed964d68a2c2355d55622a8e9cb09fc3f517385/matplotlib-3.9.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-D8ABUW/88aIhvrURmLGU2SMBmdaELFQBCOTOEJrAXMA=",
     "is-wheel": true,
     "dependencies": [
       "contourpy",
@@ -613,17 +615,17 @@
   },
   {
     "name": "networkx",
-    "version": "3.2.1",
-    "url": "https://files.pythonhosted.org:443/packages/d5/f0/8fbc882ca80cf077f1b246c0e3c3465f7f415439bdea6b899f6b19f61f70/networkx-3.2.1-py3-none-any.whl",
-    "hash": "sha256-8Yxprcl4d8QjMsFwhJyWzvqRiByZp8s+lbfGWevcHsI=",
+    "version": "3.3",
+    "url": "https://files.pythonhosted.org:443/packages/38/e9/5f72929373e1a0e8d142a130f3f97e6ff920070f87f91c4e13e40e0fba5a/networkx-3.3-py3-none-any.whl",
+    "hash": "sha256-KFdVgMbr2vRQWyLGJWornehrMW3GO6npOr3j1439vPI=",
     "is-wheel": true,
     "dependencies": []
   },
   {
     "name": "numba",
-    "version": "0.59.1",
-    "url": "https://files.pythonhosted.org:443/packages/f6/2d/f8cdcf325c8fbdfff911607d184e28eb7c94ca5c4760d7f149323404778a/numba-0.59.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
-    "hash": "sha256-Ul7z+CCTG9rpXuU3nGcNXJconGUgcmvGk3pKfUIwuiQ=",
+    "version": "0.60.0",
+    "url": "https://files.pythonhosted.org:443/packages/79/58/cb4ac5b8f7ec64200460aef1fed88258fb872ceef504ab1f989d2ff0f684/numba-0.60.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+    "hash": "sha256-/gsoq7jXD4FgeY9N6dSGFDIA80RY00xKIUEU5EXXEk4=",
     "is-wheel": true,
     "dependencies": [
       "llvmlite",
@@ -728,9 +730,9 @@
   },
   {
     "name": "nvidia-nvjitlink-cu12",
-    "version": "12.4.99",
-    "url": "https://files.pythonhosted.org:443/packages/58/d1/d1c80553f9d5d07b6072bc132607d75a0ef3600e28e1890e11c0f55d7346/nvidia_nvjitlink_cu12-12.4.99-py3-none-manylinux2014_x86_64.whl",
-    "hash": "sha256-xkKINtIP5+MnGRwXV5HThXDhB2LtxYj7RnSSF81ETHQ=",
+    "version": "12.5.82",
+    "url": "https://files.pythonhosted.org:443/packages/75/bc/e0d0dbb85246a086ab14839979039647bce501d8c661a159b8b019d987b7/nvidia_nvjitlink_cu12-12.5.82-py3-none-manylinux2014_x86_64.whl",
+    "hash": "sha256-+bN7xcjPdQlmXLatpaqgzmVhjyMyt9PnjpeQUR8REhI=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -773,9 +775,9 @@
   },
   {
     "name": "opencv-python",
-    "version": "4.9.0.80",
-    "url": "https://files.pythonhosted.org:443/packages/d9/64/7fdfb9386511cd6805451e012c537073a79a958a58795c4e602e538c388c/opencv_python-4.9.0.80-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-5AiMq4K2ajs3/8RSl2sUo8WZJpwkeJWunOtAZtgYilc=",
+    "version": "4.10.0.84",
+    "url": "https://files.pythonhosted.org:443/packages/3f/a4/d2537f47fd7fcfba966bd806e3ec18e7ee1681056d4b0a9c8d983983e4d5/opencv_python-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-ms4UD8bWR/vhxpK8sqvOdolzSRIiwGfBMdgJV8WVtx8=",
     "is-wheel": true,
     "dependencies": [
       "numpy",
@@ -786,25 +788,25 @@
   },
   {
     "name": "orjson",
-    "version": "3.10.0",
-    "url": "https://files.pythonhosted.org:443/packages/fb/c9/d43cc61ebd197d6b50bcc2f6dad8d4102eaf1750e1d7e52d0b7fa8296f0f/orjson-3.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-4oalHe9mJvHgzBNLogZ9zxT39LlVD23UU1/Z15AABAs=",
+    "version": "3.10.6",
+    "url": "https://files.pythonhosted.org:443/packages/36/06/f5e0d6a921af2feae3c189514ebe12a6b8ab59ffe92c855996bcb4e6aa7f/orjson-3.10.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-Yzo7MdnXyfAtScSrTQqGBlxKb2rcKX1j0nLgQ0cqyrU=",
     "is-wheel": true,
     "dependencies": []
   },
   {
     "name": "packaging",
-    "version": "24.0",
-    "url": "https://files.pythonhosted.org:443/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl",
-    "hash": "sha256-Ld+1U/3wL7eEwjTHumzMKIKWzqvslkrS6uN3d3gTC8U=",
+    "version": "24.1",
+    "url": "https://files.pythonhosted.org:443/packages/08/aa/cc0199a5f0ad350994d660967a8efb233fe0416e4639146c089643407ce6/packaging-24.1-py3-none-any.whl",
+    "hash": "sha256-W48iF9vb0vfzhMQcYoVE5tUvLQ9TxtDD6mGqXR1/8SQ=",
     "is-wheel": true,
     "dependencies": []
   },
   {
     "name": "pandas",
-    "version": "2.2.1",
-    "url": "https://files.pythonhosted.org:443/packages/19/df/8d789d96a9e338cf28cb7978fa93ef5da53137624b7ef032f30748421c2b/pandas-2.2.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-w4zpLLIqS+pOOSlCmqEGekVNzJwzV5mvk7qb4htr61E=",
+    "version": "2.2.2",
+    "url": "https://files.pythonhosted.org:443/packages/89/1b/12521efcbc6058e2673583bb096c2b5046a9df39bd73eca392c1efed24e5/pandas-2.2.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-hjXBa/PZkED988o9tmmnJQ3fScVdxKqP4K4PqNbcwfA=",
     "is-wheel": true,
     "dependencies": [
       "numpy",
@@ -830,10 +832,18 @@
     "dependencies": []
   },
   {
+    "name": "pillow-avif-plugin",
+    "version": "1.4.3",
+    "url": "https://files.pythonhosted.org:443/packages/31/74/877f141d64cced6457c9d3296c196fb2f797ef7d72b8ee48d86b2550305a/pillow_avif_plugin-1.4.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-NSsQFuBU1KosL1R/J/8ABrfwyaVilrfM+1m5fahUoRI=",
+    "is-wheel": true,
+    "dependencies": []
+  },
+  {
     "name": "protobuf",
-    "version": "3.20.3",
-    "url": "https://files.pythonhosted.org:443/packages/31/be/80a9c6f16dfa4d41be3edbe655349778ae30882407fa8275eb46b4d34854/protobuf-3.20.3-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl",
-    "hash": "sha256-mq5EBupj2CVjbMEf+zStM3kzWAMhbuOoVnh7z1zMdR4=",
+    "version": "3.20.0",
+    "url": "https://files.pythonhosted.org:443/packages/5c/a6/9a451d69492a695e2300643933590762aa4e5bbef2ae5f08f7d218ea6c3a/protobuf-3.20.0-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl",
+    "hash": "sha256-W1hgt5BJjyM83I1jWhf8CN5i5Z1NzYzbbGwNOKMe3ys=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -847,9 +857,9 @@
   },
   {
     "name": "pydantic",
-    "version": "1.10.14",
-    "url": "https://files.pythonhosted.org:443/packages/8b/ff/c6e3de00d83a607ba7fb81cee8ad72bbc722f15a57d18a815a1aa0e35793/pydantic-1.10.14-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-gtiGvTw/vqqWNpLva2QxWcy0tM769/8WF3IMvq0E/R0=",
+    "version": "1.10.17",
+    "url": "https://files.pythonhosted.org:443/packages/ef/a6/080cace699e89a94bd4bf34e8c12821d1f05fe4d56a0742f797b231d9a40/pydantic-1.10.17-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-Nx3PGDH4fJ4hfitqDGaEKHmhSHMRTrudCGGrIuO1ux4=",
     "is-wheel": true,
     "dependencies": [
       "typing-extensions"
@@ -917,9 +927,9 @@
   },
   {
     "name": "PyWavelets",
-    "version": "1.5.0",
-    "url": "https://files.pythonhosted.org:443/packages/b9/c2/7dffd331ac88c1776d8bba0fa77c73202a4ce79dc8d203fc99007b715866/pywavelets-1.5.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-eotY6vlG++4ALM5GDTKg6TLG2eFYqtEO6phOfybNoV4=",
+    "version": "1.6.0",
+    "url": "https://files.pythonhosted.org:443/packages/6e/01/a7157eec994747d3825df3e327365e072e5c80408000a358f2431cf91eb2/pywavelets-1.6.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-BZXFFHLJxXJP4IfLc+J5cFP9JceI1lU/2tb/YavGDpE=",
     "is-wheel": true,
     "dependencies": [
       "numpy"
@@ -935,9 +945,9 @@
   },
   {
     "name": "referencing",
-    "version": "0.34.0",
-    "url": "https://files.pythonhosted.org:443/packages/42/8e/ae1de7b12223986e949bdb886c004de7c304b6fa94de5b87c926c1099656/referencing-0.34.0-py3-none-any.whl",
-    "hash": "sha256-1TrjAM7d0xafH/qcryy3t2npJlfk+vsj00uTZ5EW39Q=",
+    "version": "0.35.1",
+    "url": "https://files.pythonhosted.org:443/packages/b7/59/2056f61236782a2c86b33906c025d4f4a0b17be0161b63b70fd9e8775d36/referencing-0.35.1-py3-none-any.whl",
+    "hash": "sha256-7abTI01igU0cZOMFwTMcmjphMtpHWrY4LqqZeyHudd4=",
     "is-wheel": true,
     "dependencies": [
       "attrs",
@@ -946,17 +956,17 @@
   },
   {
     "name": "regex",
-    "version": "2023.12.25",
-    "url": "https://files.pythonhosted.org:443/packages/81/8a/96a62ce98e8ff1b16db56fde3debc8a571f6b7ea42ee137eb0d995cdfa26/regex-2023.12.25-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-qcyZ1pRtdQ63WCfLU8Q3G4sP6JxzOpSxVzyd0W6myeQ=",
+    "version": "2024.5.15",
+    "url": "https://files.pythonhosted.org:443/packages/07/17/5d92509b4dccacf9767d8607112c19667e15db2428014440bae4356b8aff/regex-2024.5.15-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-Eze32++bL3ESHNvx6X5A3jP/EUgBJjsnWq/XUwO9YrU=",
     "is-wheel": true,
     "dependencies": []
   },
   {
     "name": "requests",
-    "version": "2.31.0",
-    "url": "https://files.pythonhosted.org:443/packages/70/8e/0e2d847013cb52cd35b38c009bb167a1a26b2ce6cd6965bf26b47bc0bf44/requests-2.31.0-py3-none-any.whl",
-    "hash": "sha256-WM0hh8AecObiZQW8p1F3eqny7gt/QwCYi3CfROATAD8=",
+    "version": "2.32.3",
+    "url": "https://files.pythonhosted.org:443/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl",
+    "hash": "sha256-cHYc/gPHc86yKqL2cbR1eXYUUXXN/KA4wCZU0GHW3MY=",
     "is-wheel": true,
     "dependencies": [
       "certifi",
@@ -975,9 +985,9 @@
   },
   {
     "name": "rpds-py",
-    "version": "0.18.0",
-    "url": "https://files.pythonhosted.org:443/packages/15/f5/769fc90b3af55e6288ce683539ffd68b93dbdf1a5d86050f063828e5911e/rpds_py-0.18.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-OVFNqA+XE2L5JnxgC21Fm/u8VJz/ws745HR0/dybRbE=",
+    "version": "0.19.0",
+    "url": "https://files.pythonhosted.org:443/packages/b8/2a/319eecf21aa0e872a0ee8233507a2a42e02f4b732308834292458fe1302c/rpds_py-0.19.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-lZF577PkonYQ6NVNZnwCqf6qhrurr2Pvp/qk36eA1PE=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -1009,9 +1019,9 @@
   },
   {
     "name": "scipy",
-    "version": "1.12.0",
-    "url": "https://files.pythonhosted.org:443/packages/f5/aa/8e6071a5e4dca4ec68b5b22e4991ee74c59c5d372112b9c236ec1faff57d/scipy-1.12.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-XjKEfgjajYlc4J0QiklNnreJdM9t4jBj+TMGo+QZlgw=",
+    "version": "1.14.0",
+    "url": "https://files.pythonhosted.org:443/packages/e2/20/15c8fe0dfebb6facd81b3d08bf45dfa080e305deb17172b0a40eba59e927/scipy-1.14.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-QkcOoBlTNt8xl0HiMGJrYiWnQP2dzpZCyhPpj2ZwR8A=",
     "is-wheel": true,
     "dependencies": [
       "numpy"
@@ -1059,16 +1069,32 @@
   },
   {
     "name": "spandrel",
-    "version": "0.1.6",
-    "url": "https://files.pythonhosted.org:443/packages/f5/79/de4c14ebf02bb41c0024a5087e631b2095cdbd3b4b7c92c4123de664bf51/spandrel-0.1.6-py3-none-any.whl",
-    "hash": "sha256-sGYfHrer0KKL6i4RUCdWl3O/jGTt/wSomEMwLpdDdZY=",
+    "version": "0.3.4",
+    "url": "https://files.pythonhosted.org:443/packages/1f/53/94dc6c19273be734247dab99494ed22d8ed188e7442c2ea28dbc9ae91dce/spandrel-0.3.4-py3-none-any.whl",
+    "hash": "sha256-G1WFvLApj8gX5bVWiAQxNT9Idw+YMow85U9O2XaPLBM=",
     "is-wheel": true,
     "dependencies": [
       "einops",
       "numpy",
       "safetensors",
       "torch",
-      "torchvision"
+      "torchvision",
+      "typing-extensions"
+    ]
+  },
+  {
+    "name": "spandrel_extra_arches",
+    "version": "0.1.1",
+    "url": "https://files.pythonhosted.org:443/packages/6b/04/825cd3f47dcb0e991261fe0f202c8f037bce4bac05599ef7d0398f7968da/spandrel_extra_arches-0.1.1-py3-none-any.whl",
+    "hash": "sha256-HAyiVWkjQed7Whrtm4MgNZO5GppOAHIqd0NyUf7Y8y4=",
+    "is-wheel": true,
+    "dependencies": [
+      "einops",
+      "numpy",
+      "spandrel",
+      "torch",
+      "torchvision",
+      "typing-extensions"
     ]
   },
   {
@@ -1083,9 +1109,9 @@
   },
   {
     "name": "sympy",
-    "version": "1.12",
-    "url": "https://files.pythonhosted.org:443/packages/d2/05/e6600db80270777c4a64238a98d442f0fd07cc8915be2a1c16da7f2b9e74/sympy-1.12-py3-none-any.whl",
-    "hash": "sha256-w1iM1CldDA9gPQ8q54BYfmTi7+7bNSHka5ux0I0YT6U=",
+    "version": "1.13.1",
+    "url": "https://files.pythonhosted.org:443/packages/b2/fe/81695a1aa331a842b582453b605175f419fe8540355886031328089d840a/sympy-1.13.1-py3-none-any.whl",
+    "hash": "sha256-2zbNxkv2G5skV4tve6sezdJFLPAI80+qM3dmgMJtZvg=",
     "is-wheel": true,
     "dependencies": [
       "mpmath"
@@ -1093,9 +1119,9 @@
   },
   {
     "name": "tifffile",
-    "version": "2024.2.12",
-    "url": "https://files.pythonhosted.org:443/packages/cd/0b/33610b4d0d1bb83a6bfd20ed838f52e02a44e9b439116cd4f3d424e81a80/tifffile-2024.2.12-py3-none-any.whl",
-    "hash": "sha256-hwmY+C+8lP98NSiITBsK5UhjUE/1Hb6+pDGsP6j7fCE=",
+    "version": "2024.7.2",
+    "url": "https://files.pythonhosted.org:443/packages/d2/d7/ca95f347442e82700f591f3608e336596ee607daecbcad6a7ebd16ff5de4/tifffile-2024.7.2-py3-none-any.whl",
+    "hash": "sha256-Wi7mCMnMHy4ETZQ9rOvdxx1IJ7b60VDvTGRLeu++LRo=",
     "is-wheel": true,
     "dependencies": [
       "numpy"
@@ -1181,9 +1207,9 @@
   },
   {
     "name": "torchmetrics",
-    "version": "1.3.2",
-    "url": "https://files.pythonhosted.org:443/packages/f3/0e/cedcb9c8aeb2d1f655f8d05f841b14d84b0a68d9f31afae4af55c7c6d0a9/torchmetrics-1.3.2-py3-none-any.whl",
-    "hash": "sha256-RMo6n4bcBQyz9VSDbvKRaY6nl3eEVxlbT2hfzo4uZKM=",
+    "version": "1.4.0.post0",
+    "url": "https://files.pythonhosted.org:443/packages/6d/e6/e51997d1818a4c1a1ad2b1c7ca5ff9dd95969596add58b2ed39479026964/torchmetrics-1.4.0.post0-py3-none-any.whl",
+    "hash": "sha256-qyNCFlmOP72NYu5FQaDnTn6PyTXQmWg69bjaUPdFs8g=",
     "is-wheel": true,
     "dependencies": [
       "lightning-utilities",
@@ -1220,9 +1246,9 @@
   },
   {
     "name": "tqdm",
-    "version": "4.66.2",
-    "url": "https://files.pythonhosted.org:443/packages/2a/14/e75e52d521442e2fcc9f1df3c5e456aead034203d4797867980de558ab34/tqdm-4.66.2-py3-none-any.whl",
-    "hash": "sha256-HuT4qJPrm+9RxuNXMM6/I01dC2vRErAnHhDtfCSgK9k=",
+    "version": "4.66.4",
+    "url": "https://files.pythonhosted.org:443/packages/18/eb/fdb7eb9e48b7b02554e1664afd3bd3f117f6b6d6c5881438a0b055554f9b/tqdm-4.66.4-py3-none-any.whl",
+    "hash": "sha256-t1yla0E7AwvD8Ar1H9LBoaXqxqDBzKg8uzelxSq85kQ=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -1265,9 +1291,9 @@
   },
   {
     "name": "typing_extensions",
-    "version": "4.10.0",
-    "url": "https://files.pythonhosted.org:443/packages/f9/de/dc04a3ea60b22624b51c703a84bbe0184abcd1d0b9bc8074b5d6b7ab90bb/typing_extensions-4.10.0-py3-none-any.whl",
-    "hash": "sha256-abGpN8OlFzQhEvtMbffnL8OaOOeJGlcw7UmFtSFLVHU=",
+    "version": "4.12.2",
+    "url": "https://files.pythonhosted.org:443/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl",
+    "hash": "sha256-BOXKA1Hg8/hcaFOVQHLfZZ0NE/rDJNAHIxa2fXeUcA0=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -1281,17 +1307,17 @@
   },
   {
     "name": "urllib3",
-    "version": "2.2.1",
-    "url": "https://files.pythonhosted.org:443/packages/a2/73/a68704750a7679d0b6d3ad7aa8d4da8e14e151ae82e6fee774e6e0d05ec8/urllib3-2.2.1-py3-none-any.whl",
-    "hash": "sha256-RQsg7ClqRnB3Eov/QrcwgFFucbVv9ZpgoCvvIjLE+p0=",
+    "version": "2.2.2",
+    "url": "https://files.pythonhosted.org:443/packages/ca/1c/89ffc63a9605b583d5df2be791a27bc1a42b7c32bab68d3c8f2f73a98cd4/urllib3-2.2.2-py3-none-any.whl",
+    "hash": "sha256-pEiy9k1oYVVGgDfhrOny0hmXduF/CkZhBIDTEfc+NHI=",
     "is-wheel": true,
     "dependencies": []
   },
   {
     "name": "uvicorn",
-    "version": "0.29.0",
-    "url": "https://files.pythonhosted.org:443/packages/73/f5/cbb16fcbe277c1e0b8b3ddd188f2df0e0947f545c49119b589643632d156/uvicorn-0.29.0-py3-none-any.whl",
-    "hash": "sha256-LCqsf/T0Nlwgb9dzo5v069EEfCOPi4JorZloKTI0c94=",
+    "version": "0.30.3",
+    "url": "https://files.pythonhosted.org:443/packages/63/84/2a26b4eac1cf0c6b5b176dd4346cc4912af5e1b0efc150b865e28636ac34/uvicorn-0.30.3-py3-none-any.whl",
+    "hash": "sha256-lKNgjaDlMM6o9paDqkEmNkrBjjgmtmMNGmX0Y4qt5QM=",
     "is-wheel": true,
     "dependencies": [
       "click",
