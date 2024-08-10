@@ -2,8 +2,17 @@
 , stable-diffusion-webui-git
 }:
 let
-  # The python version we use
-  python = pkgs.python310;
+  # Bootstrap setuptools using the nix provided python installations
+  bootstrapPython = pkgs.python310;
+  bootstrapPkgs = bootstrapPython.pkgs;
+  bootstrapOverrides = (pythonPkgs.callPackage ./raw.nix { pkgs = bootstrapPkgs; }).overrides;
+
+  # Python with setuptools overwritten
+  python = bootstrapPython.override {
+    packageOverrides = prev: final: {
+      setuptools = bootstrapOverrides.setuptools;
+    };
+  };
   pythonPkgs = python.pkgs;
 
   # Some packages need fixups
@@ -97,11 +106,6 @@ let
       doCheck = false;
     });
 
-    clip = prev.clip.overridePythonAttrs (prev: {
-      # Works in this workspace, fails in system configuration
-      doCheck = false;
-    });
-
     # Torchvision and xformers requires the native libraries from torch -
     # since both packages depend on torch, they'll be available via python
     torchvision = withImplicitTorchLibs prev.torchvision;
@@ -128,5 +132,7 @@ let
       inherit (final) stable-diffusion-webui-python-raw;
     };
   };
+
+  finalPackages = (pythonPkgs.callPackage ./raw.nix { pkgs = pythonPkgs; }).packages.overrideScope requirementsOverlay;
 in
-  (pythonPkgs.callPackage ./raw.nix {}).overrideScope requirementsOverlay
+  finalPackages

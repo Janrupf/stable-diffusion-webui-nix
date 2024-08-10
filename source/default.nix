@@ -59,8 +59,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "AUTOMATIC1111";
     repo = "stable-diffusion-webui";
-    rev = "9f5a98d5766b4ac233d916fe8b02ea16b8b2c259";
-    hash = "sha256-ScLBhm9YYHabZqGavDmI9RYrZflfsrS6nI27d0p67+c=";
+    rev = "82a973c04367123ae98bd9abdf80d9eda9b910e2";
+    hash = "sha256-lY+fZQ9yzFBVX5hrmvaIAm/FaRnsIkB2z4WpcJMmL3w=";
   };
 
   patches = [

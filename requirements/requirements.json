@@ -30,12 +30,21 @@
     "dependencies": []
   },
   {
+    "name": "aiohappyeyeballs",
+    "version": "2.3.5",
+    "url": "https://files.pythonhosted.org:443/packages/8b/b4/0983e94060405eb51f23be493e3f5c28003f7ebc5efcd0803c1cb23ea407/aiohappyeyeballs-2.3.5-py3-none-any.whl",
+    "hash": "sha256-TW3qWSFVN9vHRuk+d5yuqBeMhmhWpyHJxmDXpae4vgM=",
+    "is-wheel": true,
+    "dependencies": []
+  },
+  {
     "name": "aiohttp",
-    "version": "3.9.5",
-    "url": "https://files.pythonhosted.org:443/packages/a0/09/e7637f4f0760cad4d67347bbd8311c6ad0259a3fc01f04555af9e84bd378/aiohttp-3.9.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-wmlZynt1/3aOJ3bYBVv5WCpiZ+JFVrt/e9KeZ3kyvnI=",
+    "version": "3.10.2",
+    "url": "https://files.pythonhosted.org:443/packages/12/3e/e31c68fd01f53657f10854a8595aa6739d70d1062246fd4bc8f0b8a0a0a1/aiohttp-3.10.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-4AGR04FW4J6Mge89dcDXDU8gm4OB5xYiFl8i732m8QE=",
     "is-wheel": true,
     "dependencies": [
+      "aiohappyeyeballs",
       "aiosignal",
       "async-timeout",
       "attrs",
@@ -100,9 +109,9 @@
   },
   {
     "name": "attrs",
-    "version": "23.2.0",
-    "url": "https://files.pythonhosted.org:443/packages/e0/44/827b2a91a5816512fcaf3cc4ebc465ccd5d598c45cefa6703fcf4a79018f/attrs-23.2.0-py3-none-any.whl",
-    "hash": "sha256-mbh6SFpYILI7h58EwjBbRLlRtQL9ZL6RWHnXen6PxvE=",
+    "version": "24.2.0",
+    "url": "https://files.pythonhosted.org:443/packages/6a/21/5b6702a7f963e95456c0de2d495f67bf5fd62840ac655dc451586d23d39a/attrs-24.2.0-py3-none-any.whl",
+    "hash": "sha256-gZIeuW3jGRyCWMGZYYEE3SesYI2TZvXjXQEerhhn7eI=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -256,10 +265,10 @@
   },
   {
     "name": "ffmpy",
-    "version": "0.3.2",
-    "url": "https://files.pythonhosted.org:443/packages/1d/70/07914754979f5dd80bda947a0ffd181c08bfcb137b01c3c0cef45254d271/ffmpy-0.3.2.tar.gz",
-    "hash": "sha256-gCYJJP2FgUnJ0DGzFyugh/lpa8sp8hh/xe71F6Sir9I=",
-    "is-wheel": false,
+    "version": "0.4.0",
+    "url": "https://files.pythonhosted.org:443/packages/ff/1e/db99aa669eee301966bc6c997d60a0240f9cecae63f044b2e5a5310e4bf7/ffmpy-0.4.0-py3-none-any.whl",
+    "hash": "sha256-OcDyDFtGXn+NKaUZHzp9dnWoxUbZ2YXeiSEVHNm1nhQ=",
+    "is-wheel": true,
     "dependencies": []
   },
   {
@@ -308,9 +317,9 @@
   },
   {
     "name": "ftfy",
-    "version": "6.2.0",
-    "url": "https://files.pythonhosted.org:443/packages/f4/f0/21efef51304172736b823689aaf82f33dbc64f54e9b046b75f5212d5cee7/ftfy-6.2.0-py3-none-any.whl",
-    "hash": "sha256-+UosNLduB0dXIOMJb1yoCRHRUkBvveZv20XE0MkVACY=",
+    "version": "6.2.3",
+    "url": "https://files.pythonhosted.org:443/packages/ed/46/14d230ad057048aea7ccd2f96a80905830866d281ea90a6662a825490659/ftfy-6.2.3-py3-none-any.whl",
+    "hash": "sha256-8VdhsCPzBhpmIH0z8MAUmtQKgxn9FtqReWNj4sBJ/fg=",
     "is-wheel": true,
     "dependencies": [
       "wcwidth"
@@ -422,9 +431,9 @@
   },
   {
     "name": "huggingface-hub",
-    "version": "0.24.0",
-    "url": "https://files.pythonhosted.org:443/packages/57/c0/cf4435f3186655e3bafdca08cd6c794e3866f1f89ed99595504e7240b6a2/huggingface_hub-0.24.0-py3-none-any.whl",
-    "hash": "sha256-etku3vuT2BRcBh9t+Nmd8v+F+DebpfrIqVrKBkKvpdc=",
+    "version": "0.24.5",
+    "url": "https://files.pythonhosted.org:443/packages/0b/05/31b21998f68c31e7ffcc27ff08531fb9af5506d765ce8d661fb0036e6918/huggingface_hub-0.24.5-py3-none-any.whl",
+    "hash": "sha256-2T+2Ox8akZoizpGhRRiXToH8RhC/NE3+dXI0POjTrO0=",
     "is-wheel": true,
     "dependencies": [
       "filelock",
@@ -553,9 +562,9 @@
   },
   {
     "name": "lightning-utilities",
-    "version": "0.11.5",
-    "url": "https://files.pythonhosted.org:443/packages/36/bb/8577ddf395654b1790fd433d83c26bd3b236f515a3f7b02e445d4a0797a6/lightning_utilities-0.11.5-py3-none-any.whl",
-    "hash": "sha256-qyEXzJJqnjdXkZ4loNpXS62xwPBPyTGEkjVzG3gBao0=",
+    "version": "0.11.6",
+    "url": "https://files.pythonhosted.org:443/packages/ea/d5/ed204bc738672c17455019b5e0c7c8d1effb0ea17707150ca50336298ca0/lightning_utilities-0.11.6-py3-none-any.whl",
+    "hash": "sha256-7NmVPDFsuvVq2CD7570GIYe5lzxKI9R7B2zVncCAoxA=",
     "is-wheel": true,
     "dependencies": [
       "packaging",
@@ -581,9 +590,9 @@
   },
   {
     "name": "matplotlib",
-    "version": "3.9.1",
-    "url": "https://files.pythonhosted.org:443/packages/32/ad/58902b481f5a294101a53ed964d68a2c2355d55622a8e9cb09fc3f517385/matplotlib-3.9.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-D8ABUW/88aIhvrURmLGU2SMBmdaELFQBCOTOEJrAXMA=",
+    "version": "3.9.1.post1",
+    "url": "https://files.pythonhosted.org:443/packages/4c/d5/7199ebaa1ccd3750ee53281cf860c289d275d912392e895c2a4d6e08d44f/matplotlib-3.9.1.post1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-Yhpig4nAmmufYJojivjmas7Ozhz6Ev68X+QZURS6dEY=",
     "is-wheel": true,
     "dependencies": [
       "contourpy",
@@ -730,9 +739,9 @@
   },
   {
     "name": "nvidia-nvjitlink-cu12",
-    "version": "12.5.82",
-    "url": "https://files.pythonhosted.org:443/packages/75/bc/e0d0dbb85246a086ab14839979039647bce501d8c661a159b8b019d987b7/nvidia_nvjitlink_cu12-12.5.82-py3-none-manylinux2014_x86_64.whl",
-    "hash": "sha256-+bN7xcjPdQlmXLatpaqgzmVhjyMyt9PnjpeQUR8REhI=",
+    "version": "12.6.20",
+    "url": "https://files.pythonhosted.org:443/packages/59/65/7ff0569494fbaea45ad2814972cc88da843d53cc96eb8554fcd0908941d9/nvidia_nvjitlink_cu12-12.6.20-py3-none-manylinux2014_x86_64.whl",
+    "hash": "sha256-Viq5fqLCMWSCOyqJyzKNAdRcuZY0uMZf581g0UVivXk=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -788,9 +797,9 @@
   },
   {
     "name": "orjson",
-    "version": "3.10.6",
-    "url": "https://files.pythonhosted.org:443/packages/36/06/f5e0d6a921af2feae3c189514ebe12a6b8ab59ffe92c855996bcb4e6aa7f/orjson-3.10.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-Yzo7MdnXyfAtScSrTQqGBlxKb2rcKX1j0nLgQ0cqyrU=",
+    "version": "3.10.7",
+    "url": "https://files.pythonhosted.org:443/packages/b6/bc/fbd345d771a73cacc5b0e774d034cd081590b336754c511f4ead9fdc4cf1/orjson-3.10.7-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-NIvdFrMlVs+NclexfPK9t6t5dq9K9B6+efl5bCGPfpE=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -937,9 +946,9 @@
   },
   {
     "name": "PyYAML",
-    "version": "6.0.1",
-    "url": "https://files.pythonhosted.org:443/packages/29/61/bf33c6c85c55bc45a29eee3195848ff2d518d84735eb0e2d8cb42e0d285e/PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-ujNuOQzY5NFzn0Lf6buDo8wugPVn2IBeEbRvSpQ/VRU=",
+    "version": "6.0.2",
+    "url": "https://files.pythonhosted.org:443/packages/6b/4e/1523cb902fd98355e2e9ea5e5eb237cbc5f3ad5f3075fa65087aa0ecb669/PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-7AMdXS/rNtHRokOA5NttQ2lfN0g0PZlDTm9fkVaqou0=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -956,9 +965,9 @@
   },
   {
     "name": "regex",
-    "version": "2024.5.15",
-    "url": "https://files.pythonhosted.org:443/packages/07/17/5d92509b4dccacf9767d8607112c19667e15db2428014440bae4356b8aff/regex-2024.5.15-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-Eze32++bL3ESHNvx6X5A3jP/EUgBJjsnWq/XUwO9YrU=",
+    "version": "2024.7.24",
+    "url": "https://files.pythonhosted.org:443/packages/3e/66/04b63f31580026c8b819aed7f171149177d10cfab27477ea8800a2268d50/regex-2024.7.24-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-v3qJ7vZLVFWDX17TAlTsGb9B91Qc2U8marfL1GPwDEE=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -985,9 +994,9 @@
   },
   {
     "name": "rpds-py",
-    "version": "0.19.0",
-    "url": "https://files.pythonhosted.org:443/packages/b8/2a/319eecf21aa0e872a0ee8233507a2a42e02f4b732308834292458fe1302c/rpds_py-0.19.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
-    "hash": "sha256-lZF577PkonYQ6NVNZnwCqf6qhrurr2Pvp/qk36eA1PE=",
+    "version": "0.20.0",
+    "url": "https://files.pythonhosted.org:443/packages/4a/6d/1166a157b227f2333f8e8ae320b6b7ea2a6a38fbe7a3563ad76dffc8608d/rpds_py-0.20.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "hash": "sha256-+OYE/nO6BIwGCFvq9RFH6ux9+FaCS/57mGV89DZiPa8=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -1040,6 +1049,14 @@
     "version": "0.2.0",
     "url": "https://files.pythonhosted.org:443/packages/a6/27/33019685023221ca8ed98e8ceb7ae5e166032686fa3662c68f1f1edf334e/sentencepiece-0.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
     "hash": "sha256-E4DOZUCjaN4u9tfmuhS6jzJY32UNObp9gzt57milIEA=",
+    "is-wheel": true,
+    "dependencies": []
+  },
+  {
+    "name": "setuptools",
+    "version": "69.5.1",
+    "url": "https://files.pythonhosted.org:443/packages/f7/29/13965af254e3373bceae8fb9a0e6ea0d0e571171b80d6646932131d6439b/setuptools-69.5.1-py3-none-any.whl",
+    "hash": "sha256-xjasNhvEdYBQRkQnXJrYAsUEFcdSIhIlLAM70V8wHzI=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -1119,9 +1136,9 @@
   },
   {
     "name": "tifffile",
-    "version": "2024.7.2",
-    "url": "https://files.pythonhosted.org:443/packages/d2/d7/ca95f347442e82700f591f3608e336596ee607daecbcad6a7ebd16ff5de4/tifffile-2024.7.2-py3-none-any.whl",
-    "hash": "sha256-Wi7mCMnMHy4ETZQ9rOvdxx1IJ7b60VDvTGRLeu++LRo=",
+    "version": "2024.7.24",
+    "url": "https://files.pythonhosted.org:443/packages/05/a9/f7b3fd6c73e0ac29e7f9c9c86c3b7367b182a3dd60495da7b8129e6df681/tifffile-2024.7.24-py3-none-any.whl",
+    "hash": "sha256-9czhqRXDe8RK5KeS47QsB6MKP6iEBvXGBgo94HZIftE=",
     "is-wheel": true,
     "dependencies": [
       "numpy"
@@ -1207,9 +1224,9 @@
   },
   {
     "name": "torchmetrics",
-    "version": "1.4.0.post0",
-    "url": "https://files.pythonhosted.org:443/packages/6d/e6/e51997d1818a4c1a1ad2b1c7ca5ff9dd95969596add58b2ed39479026964/torchmetrics-1.4.0.post0-py3-none-any.whl",
-    "hash": "sha256-qyNCFlmOP72NYu5FQaDnTn6PyTXQmWg69bjaUPdFs8g=",
+    "version": "1.4.1",
+    "url": "https://files.pythonhosted.org:443/packages/29/1b/b38033e61c28e52dde7bd459df6567c04c127ee153722c73b9acd0fe550b/torchmetrics-1.4.1-py3-none-any.whl",
+    "hash": "sha256-wufNVt2L3GCuY9cS873OZJ8jvRdNkYC90LdG4CMLhlo=",
     "is-wheel": true,
     "dependencies": [
       "lightning-utilities",
@@ -1246,9 +1263,9 @@
   },
   {
     "name": "tqdm",
-    "version": "4.66.4",
-    "url": "https://files.pythonhosted.org:443/packages/18/eb/fdb7eb9e48b7b02554e1664afd3bd3f117f6b6d6c5881438a0b055554f9b/tqdm-4.66.4-py3-none-any.whl",
-    "hash": "sha256-t1yla0E7AwvD8Ar1H9LBoaXqxqDBzKg8uzelxSq85kQ=",
+    "version": "4.66.5",
+    "url": "https://files.pythonhosted.org:443/packages/48/5d/acf5905c36149bbaec41ccf7f2b68814647347b72075ac0b1fe3022fdc73/tqdm-4.66.5-py3-none-any.whl",
+    "hash": "sha256-kCeaN3B1Pq/JGUoDZIUhWYAhEZJaow6z+dhbDoBax80=",
     "is-wheel": true,
     "dependencies": []
   },
@@ -1315,9 +1332,9 @@
   },
   {
     "name": "uvicorn",
-    "version": "0.30.3",
-    "url": "https://files.pythonhosted.org:443/packages/63/84/2a26b4eac1cf0c6b5b176dd4346cc4912af5e1b0efc150b865e28636ac34/uvicorn-0.30.3-py3-none-any.whl",
-    "hash": "sha256-lKNgjaDlMM6o9paDqkEmNkrBjjgmtmMNGmX0Y4qt5QM=",
+    "version": "0.30.5",
+    "url": "https://files.pythonhosted.org:443/packages/67/d8/1bcb5e6508d14c6c9912cd964b286f04392298ffb3e4218f4a1292d64e76/uvicorn-0.30.5-py3-none-any.whl",
+    "hash": "sha256-stht4nRybph4GI+gdXbJzu/5CoOeK24lyRf+BfWmyDU=",
     "is-wheel": true,
     "dependencies": [
       "click",

@@ -2,11 +2,9 @@
 # This is only needed when updating the flake, you don't need to install
 # this when just using stable-diffusion.
 { pkgs
-, lib
 , stable-diffusion-webui-git
 , stable-diffusion-webui-python-raw
 , gnugrep
-, findutils
 , nix
 , coreutils-full
 , gawk
@@ -130,8 +128,8 @@ pkgs.writeShellScriptBin "stable-diffusion-webui-update-requirements" ''
 
     echo "Processing $package_name $package_version"
 
-    # Skip pip and setuptools
-    if [[ "$package_name" == "pip" ]] || [[ "$package_name" == "setuptools" ]] || [[ "$package_name" == "wheel" ]]; then
+    # Skip pip and wheel
+    if [[ "$package_name" == "pip" ]] || [[ "$package_name" == "wheel" ]]; then
       continue
     fi
 

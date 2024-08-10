@@ -1,6 +1,7 @@
 # Automatically parse all the requirements from frozen-requirements.txt
 { lib
 , newScope
+, pkgs
 }:
 let
   # Read the locked data
@@ -12,6 +13,18 @@ let
     strings = lib.strings;
   in
     strings.stringAsChars (x: if x == "-" then "_" else x) (strings.toLower name);
+
+  # Override setuptools if required
+  setuptools-override =
+  let
+    setuptoolsData = lib.lists.findFirst (el: el.name == "setuptools") null requirementsData;
+  in
+    if setuptoolsData == null
+      then pkgs.setuptools
+      else pkgs.callPackage makePythonPackage {
+        requirementData = setuptoolsData;
+        selfPkgs = pkgs; # Can't reference own packages
+      };
 
   # Called with callPackaged makePythonPackage { inherit requirementData; };
   makePythonPackage = 
@@ -78,4 +91,9 @@ let
   }];
 
   packages = lib.makeScope newScope (self: builtins.listToAttrs (mappedPackages self));
-in packages
+in {
+  inherit packages;
+  overrides = {
+    setuptools = setuptools-override;
+  };
+}
