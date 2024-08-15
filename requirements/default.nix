@@ -89,7 +89,7 @@ let
       cudaPackages.cuda_nvrtc
       cudaPackages.cuda_nvtx
       cudaPackages.libcufft
-      cudaPackages.cudnn
+      cudaPackages.cudnn_8_9
       cudaPackages.nccl
       cudaPackages.libcurand
     ];
