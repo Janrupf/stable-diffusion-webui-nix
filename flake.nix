@@ -6,7 +6,7 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils, ... }:
+  outputs = { nixpkgs, flake-utils, ... }:
   let
     localOverlay = import ./overlay.nix;
 
@@ -48,6 +48,8 @@
       drv = packages.stable-diffusion-webui;
     };
     apps.default = apps.stable-diffusion-webui;
+
+    requirements = legacyPackages.stable-diffusion-requirements;
   }) // {
     # Non system specific stuff
     overlays.default = localOverlay;

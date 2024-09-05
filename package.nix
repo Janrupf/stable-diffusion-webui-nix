@@ -29,7 +29,7 @@ pkgs.writeShellScriptBin "stable-diffusion-webui" ''
     prog_args+=("--data-dir" "$link_dir")
   fi
 
-  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/opengl-driver/lib:/run/opengl-driver-32/lib"
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/opengl-driver/lib:/run/opengl-driver-32/lib:${pkgs.lib.makeLibraryPath [stable-diffusion-webui-python]}"
 
   cd ${stable-diffusion-webui-git}
   exec ${stable-diffusion-webui-python}/bin/python ${stable-diffusion-webui-git}/webui.py "''${prog_args[@]}"

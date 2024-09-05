@@ -34,26 +34,37 @@ let
       } ./python-remove-bytecode-hook.sh
     ) {};
 
+    # Hook for copying libraries to lib output
+    pythonPropagateLibHook = pythonPkgs.callPackage ({ makePythonHook }:
+      makePythonHook {
+        name = "python-propagate-lib-hook";
+        propagatedBuildInputs = [];
+        substitutions = {
+          pythonSitePackages = python.sitePackages;
+        };
+      } ./python-propagate-lib-hook.sh
+    ) {};
+
     # Remove all bytecode from the package
     removePythonBytecode = pkg: pkg.overridePythonAttrs (prev: {
       nativeBuildInputs = prev.nativeBuildInputs ++ [ pythonRemoveBytecodeHook ];
     });
 
-    # Remove the explicit dependency on the torch native libraries
-    withImplicitTorchLibs = pkg: pkg.overridePythonAttrs (prev: {
-      autoPatchelfIgnoreMissingDeps = [
-        "libtorch.so"
-        "libtorch_cpu.so"
-        "libtorch_python.so"
-        "libtorch_cuda.so"
-        "libc10_cuda.so"
-        "libc10.so"
-      ];
+    # Make sure the package has a lib output
+    propagateLib = pkg: pkg.overrideAttrs (prev: {
+      outputs = (prev.outputs or []) ++ ["lib"];
+      nativeBuildInputs = prev.nativeBuildInputs ++ [ pythonPropagateLibHook ];
     });
+
   in
   with pkgs;
-  rec {
+  {
     # Replace scipy with the one from nixpkgs
+    #
+    # Not doing so results in a corrupted scipy_openblas library:
+    #  ImportError: libscipy_openblas-c128ec02.so: ELF load command address/offset not page-aligned
+    #
+    # Probably a case of https://github.com/NixOS/patchelf/issues/492
     scipy = pythonPkgs.scipy.override (scipyPrev: {
       numpy = final.numpy;
     });
@@ -67,7 +78,6 @@ let
       # https://github.com/NixOS/nixpkgs/issues/96654
       dontStrip = 1;
     }));
-    nvidia_cudnn_cu12 = removePythonBytecode (withZlib prev.nvidia_cudnn_cu12);
 
     # Random other dependencies
     opencv_python = withExtraDependencies prev.opencv_python [
@@ -80,19 +90,11 @@ let
     ];
 
     # Cuda stuff
-    nvidia_cusparse_cu12 = removePythonBytecode (withExtraDependencies prev.nvidia_cusparse_cu12 [ cudaPackages.libnvjitlink ]);
-    nvidia_cusolver_cu12 = removePythonBytecode (withExtraDependencies prev.nvidia_cusolver_cu12 [ cudaPackages.libcublas cudaPackages.libcusolver ]);
-    torch = withExtraDependencies prev.torch [
-      # To pull in graphics drivers
-      cudaPackages.cuda_cupti
-      cudaPackages.cuda_cudart
-      cudaPackages.cuda_nvrtc
-      cudaPackages.cuda_nvtx
-      cudaPackages.libcufft
-      cudaPackages.cudnn_8_9
-      cudaPackages.nccl
-      cudaPackages.libcurand
-    ];
+    torch = propagateLib (prev.torch.overridePythonAttrs (prev: {
+      # Will be added by pkgs.autoAddDriverRunpath
+      autoPatchelfIgnoreMissingDeps = [ "libcuda.so.1" ];
+      nativeBuildInputs = (prev.nativeBuildInputs or []) ++ [ pkgs.autoAddDriverRunpath ];
+    }));
 
     numba = withExtraDependencies prev.numba [ tbb_2021_11 ];
 
@@ -106,20 +108,19 @@ let
       doCheck = false;
     });
 
-    # Torchvision and xformers requires the native libraries from torch -
-    # since both packages depend on torch, they'll be available via python
-    torchvision = withImplicitTorchLibs prev.torchvision;
-    xformers = withImplicitTorchLibs prev.xformers;
-
     # Bytecode removal (thanks NVIDIA for shipping libraries with overlapping bytecode..)
-    nvidia_cuda_cupti_cu12 = removePythonBytecode prev.nvidia_cuda_cupti_cu12;
-    nvidia_cublas_cu12 = removePythonBytecode prev.nvidia_cublas_cu12;
-    nvidia_cuda_nvrtc_cu12 = removePythonBytecode prev.nvidia_cuda_nvrtc_cu12;
-    nvidia_cuda_runtime_cu12 = removePythonBytecode prev.nvidia_cuda_runtime_cu12;
-    nvidia_curand_cu12 = removePythonBytecode prev.nvidia_curand_cu12;
-    nvidia_cufft_cu12 = removePythonBytecode prev.nvidia_cufft_cu12;
-    nvidia_nvjitlink_cu12 = removePythonBytecode prev.nvidia_nvjitlink_cu12;
-    nvidia_nccl_cu12 = removePythonBytecode prev.nvidia_nccl_cu12;
+    nvidia_nvjitlink_cu12 = propagateLib (removePythonBytecode prev.nvidia_nvjitlink_cu12);
+    nvidia_cusparse_cu12 = propagateLib (removePythonBytecode prev.nvidia_cusparse_cu12);
+    nvidia_cusolver_cu12 = propagateLib (removePythonBytecode prev.nvidia_cusolver_cu12);
+    nvidia_cudnn_cu12 = propagateLib (removePythonBytecode (withZlib prev.nvidia_cudnn_cu12));
+    nvidia_cuda_cupti_cu12 = propagateLib (removePythonBytecode prev.nvidia_cuda_cupti_cu12);
+    nvidia_cublas_cu12 = propagateLib (removePythonBytecode prev.nvidia_cublas_cu12);
+    nvidia_cuda_nvrtc_cu12 = propagateLib (removePythonBytecode prev.nvidia_cuda_nvrtc_cu12);
+    nvidia_cuda_runtime_cu12 = propagateLib (removePythonBytecode prev.nvidia_cuda_runtime_cu12);
+    nvidia_curand_cu12 = propagateLib (removePythonBytecode prev.nvidia_curand_cu12);
+    nvidia_cufft_cu12 = propagateLib (removePythonBytecode prev.nvidia_cufft_cu12);
+    nvidia_nccl_cu12 = propagateLib (removePythonBytecode prev.nvidia_nccl_cu12);
+    nvidia_nvtx_cu12 = propagateLib (removePythonBytecode prev.nvidia_nvtx_cu12);
 
     # Extra packages
     inherit stable-diffusion-webui-git;

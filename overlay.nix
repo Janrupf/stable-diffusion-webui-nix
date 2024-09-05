@@ -23,4 +23,6 @@ in
 
   # Python environment for development purpose
   inherit (stable-diffusion-requirements) stable-diffusion-webui-python;
+
+  inherit stable-diffusion-requirements;
 }
