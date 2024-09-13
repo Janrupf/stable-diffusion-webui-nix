@@ -59,6 +59,16 @@ let
   in
   with pkgs;
   {
+    # Numpy needs zlib and also needs to define coreIncludeDir so that scipy
+    # can consume it
+    numpy = prev.numpy.overridePythonAttrs (prevPyAttrs: {
+      dependencies = prevPyAttrs.dependencies ++ [ zlib ];
+      passthru = (prevPyAttrs.passthru or {}) // {
+        # Needed for nixpkgs scipy to build
+        coreIncludeDir = "${final.numpy}/${python.sitePackages}/numpy/core/include";
+      };
+    });
+
     # Replace scipy with the one from nixpkgs
     #
     # Not doing so results in a corrupted scipy_openblas library:
@@ -72,7 +82,6 @@ let
     # A bunch of packages require zlib
     llvmlite = withZlib prev.llvmlite;
     tokenizers = withZlib prev.tokenizers;
-    numpy = withZlib prev.numpy;
     pillow = withZlib prev.pillow;
     triton = withZlib (prev.triton.overridePythonAttrs (prev: {
       # https://github.com/NixOS/nixpkgs/issues/96654
