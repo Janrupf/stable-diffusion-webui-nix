@@ -9,6 +9,7 @@ let
   # Import the requirements
   stable-diffusion-requirements = prev.callPackage ./requirements {
     inherit stable-diffusion-webui-git;
+    inherit (final) python-flexseal;
   };
 in
 {

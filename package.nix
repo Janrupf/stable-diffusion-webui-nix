@@ -29,6 +29,8 @@ pkgs.writeShellScriptBin "stable-diffusion-webui" ''
     prog_args+=("--data-dir" "$link_dir")
   fi
 
+  prog_args+=("--gradio-allowed-path" "${stable-diffusion-webui-git}")
+
   export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/opengl-driver/lib:/run/opengl-driver-32/lib:${pkgs.lib.makeLibraryPath [stable-diffusion-webui-python]}"
 
   cd ${stable-diffusion-webui-git}

@@ -1,5 +1,6 @@
 { pkgs
 , stable-diffusion-webui-git
+, python-flexseal
 }:
 let
   # Bootstrap setuptools using the nix provided python installations
@@ -10,7 +11,7 @@ let
   # Python with setuptools overwritten
   python = bootstrapPython.override {
     packageOverrides = prev: final: {
-      setuptools = bootstrapOverrides.setuptools;
+      # setuptools = bootstrapOverrides.setuptools;
     };
   };
   pythonPkgs = python.pkgs;
@@ -89,7 +90,7 @@ let
     }));
 
     # Random other dependencies
-    opencv_python = withExtraDependencies prev.opencv_python [
+    opencv-python = withExtraDependencies prev.opencv-python [
       libGL
       glib
 
@@ -118,18 +119,18 @@ let
     });
 
     # Bytecode removal (thanks NVIDIA for shipping libraries with overlapping bytecode..)
-    nvidia_nvjitlink_cu12 = propagateLib (removePythonBytecode prev.nvidia_nvjitlink_cu12);
-    nvidia_cusparse_cu12 = propagateLib (removePythonBytecode prev.nvidia_cusparse_cu12);
-    nvidia_cusolver_cu12 = propagateLib (removePythonBytecode prev.nvidia_cusolver_cu12);
-    nvidia_cudnn_cu12 = propagateLib (removePythonBytecode (withZlib prev.nvidia_cudnn_cu12));
-    nvidia_cuda_cupti_cu12 = propagateLib (removePythonBytecode prev.nvidia_cuda_cupti_cu12);
-    nvidia_cublas_cu12 = propagateLib (removePythonBytecode prev.nvidia_cublas_cu12);
-    nvidia_cuda_nvrtc_cu12 = propagateLib (removePythonBytecode prev.nvidia_cuda_nvrtc_cu12);
-    nvidia_cuda_runtime_cu12 = propagateLib (removePythonBytecode prev.nvidia_cuda_runtime_cu12);
-    nvidia_curand_cu12 = propagateLib (removePythonBytecode prev.nvidia_curand_cu12);
-    nvidia_cufft_cu12 = propagateLib (removePythonBytecode prev.nvidia_cufft_cu12);
-    nvidia_nccl_cu12 = propagateLib (removePythonBytecode prev.nvidia_nccl_cu12);
-    nvidia_nvtx_cu12 = propagateLib (removePythonBytecode prev.nvidia_nvtx_cu12);
+    nvidia-nvjitlink-cu12 = propagateLib (removePythonBytecode prev.nvidia-nvjitlink-cu12);
+    nvidia-cusparse-cu12 = propagateLib (removePythonBytecode prev.nvidia-cusparse-cu12);
+    nvidia-cusolver-cu12 = propagateLib (removePythonBytecode prev.nvidia-cusolver-cu12);
+    nvidia-cudnn-cu12 = propagateLib (removePythonBytecode (withZlib prev.nvidia-cudnn-cu12));
+    nvidia-cuda-cupti-cu12 = propagateLib (removePythonBytecode prev.nvidia-cuda-cupti-cu12);
+    nvidia-cublas-cu12 = propagateLib (removePythonBytecode prev.nvidia-cublas-cu12);
+    nvidia-cuda-nvrtc-cu12 = propagateLib (removePythonBytecode prev.nvidia-cuda-nvrtc-cu12);
+    nvidia-cuda-runtime-cu12 = propagateLib (removePythonBytecode prev.nvidia-cuda-runtime-cu12);
+    nvidia-curand-cu12 = propagateLib (removePythonBytecode prev.nvidia-curand-cu12);
+    nvidia-cufft-cu12 = propagateLib (removePythonBytecode prev.nvidia-cufft-cu12);
+    nvidia-nccl-cu12 = propagateLib (removePythonBytecode prev.nvidia-nccl-cu12);
+    nvidia-nvtx-cu12 = propagateLib (removePythonBytecode prev.nvidia-nvtx-cu12);
 
     # Extra packages
     inherit stable-diffusion-webui-git;
@@ -139,7 +140,8 @@ let
     stable-diffusion-webui-update-requirements = pythonPkgs.callPackage ./update.nix {
       # Inherit the final versions of the dependencies
       inherit (final) stable-diffusion-webui-git;
-      inherit (final) stable-diffusion-webui-python-raw;
+      inherit bootstrapPython;
+      inherit python-flexseal;
     };
   };
 

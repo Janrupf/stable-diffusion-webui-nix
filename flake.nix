@@ -4,19 +4,34 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    python-flexseal = {
+      url = "github:Janrupf/python-flexseal";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-utils.follows = "flake-utils";
+      };
+    };
   };
 
-  outputs = { nixpkgs, flake-utils, ... }:
+  outputs = { nixpkgs, flake-utils, python-flexseal, ... }:
   let
     localOverlay = import ./overlay.nix;
 
-    pkgsForSystem = system: import nixpkgs {
+    pkgsForSystem = system: 
+    let
+      # TODO: This should be an overlay in python-flexseal
+      python-flexseal-pkg = python-flexseal.packages.${system}.python-flexseal;
+    in
+    import nixpkgs {
       config = {
         allowUnfree = true;
         cudaSupport = true;
       };
 
-      overlays = [ localOverlay ];
+      overlays = [
+        (prev: final: { python-flexseal = python-flexseal-pkg; })
+        localOverlay
+      ];
       inherit system;
     };
   in
