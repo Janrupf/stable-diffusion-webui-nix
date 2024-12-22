@@ -52,6 +52,9 @@
       packages;
   }) // {
     # Non system specific stuff
-    overlays.default = localOverlay;
+    overlays.default = (final: prev: {
+      # For now we need to pollute with python-flexseal, not sure how to prevent this
+      python-flexseal = python-flexseal.packages.${prev.stdenv.system}.python-flexseal;
+    } // (localOverlay final prev));
   };
 }
