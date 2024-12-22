@@ -4,7 +4,6 @@
 # For these packages we need to apply special steps - this is done
 # in form of an overlay to the python packages
 { pkgs
-, stable-diffusion-webui-git
 , python
 , pythonPkgs
 }: final: prev: 
@@ -123,15 +122,6 @@ with pkgs;
   nvidia-nvtx-cu12 = propagateLib (removePythonBytecode prev.nvidia-nvtx-cu12);
 
   # Extra packages
-  inherit stable-diffusion-webui-git;
-  stable-diffusion-webui-python-raw = python;
-  stable-diffusion-webui-python = python.withPackages (_: final.allRequirements);
-
-  # TODO: Move somewhere else
-  stable-diffusion-webui-update-requirements = pythonPkgs.callPackage ./../update.nix {
-    # Inherit the final versions of the dependencies
-    inherit (final) stable-diffusion-webui-git;
-    inherit bootstrapPython;
-    inherit python-flexseal;
-  };
+  webui-python-raw = python;
+  webui-python-env = python.withPackages (_: final.allRequirements);
 }

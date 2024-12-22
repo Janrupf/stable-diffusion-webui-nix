@@ -1,9 +1,12 @@
 { pkgs
 
 # Extra parameters
-, stable-diffusion-webui-git
-, stable-diffusion-webui-python
+, webuiPkgs
+, requirements
 }:
+let
+  python = requirements.requirementPkgs.webui-python-env;
+in
 pkgs.writeShellScriptBin "stable-diffusion-webui" ''
   prog_args=("$@")
 
@@ -29,10 +32,10 @@ pkgs.writeShellScriptBin "stable-diffusion-webui" ''
     prog_args+=("--data-dir" "$link_dir")
   fi
 
-  prog_args+=("--gradio-allowed-path" "${stable-diffusion-webui-git}")
+  prog_args+=("--gradio-allowed-path" "${webuiPkgs.source}")
 
-  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/opengl-driver/lib:/run/opengl-driver-32/lib:${pkgs.lib.makeLibraryPath [stable-diffusion-webui-python]}"
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/opengl-driver/lib:/run/opengl-driver-32/lib:${pkgs.lib.makeLibraryPath [python]}"
 
-  cd ${stable-diffusion-webui-git}
-  exec ${stable-diffusion-webui-python}/bin/python ${stable-diffusion-webui-git}/webui.py "''${prog_args[@]}"
+  cd ${webuiPkgs.source}
+  exec ${python}/bin/python ${webuiPkgs.source}/webui.py "''${prog_args[@]}"
 ''

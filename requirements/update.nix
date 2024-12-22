@@ -2,13 +2,14 @@
 # This is only needed when updating the flake, you don't need to install
 # this when just using stable-diffusion.
 { pkgs
-, stable-diffusion-webui-git
-, bootstrapPython
 , python-flexseal
+
+# Extra parameters
+, webuiPkgs
 }:
 let
   # Use the raw python with a few custom packages
-  basic-python = bootstrapPython.withPackages (pyPkgs: [
+  basic-python = webuiPkgs.python.withPackages (pyPkgs: [
     pyPkgs.pip
     pyPkgs.virtualenv
     pyPkgs.wheel
@@ -24,7 +25,7 @@ pkgs.writeShellScriptBin "stable-diffusion-webui-update-requirements" ''
 
   output="$(realpath "$1")"
 
-  echo "Stable diffusion repository is at ${stable-diffusion-webui-git}"
+  echo "Stable diffusion repository is at ${webuiPkgs.source}"
 
   temporary_dir="$(mktemp -d)"
   cd "$temporary_dir"
@@ -32,8 +33,8 @@ pkgs.writeShellScriptBin "stable-diffusion-webui-update-requirements" ''
   download_dir="$temporary_dir/downloads"
   cache_dir="$temporary_dir/cache"
   env_dir="$temporary_dir/venv"
-  requirement_files=("${stable-diffusion-webui-git}/requirements_versions.txt")
-  additional_requirements_file="${stable-diffusion-webui-git}/additional-requirements.json"
+  requirement_files=("${webuiPkgs.source}/requirements_versions.txt")
+  additional_requirements_file="${webuiPkgs.source}/additional-requirements.json"
 
   # Make an array of additional requirements
   declare -A additional_requirements

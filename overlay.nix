@@ -3,27 +3,28 @@ let
   # These are packages we don't want in the final overlay, so we temporarily
   # keep them in this let block
 
-  # Source repo
-  stable-diffusion-webui-git = prev.callPackage ./source {};
+  webuiPkgs = {
+    source = final.callPackage ./source {};
+    python = final.python310;
+  };
 
   # Import the requirements
-  stable-diffusion-requirements = prev.callPackage ./requirements {
-    inherit stable-diffusion-webui-git;
-    inherit (final) python-flexseal;
+  requirements = prev.callPackage ./requirements {
+    inherit webuiPkgs;
   };
 in
 {
   # Final package
   stable-diffusion-webui = prev.callPackage ./package.nix {
-    inherit stable-diffusion-webui-git;
-    inherit (stable-diffusion-requirements) stable-diffusion-webui-python;
+    inherit webuiPkgs;
+    inherit requirements;
   };
 
   # Requirements update helper
-  inherit (stable-diffusion-requirements) stable-diffusion-webui-update-requirements;
+  stable-diffusion-webui-update-requirements = requirements.update-helper;
 
   # Python environment for development purpose
-  inherit (stable-diffusion-requirements) stable-diffusion-webui-python;
+  stable-diffusion-webui-python = requirements.requirementPkgs.webui-python-raw;
 
-  inherit stable-diffusion-requirements;
+  stable-diffusion-requirements = requirements;
 }
