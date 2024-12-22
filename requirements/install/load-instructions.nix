@@ -1,4 +1,5 @@
-# Automatically parse all the requirements from frozen-requirements.txt
+# Functionality to load an install-instructions.json file and convert
+# it to nix packages
 { lib
 , newScope
 , pkgs
@@ -7,10 +8,6 @@
 , glibcLocalesUtf8
 }:
 let
-  # Read the locked data
-  installInstructions = builtins.fromJSON (builtins.readFile ./install-instructions.json);
-  packagesToInstall = installInstructions.packages;
-
   # Extract an archive after downloading it
   #
   # We can't rely on fetchzip to do this for us, because the hashes we get from PyPi are
@@ -37,19 +34,7 @@ let
       chmod 755 "$out"
   '';
 
-  # Override setuptools if required
-  setuptools-override =
-  let
-    setuptoolsData = lib.lists.findFirst (el: el.name == "setuptools") null packagesToInstall;
-  in
-    if setuptoolsData == null
-      then pkgs.setuptools
-      else pkgs.callPackage makePythonPackage {
-        packageData = setuptoolsData;
-        selfPkgs = pkgs; # Can't reference own packages
-      };
-
-  # Called with callPackaged makePythonPackage { inherit requirementData; };
+    # Called with callPackage makePythonPackage { inherit packageData; };
   makePythonPackage = 
   { buildPythonPackage
   , pkgs
@@ -101,6 +86,26 @@ let
         selfPkgs.${dep}
     ) packageData.dependencies;
   };
+in
+
+# Function implementation starts here:
+installInstructionsFile:
+let
+  # Read the locked data
+  installInstructions = builtins.fromJSON (builtins.readFile installInstructionsFile);
+  packagesToInstall = installInstructions.packages;
+
+  # Override setuptools if required
+  setuptools-override =
+  let
+    setuptoolsData = lib.lists.findFirst (el: el.name == "setuptools") null packagesToInstall;
+  in
+    if setuptoolsData == null
+      then pkgs.setuptools
+      else pkgs.callPackage makePythonPackage {
+        packageData = setuptoolsData;
+        selfPkgs = pkgs; # Can't reference own packages
+      };
 
   # Convert the requirementsData to a key-value set that can be passed to
   # builtins.listToAttrs
@@ -112,6 +117,8 @@ let
     value = map (packageData: pkgs.${packageData.name}) packagesToInstall;
   }];
 
+  # Final package scope that contains all the packages imported from
+  # the installation instructions
   packages = lib.makeScope newScope (self: builtins.listToAttrs (mappedPackages self));
 in {
   inherit packages;
