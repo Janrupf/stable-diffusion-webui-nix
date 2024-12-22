@@ -2,6 +2,7 @@
 # This is only needed when updating the flake, you don't need to install
 # this when just using stable-diffusion.
 { pkgs
+, lib
 , python-flexseal
 
 # Extra parameters
@@ -14,6 +15,17 @@ let
     pyPkgs.virtualenv
     pyPkgs.wheel
   ]);
+
+  # Transform the Nix objects into arguments that can be passed to pip
+  requirementToPip = requirement:
+    if (lib.strings.hasPrefix "https://" requirement.spec) ||
+      (lib.strings.hasPrefix "http://" requirement.spec)
+    then requirement.spec
+    else "${requirement.name}==${requirement.spec}";
+
+  additionalPipArgs = lib.strings.escapeShellArgs (
+    map requirementToPip (webuiPkgs.additionalRequirements or [])
+  );
 in
 pkgs.writeShellScriptBin "stable-diffusion-webui-update-requirements" ''
   set -e
@@ -34,14 +46,6 @@ pkgs.writeShellScriptBin "stable-diffusion-webui-update-requirements" ''
   cache_dir="$temporary_dir/cache"
   env_dir="$temporary_dir/venv"
   requirement_files=("${webuiPkgs.source}/requirements_versions.txt")
-  additional_requirements_file="${webuiPkgs.source}/additional-requirements.json"
-
-  # Make an array of additional requirements
-  declare -A additional_requirements
-  while IFS="@" read -r key value; do
-    echo "Adding additional requirement $key -> $value"
-    additional_requirements[$key]="$value"
-  done < <(${pkgs.jq}/bin/jq -r 'map("\(.name)@\(.spec)")|.[]' "$additional_requirements_file")
 
   echo "Creating virtual environment in $env_dir"
   ${basic-python}/bin/python -m venv "$env_dir"
@@ -53,27 +57,7 @@ pkgs.writeShellScriptBin "stable-diffusion-webui-update-requirements" ''
 
   echo "Installing dependencies..."
 
-  function is_direct_download() {
-    if [[ "$1" =~ http(s):\/\/.* ]]; then
-      return 0
-    else
-      return 1
-    fi
-  }
-
-  function to_pip_spec() {
-    local package_name="$1"
-    local package_spec="''${additional_requirements[$package_name]}"
-
-    if is_direct_download "$package_spec"; then
-      echo -n "$package_spec"
-    else
-      echo -n "$package_name==$package_spec"
-    fi
-  }
-
   declare -a pip_requirement_files
-  declare -a pip_requirements_extra
 
   for f in $requirement_files; do
     echo "  Adding requirement file $f"
@@ -93,8 +77,8 @@ pkgs.writeShellScriptBin "stable-diffusion-webui-update-requirements" ''
     --ignore-installed \
     --report install-report.json \
     "''${pip_requirement_files[@]}" \
-    "''${pip_requirements_extra[@]}" \
-    --cache-dir "$cache_dir"
+    --cache-dir "$cache_dir" \
+    ${additionalPipArgs}
 
   echo "Removing wheel.."
   python -m pip uninstall -y wheel

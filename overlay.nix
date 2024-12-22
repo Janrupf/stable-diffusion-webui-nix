@@ -3,11 +3,8 @@ let
   # These are packages we don't want in the final overlay, so we temporarily
   # keep them in this let block
 
-  webuiPkgs = {
-    source = final.callPackage ./source {};
-    python = final.python310;
-  };
-
+  webuiPkgs = (final.callPackage ./source {}).forge.cuda;
+  
   # Import the requirements
   requirements = prev.callPackage ./requirements {
     inherit webuiPkgs;
