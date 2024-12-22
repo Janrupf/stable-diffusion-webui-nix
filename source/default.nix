@@ -4,18 +4,15 @@
 ...
 }:
 let
-  forge = pkgs.callPackage ./forge.nix {};
+  mkWebuiDistrib = {
+      source
+    , python
+    , additionalRequirements
+    , installInstructions
+  }@args: {
+    type = "stable-diffusion-webui-derivation";
+  } // args;
 in
 {
-  forge = {
-    cuda = {
-      source = forge;
-      python = pkgs.python310;
-
-      additionalRequirements = forge.additionalRequirements ++ [
-        # Acceleration on CUDA
-        { name = "xformers"; spec = "0.0.27"; }
-      ];
-    };
-  };
+  forge = pkgs.callPackage ./forge { inherit mkWebuiDistrib; };
 }

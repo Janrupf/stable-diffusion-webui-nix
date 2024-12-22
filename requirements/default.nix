@@ -31,7 +31,7 @@ let
   # The helper which can import flexsealed data
   loadInstructions = pythonPkgs.callPackage ./install/load-instructions.nix { pkgs = pythonPkgs; };
 
-  requirementPkgs = (loadInstructions ./install/install-instructions.json).packages.overrideScope requirementsOverlay;
+  requirementPkgs = (loadInstructions webuiPkgs.installInstructions).packages.overrideScope requirementsOverlay;
 in {
   # Package requirements for the given source packages
   inherit requirementPkgs;

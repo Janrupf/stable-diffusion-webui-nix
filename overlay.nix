@@ -1,27 +1,41 @@
 final: prev: 
 let
+  lib = final.lib;
+
   # These are packages we don't want in the final overlay, so we temporarily
   # keep them in this let block
 
-  webuiPkgs = (final.callPackage ./source {}).forge.cuda;
-  
-  # Import the requirements
-  requirements = prev.callPackage ./requirements {
-    inherit webuiPkgs;
-  };
+  sources = (final.callPackage ./source {});
+
+  # Take a source set of webui pkgs and get the final packages from it
+  constructPackage = webuiPkgs:
+  let
+    requirements = final.callPackage ./requirements { inherit webuiPkgs; };
+    runner = final.callPackage ./package.nix {
+      inherit webuiPkgs;
+      inherit requirements;
+    };
+  in
+    runner // {
+      update-helper = requirements.update-helper;
+    };
+
+  # Convert the source definitions to the final packages
+  mappedPackages = lib.attrsets.mapAttrsRecursiveCond
+    (as: !(as ? "type" && as.type == "stable-diffusion-webui-derivation"))
+    (path: x: constructPackage x)
+    sources;
 in
 {
-  # Final package
-  stable-diffusion-webui = prev.callPackage ./package.nix {
-    inherit webuiPkgs;
-    inherit requirements;
-  };
-
-  # Requirements update helper
-  stable-diffusion-webui-update-requirements = requirements.update-helper;
-
-  # Python environment for development purpose
-  stable-diffusion-webui-python = requirements.requirementPkgs.webui-python-raw;
-
-  stable-diffusion-requirements = requirements;
+  # Final packages
+  stable-diffusion-webui = mappedPackages // (let
+    error = throw "stable-diffusion-webui has been split into multiple packages! Use stable-diffusion-webui.forge.cuda or similar.";
+  in {
+    type = "derivation";
+    drvPath = error;
+    name = error;
+    outputs = error;
+    meta = error;
+    system = error;
+  });
 }

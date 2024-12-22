@@ -38,33 +38,18 @@
   flake-utils.lib.eachDefaultSystem (system: rec {
     # Make packages available
     legacyPackages = pkgsForSystem system;
-    packages = flake-utils.lib.flattenTree {
-      inherit (legacyPackages) stable-diffusion-webui stable-diffusion-webui-update-requirements;
-    };
-    defaultPackage = packages.stable-diffusion-webui;
+    packages = legacyPackages.stable-diffusion-webui;
 
-    # For development
-    apps.stable-diffusion-webui-update-requirements = flake-utils.lib.mkApp {
-      drv = packages.stable-diffusion-webui-update-requirements;
-    };
-
-    devShells.default = legacyPackages.mkShell {
-      packages = [
-        # Add the python interpreter with all the requirements set up
-        legacyPackages.stable-diffusion-webui-python
-
-        # Tool for updating the requirements json
-        legacyPackages.stable-diffusion-webui-update-requirements
-      ];
-    };
-
-    # Final application
-    apps.stable-diffusion-webui = flake-utils.lib.mkApp {
-      drv = packages.stable-diffusion-webui;
-    };
-    apps.default = apps.stable-diffusion-webui;
-
-    requirements = legacyPackages.stable-diffusion-requirements;
+    # Make all the webui packages also available as apps
+    apps = legacyPackages.lib.attrsets.mapAttrsRecursiveCond
+      (as: !(as ? "type" && as.type == "derivation"))
+      (_: drv: (
+        flake-utils.lib.mkApp { inherit drv; } // {
+          # Also expose the update helper
+          update-helper = flake-utils.lib.mkApp { drv = drv.update-helper; }; 
+        }
+      ))
+      packages;
   }) // {
     # Non system specific stuff
     overlays.default = localOverlay;

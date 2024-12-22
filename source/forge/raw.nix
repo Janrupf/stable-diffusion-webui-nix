@@ -56,7 +56,7 @@ stdenv.mkDerivation {
   };
 
   patches = [
-    ./0003-Move-config-states-to-data-path.patch
+    ./../0003-Move-config-states-to-data-path.patch
   ];
 
   unpackPhase = ''
@@ -73,8 +73,6 @@ stdenv.mkDerivation {
     cp -r ${extraRepos.huggingfaceGuess} $sourceRoot/repositories/huggingface_guess
     cp -r ${extraRepos.googleBlockly} $sourceRoot/repositories/google_blockly_prototypes
     cp -r ${extraRepos.blip} $sourceRoot/repositories/BLIP
-
-    echo '${builtins.toJSON additionalRequirements}' > $sourceRoot/additional-requirements.json
 
     chmod -R u+w -- "$sourceRoot"
 
