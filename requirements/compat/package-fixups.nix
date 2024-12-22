@@ -93,6 +93,9 @@ with pkgs;
     # Will be added by pkgs.autoAddDriverRunpath
     autoPatchelfIgnoreMissingDeps = [ "libcuda.so.1" ];
     nativeBuildInputs = (prev.nativeBuildInputs or []) ++ [ pkgs.autoAddDriverRunpath ];
+
+    # TODO: This is ROCm only!
+    dependencies = (prev.dependencies or []) ++ [ rocmPackages.hipblas ];
   }));
 
   numba = withExtraDependencies prev.numba [ tbb_2021_11 ];
@@ -120,6 +123,12 @@ with pkgs;
   nvidia-cufft-cu12 = propagateLib (removePythonBytecode prev.nvidia-cufft-cu12);
   nvidia-nccl-cu12 = propagateLib (removePythonBytecode prev.nvidia-nccl-cu12);
   nvidia-nvtx-cu12 = propagateLib (removePythonBytecode prev.nvidia-nvtx-cu12);
+
+  # ROCm specific stuff
+  pytorch-triton-rocm = withExtraDependencies prev.pytorch-triton-rocm [
+    pkgs.zlib
+    pkgs.zstd
+  ];
 
   # Extra packages
   webui-python-raw = python;

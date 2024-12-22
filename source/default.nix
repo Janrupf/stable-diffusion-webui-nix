@@ -7,10 +7,15 @@ let
   mkWebuiDistrib = {
       source
     , python
-    , additionalRequirements
+    , additionalRequirements ? []
+    , additionalPipArgs ? []
     , installInstructions
   }@args: {
     type = "stable-diffusion-webui-derivation";
+
+    # So the defaults propagate...
+    inherit additionalPipArgs;
+    inherit additionalRequirements;
   } // args;
 in
 {

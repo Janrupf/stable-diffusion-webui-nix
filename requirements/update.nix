@@ -24,7 +24,8 @@ let
     else "${requirement.name}==${requirement.spec}";
 
   additionalPipArgs = lib.strings.escapeShellArgs (
-    map requirementToPip (webuiPkgs.additionalRequirements or [])
+    (map requirementToPip (webuiPkgs.additionalRequirements or [])) ++
+    webuiPkgs.additionalPipArgs
   );
 in
 pkgs.writeShellScriptBin "stable-diffusion-webui-update-requirements" ''
