@@ -22,9 +22,8 @@ in
     source = raw;
     python = pkgs.python310;
     additionalRequirements = raw.additionalRequirements ++ [
-      { name = "torch"; spec = "https://download.pytorch.org/whl/nightly/rocm6.2/torch-2.6.0.dev20241122%2Brocm6.2-cp310-cp310-linux_x86_64.whl"; }
-      { name = "torchvision"; spec = "https://download.pytorch.org/whl/nightly/rocm6.2/torchvision-0.20.0.dev20241206%2Brocm6.2-cp310-cp310-linux_x86_64.whl"; }
-      { name = "torchaudio"; spec = "https://download.pytorch.org/whl/nightly/rocm6.2/torchaudio-2.5.0.dev20241206%2Brocm6.2-cp310-cp310-linux_x86_64.whl"; }
+      { name = "torch"; spec = "https://download.pytorch.org/whl/nightly/rocm6.0/torch-2.5.0.dev20240802%2Brocm6.0-cp310-cp310-linux_x86_64.whl"; }
+      { name = "torchvision"; spec = "https://download.pytorch.org/whl/nightly/rocm6.0/torchvision-0.20.0.dev20240822%2Brocm6.0-cp310-cp310-linux_x86_64.whl"; }
     ];
     additionalPipArgs = ["--extra-index-url" "https://download.pytorch.org/whl/nightly/rocm6.2/"];
 

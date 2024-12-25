@@ -1,0 +1,36 @@
+diff --git a/Tensile/TensileCreateLibrary.py b/Tensile/TensileCreateLibrary.py
+index 00321294..ba953f11 100644
+--- a/Tensile/TensileCreateLibrary.py
++++ b/Tensile/TensileCreateLibrary.py
+@@ -50,6 +50,7 @@ import shlex
+ import shutil
+ import subprocess
+ import sys
++import stat
+ from timeit import default_timer as timer
+ from copy import deepcopy
+ 
+@@ -773,6 +774,10 @@ def copyStaticFiles(outputPath=None):
+     # copy file
+     shutil.copy( os.path.join(globalParameters["SourcePath"], fileName), \
+         outputPath )
++    # Make files writeable after copy
++    destFile = os.path.join(outputPath, fileName)
++    st = os.stat(destFile)
++    os.chmod(destFile, st.st_mode | stat.S_IWUSR | stat.S_IREAD)
+ 
+   return libraryStaticFiles
+ 
+@@ -1349,6 +1354,12 @@ def TensileCreateLibrary():
+     shutil.copy( os.path.join(globalParameters["SourcePath"], fileName), \
+       outputPath )
+ 
++    # Make files writeable after copy
++    destFile = os.path.join(outputPath, fileName)
++    st = os.stat(destFile)
++    os.chmod(destFile, st.st_mode | stat.S_IWUSR | stat.S_IREAD)
++
++
+   # write solutions and kernels
+   codeObjectFiles = writeSolutionsAndKernels(outputPath, CxxCompiler, None, solutions,
+                                              kernels, kernelHelperObjs, kernelWriterAssembly)

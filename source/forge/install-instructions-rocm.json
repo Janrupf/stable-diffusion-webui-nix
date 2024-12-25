@@ -231,14 +231,14 @@
       "name": "charset-normalizer",
       "source": {
         "hashes": {
-          "sha256": "7f683ddc7eedd742e2889d2bfb96d69573fde1d92fcb811979cdb7165bb9c7d3"
+          "sha256": "b010a7a4fd316c3c484d482922d13044979e78d1861f0e0650423144c616a46a"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/f8/01/344ec40cf5d85c1da3c1f57566c59e0c9b56bcc5566c08804a95a6cc8257/charset_normalizer-3.4.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/93/62/5e89cdfe04584cb7f4d36003ffa2936681b03ecc0754f8e969c2becb7e24/charset_normalizer-3.4.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "3.4.0"
+      "version": "3.4.1"
     },
     {
       "dependencies": [
@@ -946,14 +946,14 @@
       "name": "kiwisolver",
       "source": {
         "hashes": {
-          "sha256": "88f17c5ffa8e9462fb79f62746428dd57b46eb931698e42e990ad63103f35e6c"
+          "sha256": "034d2c891f76bd3edbdb3ea11140d8510dca675443da7304205a2eaa45d8334c"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/55/91/0a57ce324caf2ff5403edab71c508dd8f648094b18cfbb4c8cc0fde4a6ac/kiwisolver-1.4.7-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
+          "https://files.pythonhosted.org/packages/de/c6/7b9bb8044e150d4d1558423a1568e4f227193662a02231064e3824f37e0a/kiwisolver-1.4.8-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl"
         ]
       },
-      "version": "1.4.7"
+      "version": "1.4.8"
     },
     {
       "dependencies": [
@@ -1578,14 +1578,14 @@
       "name": "pytorch-triton-rocm",
       "source": {
         "hashes": {
-          "sha256": "20d8d24b6647010c92e7816164f39af4cd614026aa9a8f20632a2992edf257b3"
+          "sha256": "f9447ca1b9caf02999be5015aca4e51e013ab5bf9b5d8450d358ce63ed5a150f"
         },
         "is_wheel": true,
         "urls": [
-          "https://download.pytorch.org/whl/nightly/pytorch_triton_rocm-3.1.0%2Bcf34004b8a-cp310-cp310-linux_x86_64.whl"
+          "https://download.pytorch.org/whl/nightly/pytorch_triton_rocm-3.0.0%2B21eae954ef-cp310-cp310-linux_x86_64.whl"
         ]
       },
-      "version": "3.1.0+cf34004b8a"
+      "version": "3.0.0+21eae954ef"
     },
     {
       "dependencies": [],
@@ -1982,14 +1982,14 @@
       "name": "sympy",
       "source": {
         "hashes": {
-          "sha256": "db36cdc64bf61b9b24578b6f7bab1ecdd2452cf008f34faa33776680c26d66f8"
+          "sha256": "54612cf55a62755ee71824ce692986f23c88ffa77207b30c1368eda4a7060f73"
         },
         "is_wheel": true,
         "urls": [
-          "https://download.pytorch.org/whl/nightly/sympy-1.13.1-py3-none-any.whl"
+          "https://download.pytorch.org/whl/nightly/sympy-1.13.3-py3-none-any.whl"
         ]
       },
-      "version": "1.13.1"
+      "version": "1.13.3"
     },
     {
       "dependencies": [
@@ -2092,31 +2092,14 @@
       "name": "torch",
       "source": {
         "hashes": {
-          "sha256": "bb47f77d6350c627209f2067ee4a198c33255ae2659314017db6ebd2535cd3ad"
+          "sha256": "4d08f92efe793bd5b379d0358fc9cf68cc5eb0f90911572897e06811343941df"
         },
         "is_wheel": true,
         "urls": [
-          "https://download.pytorch.org/whl/nightly/rocm6.2/torch-2.6.0.dev20241122%2Brocm6.2-cp310-cp310-linux_x86_64.whl"
+          "https://download.pytorch.org/whl/nightly/rocm6.0/torch-2.5.0.dev20240802%2Brocm6.0-cp310-cp310-linux_x86_64.whl"
         ]
       },
-      "version": "2.6.0.dev20241122+rocm6.2"
-    },
-    {
-      "dependencies": [
-        "torch"
-      ],
-      "enabled_extras": [],
-      "name": "torchaudio",
-      "source": {
-        "hashes": {
-          "sha256": "93a9a3043f92e4e958eea2606e9109c7c17619712b434ffd595244b671a94bdb"
-        },
-        "is_wheel": true,
-        "urls": [
-          "https://download.pytorch.org/whl/nightly/rocm6.2/torchaudio-2.5.0.dev20241206%2Brocm6.2-cp310-cp310-linux_x86_64.whl"
-        ]
-      },
-      "version": "2.5.0.dev20241206+rocm6.2"
+      "version": "2.5.0.dev20240802+rocm6.0"
     },
     {
       "dependencies": [
@@ -2186,14 +2169,14 @@
       "name": "torchvision",
       "source": {
         "hashes": {
-          "sha256": "4854c916cd501db19e8758b17b9fa925836842ba6061bacab47f7f68980bab51"
+          "sha256": "088934c1149e2d293468edc41db01e9adbb1f70ca21d320ad1e898c3df91f83a"
         },
         "is_wheel": true,
         "urls": [
-          "https://download.pytorch.org/whl/nightly/rocm6.2/torchvision-0.20.0.dev20241206%2Brocm6.2-cp310-cp310-linux_x86_64.whl"
+          "https://download.pytorch.org/whl/nightly/rocm6.0/torchvision-0.20.0.dev20240822%2Brocm6.0-cp310-cp310-linux_x86_64.whl"
         ]
       },
-      "version": "0.20.0.dev20241206+rocm6.2"
+      "version": "0.20.0.dev20240822+rocm6.0"
     },
     {
       "dependencies": [],
@@ -2307,14 +2290,14 @@
       "name": "urllib3",
       "source": {
         "hashes": {
-          "sha256": "ca899ca043dcb1bafa3e262d73aa25c465bfb49e0bd9dd5d59f1d0acba2f8fac"
+          "sha256": "1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df"
         },
         "is_wheel": true,
         "urls": [
-          "https://download.pytorch.org/whl/nightly/urllib3-2.2.3-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/c8/19/4ec628951a74043532ca2cf5d97b7b14863931476d117c471e8e2b1eb39f/urllib3-2.3.0-py3-none-any.whl"
         ]
       },
-      "version": "2.2.3"
+      "version": "2.3.0"
     },
     {
       "dependencies": [

@@ -1,0 +1,18 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 87cd6c80..215be717 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -206,13 +206,6 @@ else()
+       set( Tensile_ROOT "${CMAKE_BINARY_DIR}/virtualenv/Lib/site-packages/Tensile" )
+     endif()
+ 
+-    include(virtualenv)
+-    if (Tensile_TEST_LOCAL_PATH)
+-      virtualenv_install(${Tensile_TEST_LOCAL_PATH})
+-      message (STATUS "using local Tensile from ${Tensile_TEST_LOCAL_PATH}, copied to ${Tensile_ROOT}")
+-    else()
+-      virtualenv_install(${CMAKE_SOURCE_DIR}/tensilelite)
+-    endif()
+     message(STATUS "Adding ${VIRTUALENV_HOME_DIR} to CMAKE_PREFIX_PATH")
+     list(APPEND CMAKE_PREFIX_PATH ${VIRTUALENV_HOME_DIR})
+     if (TENSILE_VERSION)

@@ -1,0 +1,35 @@
+diff --git a/Tensile/Ops/gen_assembly.sh b/Tensile/Ops/gen_assembly.sh
+index 7b160690..ec2f7e4b 100644
+--- a/Tensile/Ops/gen_assembly.sh
++++ b/Tensile/Ops/gen_assembly.sh
+@@ -23,21 +23,16 @@
+ #
+ ################################################################################
+ 
++set -e
++
+ archStr=$1
+ dst=$2
+ venv=$3
+ 
+-rocm_path=/opt/rocm
+-if ! [ -z ${ROCM_PATH+x} ]; then
+-    rocm_path=${ROCM_PATH}
+-fi
+-
+-toolchain=${rocm_path}/llvm/bin/clang++
+-
+-. ${venv}/bin/activate
+-
+ IFS=';' read -r -a archs <<< "$archStr"
+ 
++toolchain=clang++
++
+ for arch in "${archs[@]}"; do
+     objs=()
+     echo "Creating code object for arch ${arch}"
+@@ -60,4 +55,3 @@ for arch in "${archs[@]}"; do
+     python3 ./ExtOpCreateLibrary.py --src=$dst --co=$dst/extop_$arch.co --output=$dst --arch=$arch
+ done
+ 
+-deactivate

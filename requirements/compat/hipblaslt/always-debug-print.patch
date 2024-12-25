@@ -1,0 +1,22 @@
+diff --git a/Tensile/TensileInstructions/Base.py b/Tensile/TensileInstructions/Base.py
+index 23f2c896..709430be 100644
+--- a/Tensile/TensileInstructions/Base.py
++++ b/Tensile/TensileInstructions/Base.py
+@@ -29,6 +29,7 @@ from typing import Tuple
+ import pickle
+ import subprocess
+ import threading
++import os
+ from functools import lru_cache
+ 
+ def fastdeepcopy(x):
+@@ -206,7 +207,8 @@ def _tryAssembler(isaVersion: Tuple[int, int, int], assemblerPath: str, asmStrin
+     result = subprocess.run(args, input=asmString.encode(), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+     output = result.stdout.decode()
+ 
+-    if debug:
++    if True:
++        print("cwd: ", os.getcwd())
+         print("isaVersion: ", isaVersion)
+         print("asm_cmd:", ' '.join(args))
+         print("asmString: ", asmString)

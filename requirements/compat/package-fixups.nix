@@ -8,6 +8,8 @@
 , pythonPkgs
 }: final: prev: 
 let
+  hipblaslt = pkgs.callPackage ./hipblaslt { inherit python; inherit pythonPkgs; };
+
   # Add dependencies to a package
   withExtraDependencies = pkg: extraDeps: pkg.overridePythonAttrs (prev: {
     dependencies = prev.dependencies ++ extraDeps;
@@ -49,6 +51,8 @@ let
 in
 with pkgs;
 {
+  inherit hipblaslt;
+  
   # Numpy needs zlib and also needs to define coreIncludeDir so that scipy
   # can consume it
   numpy = prev.numpy.overridePythonAttrs (prevPyAttrs: {
@@ -95,7 +99,7 @@ with pkgs;
     nativeBuildInputs = (prev.nativeBuildInputs or []) ++ [ pkgs.autoAddDriverRunpath ];
 
     # TODO: This is ROCm only!
-    dependencies = (prev.dependencies or []) ++ [ rocmPackages.hipblas ];
+    dependencies = (prev.dependencies or []) ++ [ hipblaslt ];
   }));
 
   numba = withExtraDependencies prev.numba [ tbb_2021_11 ];

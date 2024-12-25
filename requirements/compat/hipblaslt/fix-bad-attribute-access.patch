@@ -1,0 +1,13 @@
+diff --git a/Tensile/KernelWriter.py b/Tensile/KernelWriter.py
+index a13112c5..03583fd1 100644
+--- a/Tensile/KernelWriter.py
++++ b/Tensile/KernelWriter.py
+@@ -4252,7 +4252,7 @@ for codeObjectFileName in codeObjectFileNames:
+           self.states.version = tuple(kernel["ISA"])
+         if not globalParameters["AsmCaps"][self.states.version]["SupportedISA"]:
+           defaultIsa = (9,0,0)
+-          print("warning: ISA:", self.version, " is not supported; overriding with ", defaultIsa)
++          print("warning: ISA:", self.states.version, " is not supported; overriding with ", defaultIsa)
+           self.states.version = defaultIsa
+       else:
+         kernelFoundMessage = "replacement_assemblyFilename "

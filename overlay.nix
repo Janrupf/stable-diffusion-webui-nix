@@ -18,6 +18,7 @@ let
   in
     runner // {
       update-helper = requirements.update-helper;
+      inherit requirements;
     };
 
   # Convert the source definitions to the final packages
