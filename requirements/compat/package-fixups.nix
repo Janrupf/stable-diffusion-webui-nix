@@ -99,7 +99,7 @@ with pkgs;
     nativeBuildInputs = (prev.nativeBuildInputs or []) ++ [ pkgs.autoAddDriverRunpath ];
 
     # TODO: This is ROCm only!
-    dependencies = (prev.dependencies or []) ++ [ hipblaslt ];
+    # dependencies = (prev.dependencies or []) ++ [ hipblaslt ];
   }));
 
   numba = withExtraDependencies prev.numba [ tbb_2021_11 ];
