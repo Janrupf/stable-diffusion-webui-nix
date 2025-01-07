@@ -63,16 +63,6 @@ with pkgs;
     };
   });
 
-  # Replace scipy with the one from nixpkgs
-  #
-  # Not doing so results in a corrupted scipy_openblas library:
-  #  ImportError: libscipy_openblas-c128ec02.so: ELF load command address/offset not page-aligned
-  #
-  # Probably a case of https://github.com/NixOS/patchelf/issues/492
-  scipy = pythonPkgs.scipy.override (scipyPrev: {
-    numpy = final.numpy;
-  });
-
   # A bunch of packages require zlib
   llvmlite = withZlib prev.llvmlite;
   tokenizers = withZlib prev.tokenizers;
