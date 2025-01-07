@@ -42,6 +42,9 @@ let
 
     # Required by the stable diffusion model, no idea where it comes from usually
     { name = "timm"; spec = "0.9.16"; }
+
+    # Installed from modules_forge/bnb_installer.py
+    { name = "bitsandbytes"; spec = "0.43.3"; }
   ];
 in
 stdenv.mkDerivation {
@@ -51,8 +54,8 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "lllyasviel";
     repo = "stable-diffusion-webui-forge";
-    rev = "a332f7cca35989412c7add36040d78694398b64b";
-    hash = "sha256-I0I2m/h4BLPajm0wu53gcrpJhS3TgYCGZJ4F6roiTWE=";
+    rev = "f53307881bfd824dbdce6ac0d4bba04d9a74ab36";
+    hash = "sha256-51ZQwiRrduRDKQgymlOh41L4ia8aS1GhSUL1Z3LSxrs=";
   };
 
   patches = [

@@ -92,6 +92,18 @@ with pkgs;
     # dependencies = (prev.dependencies or []) ++ [ hipblaslt ];
   }));
 
+  bitsandbytes = (prev.bitsandbytes.overridePythonAttrs (prev: {
+    # Available at runtime if, and only if, CUDA is loaded -
+    # but also only required if its loaded either way, so we
+    # ignore these dependencies
+    autoPatchelfIgnoreMissingDeps = [
+      "libcudart.so.11.0"
+      "libcublas.so.11"
+      "libcusparse.so.11"
+      "libcublasLt.so.11"
+    ];
+  }));
+
   numba = withExtraDependencies prev.numba [ tbb_2021_11 ];
 
   filterpy = prev.filterpy.overridePythonAttrs (prev: {
