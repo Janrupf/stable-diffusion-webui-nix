@@ -46,7 +46,7 @@ pkgs.writeShellScriptBin "stable-diffusion-webui-update-requirements" ''
   download_dir="$temporary_dir/downloads"
   cache_dir="$temporary_dir/cache"
   env_dir="$temporary_dir/venv"
-  requirement_files=("${webuiPkgs.source}/requirements_versions.txt")
+  requirement_files=("${webuiPkgs.source}/${webuiPkgs.requirementsFileName}")
 
   echo "Creating virtual environment in $env_dir"
   ${basic-python}/bin/python -m venv "$env_dir"

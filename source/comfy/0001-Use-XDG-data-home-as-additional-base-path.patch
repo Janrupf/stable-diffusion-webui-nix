@@ -1,0 +1,55 @@
+From d42c142b14dcf7f77935dec6265f62e3337534a9 Mon Sep 17 00:00:00 2001
+From: Janrupf <business.janrupf@gmail.com>
+Date: Wed, 8 Jan 2025 03:38:05 +0100
+Subject: [PATCH] Use XDG data home as additional base path
+
+---
+ folder_paths.py | 32 ++++++++++++++++++++++++++++----
+ 1 file changed, 28 insertions(+), 4 deletions(-)
+
+diff --git a/folder_paths.py b/folder_paths.py
+index 3542d2e..ace1937 100644
+--- a/folder_paths.py
++++ b/folder_paths.py
+@@ -39,10 +39,34 @@ folder_names_and_paths["photomaker"] = ([os.path.join(models_dir, "photomaker")]
+ 
+ folder_names_and_paths["classifiers"] = ([os.path.join(models_dir, "classifiers")], {""})
+ 
+-output_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "output")
+-temp_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "temp")
+-input_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "input")
+-user_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "user")
++### NIX PATCH: Move stuff to writable directories ###
++user_home_dir = os.path.expanduser("~")
++xdg_data_home = os.environ.get("XDG_DATA_HOME") or os.path.join(user_home_dir, ".local", "share")
++
++nix_base_path = os.environ.get("NIX_COMFYUI_BASE_PATH") or os.path.join(xdg_data_home, "comfy-ui")
++
++for folder_name in folder_names_and_paths:
++    paths_to_add = list()
++    existing_paths, _ext = folder_names_and_paths[folder_name]
++    for existing in existing_paths:
++        relative = os.path.relpath(existing, base_path)
++
++        nix_path = os.path.join(nix_base_path, relative)
++        if not os.path.exists(nix_path):
++            os.makedirs(nix_path)
++        else:
++            real_nix_path = os.path.realpath(nix_path)
++            if not os.path.isdir(real_nix_path):
++                raise Exception(f"{nix_path} (resolves to {real_nix_path}) should be a directory")
++
++        paths_to_add.append(nix_path)
++
++    existing_paths[:0] = paths_to_add
++
++output_directory = os.path.join(nix_base_path, "output")
++temp_directory = os.path.join(nix_base_path, "temp")
++input_directory = os.path.join(nix_base_path, "input")
++user_directory = os.path.join(nix_base_path, "user")
+ 
+ filename_list_cache: dict[str, tuple[list[str], dict[str, float], float]] = {}
+ 
+-- 
+2.47.0
+

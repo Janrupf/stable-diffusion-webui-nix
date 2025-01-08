@@ -59,7 +59,7 @@ stdenv.mkDerivation {
   };
 
   patches = [
-    ./../0003-Move-config-states-to-data-path.patch
+    ./0003-Move-config-states-to-data-path.patch
   ];
 
   unpackPhase = ''

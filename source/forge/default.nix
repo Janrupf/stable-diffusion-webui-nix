@@ -4,6 +4,8 @@
 }:
 let
   raw = pkgs.callPackage ./raw.nix {};
+
+  createPackage = import ./package.nix;
 in
 {
   cuda = mkWebuiDistrib {
@@ -16,6 +18,8 @@ in
     ];
 
     installInstructions = ./install-instructions-cuda.json;
+
+    inherit createPackage;
   };
 
   rocm = mkWebuiDistrib {
@@ -28,5 +32,7 @@ in
     additionalPipArgs = ["--extra-index-url" "https://download.pytorch.org/whl/nightly/rocm6.2/"];
 
     installInstructions = ./install-instructions-rocm.json;
+
+    inherit createPackage;
   };
 }

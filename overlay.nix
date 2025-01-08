@@ -11,7 +11,7 @@ let
   constructPackage = webuiPkgs:
   let
     requirements = final.callPackage ./requirements { inherit webuiPkgs; };
-    runner = final.callPackage ./package.nix {
+    runner = final.callPackage webuiPkgs.createPackage {
       inherit webuiPkgs;
       inherit requirements;
     };

@@ -50,7 +50,7 @@ let
 
 in
 with pkgs;
-{
+rec {
   inherit hipblaslt;
   
   # Numpy needs zlib and also needs to define coreIncludeDir so that scipy
@@ -90,6 +90,30 @@ with pkgs;
 
     # TODO: This is ROCm only!
     # dependencies = (prev.dependencies or []) ++ [ hipblaslt ];
+  }));
+
+  torchaudio = propagateLib (prev.torchaudio.overridePythonAttrs (prev: {
+    dependencies = [ pkgs.ffmpeg_6 pkgs.sox torch ];
+
+    # Torchaudio automatically selects between ffmpeg 6, 5 and 4 -
+    # we provide 6, so ignore the missing ffmpeg 4 and 5
+    autoPatchelfIgnoreMissingDeps = [
+      # ffmpeg 5
+      "libavutil.so.57"
+      "libavcodec.so.59"
+      "libavformat.so.59"
+      "libavfilter.so.8"
+      "libavutil.so.57"
+      "libavdevice.so.59"
+
+      # ffmpeg 4
+      "libavutil.so.56"
+      "libavcodec.so.58"
+      "libavformat.so.58"
+      "libavfilter.so.7"
+      "libavutil.so.56"
+      "libavdevice.so.58"
+    ];
   }));
 
   bitsandbytes = (prev.bitsandbytes.overridePythonAttrs (prev: {
