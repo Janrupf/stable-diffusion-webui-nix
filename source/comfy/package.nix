@@ -7,7 +7,7 @@
 let
   python = requirements.requirementPkgs.webui-python-env;
 in
-pkgs.writeShellScriptBin "comfyui" ''
+pkgs.writeShellScriptBin "comfy-ui" ''
   prog_args=()
   dataDirOverride=""
 

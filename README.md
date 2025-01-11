@@ -28,7 +28,7 @@ environment.systemPackages = [
 ];
 ```
 
-Afterwards you should have the command `stable-diffusion-webui` or `comfyui`
+Afterwards you should have the command `stable-diffusion-webui` or `comfy-ui`
 available which launches the server.
 
 ### Quirks
