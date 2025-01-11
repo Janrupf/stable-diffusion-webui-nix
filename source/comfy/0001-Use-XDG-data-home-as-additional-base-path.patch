@@ -1,17 +1,17 @@
-From d42c142b14dcf7f77935dec6265f62e3337534a9 Mon Sep 17 00:00:00 2001
+From 3be1ddf1152d3a0b7a69699e916e09c04dc4b643 Mon Sep 17 00:00:00 2001
 From: Janrupf <business.janrupf@gmail.com>
 Date: Wed, 8 Jan 2025 03:38:05 +0100
 Subject: [PATCH] Use XDG data home as additional base path
 
 ---
- folder_paths.py | 32 ++++++++++++++++++++++++++++----
- 1 file changed, 28 insertions(+), 4 deletions(-)
+ folder_paths.py | 38 ++++++++++++++++++++++++++++++++++----
+ 1 file changed, 34 insertions(+), 4 deletions(-)
 
 diff --git a/folder_paths.py b/folder_paths.py
-index 3542d2e..ace1937 100644
+index 3542d2e..b2f8ce8 100644
 --- a/folder_paths.py
 +++ b/folder_paths.py
-@@ -39,10 +39,34 @@ folder_names_and_paths["photomaker"] = ([os.path.join(models_dir, "photomaker")]
+@@ -39,10 +39,40 @@ folder_names_and_paths["photomaker"] = ([os.path.join(models_dir, "photomaker")]
  
  folder_names_and_paths["classifiers"] = ([os.path.join(models_dir, "classifiers")], {""})
  
@@ -25,6 +25,11 @@ index 3542d2e..ace1937 100644
 +
 +nix_base_path = os.environ.get("NIX_COMFYUI_BASE_PATH") or os.path.join(xdg_data_home, "comfy-ui")
 +
++# Overwrite the models dir visible to external modules, so that they write to the writable
++# storage location
++models_dir = os.path.join(nix_base_path, "models")
++
++# And for each directory, add the writeable directory
 +for folder_name in folder_names_and_paths:
 +    paths_to_add = list()
 +    existing_paths, _ext = folder_names_and_paths[folder_name]
@@ -43,6 +48,7 @@ index 3542d2e..ace1937 100644
 +
 +    existing_paths[:0] = paths_to_add
 +
++# Move all these to the writable location always
 +output_directory = os.path.join(nix_base_path, "output")
 +temp_directory = os.path.join(nix_base_path, "temp")
 +input_directory = os.path.join(nix_base_path, "input")

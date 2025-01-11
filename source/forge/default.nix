@@ -33,6 +33,7 @@ in
 
     installInstructions = ./install-instructions-rocm.json;
 
-    inherit createPackage;
+    createPackage = throw "ROCm is currently broken";
+    # inherit createPackage; # Want to work on ROCm? Swap the line above with this
   };
 }

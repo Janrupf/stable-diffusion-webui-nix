@@ -18,10 +18,14 @@ let
 
   # Transform the Nix objects into arguments that can be passed to pip
   requirementToPip = requirement:
-    if (lib.strings.hasPrefix "https://" requirement.spec) ||
-      (lib.strings.hasPrefix "http://" requirement.spec)
-    then requirement.spec
-    else "${requirement.name}==${requirement.spec}";
+    if requirement ? spec then
+      if (lib.strings.hasPrefix "https://" requirement.spec) || (lib.strings.hasPrefix "http://" requirement.spec)
+        then requirement.spec
+      else let
+        op = requirement.op or "==";
+      in "${requirement.name}${op}${requirement.spec}"
+    else
+      requirement.name;
 
   additionalPipArgs = lib.strings.escapeShellArgs (
     (map requirementToPip (webuiPkgs.additionalRequirements or [])) ++

@@ -28,7 +28,16 @@ in {
     source = sourceDerivation;
     python = pkgs.python312;
 
-    additionalRequirements = [];
+    additionalRequirements = [
+      # Required for some extensions, common enough to be included
+      # here
+      { name = "diffusers"; op = ">="; spec = "0.31.0"; }
+      { name = "huggingface_hub"; }
+      { name = "einops"; }
+      { name = "peft"; }
+      { name = "opencv-python"; }
+      { name = "imageio-ffmpeg"; }
+    ];
 
     installInstructions = ./install-instructions-cuda.json;
 

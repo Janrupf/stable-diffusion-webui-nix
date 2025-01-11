@@ -1,6 +1,29 @@
 {
   "packages": [
     {
+      "dependencies": [
+        "huggingface-hub",
+        "numpy",
+        "packaging",
+        "psutil",
+        "pyyaml",
+        "safetensors",
+        "torch"
+      ],
+      "enabled_extras": [],
+      "name": "accelerate",
+      "source": {
+        "hashes": {
+          "sha256": "be1cbb958cf837e7cdfbde46b812964b1b8ae94c9c7d94d921540beafcee8ddf"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/c2/60/a585c806d6c0ec5f8149d44eb202714792802f484e6e2b1bf96b23bd2b00/accelerate-1.2.1-py3-none-any.whl"
+        ]
+      },
+      "version": "1.2.1"
+    },
+    {
       "dependencies": [],
       "enabled_extras": [],
       "name": "aiohappyeyeballs",
@@ -118,6 +141,30 @@
       "version": "3.4.1"
     },
     {
+      "dependencies": [
+        "filelock",
+        "huggingface-hub",
+        "importlib-metadata",
+        "numpy",
+        "pillow",
+        "regex",
+        "requests",
+        "safetensors"
+      ],
+      "enabled_extras": [],
+      "name": "diffusers",
+      "source": {
+        "hashes": {
+          "sha256": "ab2ed6efe9dd2364db55b94fae453ff149dc06693ec99702cadfbeeaaa00c9c1"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/44/67/f9a02086faf52372ad36224c6d95616a867399e171e6919a5c326b75cd10/diffusers-0.32.1-py3-none-any.whl"
+        ]
+      },
+      "version": "0.32.1"
+    },
+    {
       "dependencies": [],
       "enabled_extras": [],
       "name": "einops",
@@ -214,6 +261,40 @@
         ]
       },
       "version": "3.10"
+    },
+    {
+      "dependencies": [
+        "setuptools"
+      ],
+      "enabled_extras": [],
+      "name": "imageio-ffmpeg",
+      "source": {
+        "hashes": {
+          "sha256": "5289f75c7f755b499653f3209fea4efd1430cba0e39831c381aad2d458f7a316"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/fe/44/c9e18a73dfd939b5b0ec843870ac72f1f6c17e31a03149b687a85465bff7/imageio_ffmpeg-0.5.1-py3-none-manylinux2010_x86_64.whl"
+        ]
+      },
+      "version": "0.5.1"
+    },
+    {
+      "dependencies": [
+        "zipp"
+      ],
+      "enabled_extras": [],
+      "name": "importlib-metadata",
+      "source": {
+        "hashes": {
+          "sha256": "45e54197d28b7a7f1559e60b95e7c567032b602131fbd588f1497f47880aa68b"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/a0/d9/a1e041c5e7caa9a05c925f4bdbdfb7f006d1f74996af53467bc394c97be7/importlib_metadata-8.5.0-py3-none-any.whl"
+        ]
+      },
+      "version": "8.5.0"
     },
     {
       "dependencies": [
@@ -530,6 +611,23 @@
       "version": "12.4.127"
     },
     {
+      "dependencies": [
+        "numpy"
+      ],
+      "enabled_extras": [],
+      "name": "opencv-python",
+      "source": {
+        "hashes": {
+          "sha256": "9ace140fc6d647fbe1c692bcb2abce768973491222c067c131d80957c595b71f"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/3f/a4/d2537f47fd7fcfba966bd806e3ec18e7ee1681056d4b0a9c8d983983e4d5/opencv_python-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        ]
+      },
+      "version": "4.10.0.84"
+    },
+    {
       "dependencies": [],
       "enabled_extras": [],
       "name": "packaging",
@@ -543,6 +641,32 @@
         ]
       },
       "version": "24.2"
+    },
+    {
+      "dependencies": [
+        "accelerate",
+        "huggingface-hub",
+        "numpy",
+        "packaging",
+        "psutil",
+        "pyyaml",
+        "safetensors",
+        "torch",
+        "tqdm",
+        "transformers"
+      ],
+      "enabled_extras": [],
+      "name": "peft",
+      "source": {
+        "hashes": {
+          "sha256": "2f04f3a870c3baf30f15e7dcaa5dd70d3e54cfdd146d3c6c187735d3ae0a0700"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/88/05/e58e3aaa36544d30a917814e336fc65a746f708e5874945e92999bc22fa3/peft-0.14.0-py3-none-any.whl"
+        ]
+      },
+      "version": "0.14.0"
     },
     {
       "dependencies": [],
@@ -660,14 +784,14 @@
       "name": "safetensors",
       "source": {
         "hashes": {
-          "sha256": "83a384e49b38c3ae3c02a52437548351af83029dff85fe3d1acd5b2cf06867bb"
+          "sha256": "3ab696dfdc060caffb61dbe4066b86419107a24c804a4e373ba59be699ebd8d5"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/66/83/041a0aabcd4f614460ed3f37e4c352160c7e52c8d5e5e9f250896a14adb8/safetensors-0.5.1-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/c5/dc/8952caafa9a10a3c0f40fa86bacf3190ae7f55fa5eef87415b97b29cb97f/safetensors-0.5.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "0.5.1"
+      "version": "0.5.2"
     },
     {
       "dependencies": [
@@ -707,14 +831,14 @@
       "name": "setuptools",
       "source": {
         "hashes": {
-          "sha256": "84fb203f278ebcf5cd08f97d3fb96d3fbed4b629d500b29ad60d11e00769b183"
+          "sha256": "e3982f444617239225d675215d51f6ba05f845d4eec313da4418fdbb56fb27e3"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/4e/6e/abdfaaf5c294c553e7a81cf5d801fbb4f53f5c5b6646de651f92a2667547/setuptools-75.7.0-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/69/8a/b9dc7678803429e4a3bc9ba462fa3dd9066824d3c607490235c6a796be5a/setuptools-75.8.0-py3-none-any.whl"
         ]
       },
-      "version": "75.7.0"
+      "version": "75.8.0"
     },
     {
       "dependencies": [
@@ -1003,6 +1127,21 @@
         ]
       },
       "version": "1.18.3"
+    },
+    {
+      "dependencies": [],
+      "enabled_extras": [],
+      "name": "zipp",
+      "source": {
+        "hashes": {
+          "sha256": "ac1bbe05fd2991f160ebce24ffbac5f6d11d83dc90891255885223d42b3cd931"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/b7/1a/7e4798e9339adc931158c9d69ecc34f5e6791489d469f5e50ec15e35f458/zipp-3.21.0-py3-none-any.whl"
+        ]
+      },
+      "version": "3.21.0"
     }
   ]
 }
