@@ -50,11 +50,13 @@
         }
       ))
       packages;
-  }) // {
+  }) // rec {
     # Non system specific stuff
     overlays.default = (final: prev: {
       # For now we need to pollute with python-flexseal, not sure how to prevent this
       python-flexseal = python-flexseal.packages.${prev.stdenv.system}.python-flexseal;
     } // (localOverlay final prev));
+
+    nixosModules.default = import ./modules { packageOverlay = overlays.default; };
   };
 }
