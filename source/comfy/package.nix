@@ -14,7 +14,6 @@ pkgs.writeShellScriptBin "comfy-ui" ''
   for (( i=1; i <= "$#"; i++ ))
   do
     arg="''${!i}"
-    echo "Handling arg $i: $arg"
     if [[ "$arg" == "--data-dir" ]]; then
       i=$(( $i + 1 ))
       dataDirOverride="''${!i}"
