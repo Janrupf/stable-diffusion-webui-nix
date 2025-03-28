@@ -29,14 +29,21 @@ in {
     python = pkgs.python312;
 
     additionalRequirements = [
-      # Required for some extensions, common enough to be included
+      # Required for most video extensions, common enough to be included
       # here
       { name = "diffusers"; op = ">="; spec = "0.31.0"; }
+      { name = "accelerate"; op = ">="; spec = "1.2.1"; }
+      { name = "transformers"; op = "=="; spec = "4.47.1"; }
+      { name = "jax"; op = ">="; spec = "0.4.28"; }
       { name = "huggingface_hub"; }
       { name = "einops"; }
       { name = "peft"; }
       { name = "opencv-python"; }
       { name = "imageio-ffmpeg"; }
+      { name = "bitsandbytes"; }
+      { name = "matplotlib"; }
+      { name = "mss"; }
+      { name = "color-matcher"; }
     ];
 
     installInstructions = ./install-instructions-cuda.json;

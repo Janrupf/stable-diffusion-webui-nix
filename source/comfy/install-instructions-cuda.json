@@ -14,14 +14,14 @@
       "name": "accelerate",
       "source": {
         "hashes": {
-          "sha256": "be1cbb958cf837e7cdfbde46b812964b1b8ae94c9c7d94d921540beafcee8ddf"
+          "sha256": "5788d9e6a7a9f80fed665cf09681c4dddd9dc056bea656db4140ffc285ce423e"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/c2/60/a585c806d6c0ec5f8149d44eb202714792802f484e6e2b1bf96b23bd2b00/accelerate-1.2.1-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/73/de/64508cb91af013aaba214752309c0967568a4219d50a4ea30e822af3c976/accelerate-1.3.0-py3-none-any.whl"
         ]
       },
-      "version": "1.2.1"
+      "version": "1.3.0"
     },
     {
       "dependencies": [],
@@ -29,14 +29,14 @@
       "name": "aiohappyeyeballs",
       "source": {
         "hashes": {
-          "sha256": "a980909d50efcd44795c4afeca523296716d50cd756ddca6af8c65b996e27de8"
+          "sha256": "147ec992cf873d74f5062644332c539fcd42956dc69453fe5204195e560517e1"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/b9/74/fbb6559de3607b3300b9be3cc64e97548d55678e44623db17820dbd20002/aiohappyeyeballs-2.4.4-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/44/4c/03fb05f56551828ec67ceb3665e5dc51638042d204983a03b0a1541475b6/aiohappyeyeballs-2.4.6-py3-none-any.whl"
         ]
       },
-      "version": "2.4.4"
+      "version": "2.4.6"
     },
     {
       "dependencies": [
@@ -52,14 +52,14 @@
       "name": "aiohttp",
       "source": {
         "hashes": {
-          "sha256": "a8f5f7515f3552d899c61202d99dcb17d6e3b0de777900405611cd747cecd1b8"
+          "sha256": "6dfe7f984f28a8ae94ff3a7953cd9678550dbd2a1f9bda5dd9c5ae627744c78e"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/40/7f/6de218084f9b653026bd7063cd8045123a7ba90c25176465f266976d8c82/aiohttp-3.11.11-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/17/e2/9f744cee0861af673dc271a3351f59ebd5415928e20080ab85be25641471/aiohttp-3.11.12-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "3.11.11"
+      "version": "3.11.12"
     },
     {
       "dependencies": [
@@ -84,14 +84,32 @@
       "name": "attrs",
       "source": {
         "hashes": {
-          "sha256": "ac96cd038792094f438ad1f6ff80837353805ac950cd2aa0e0625ef19850c308"
+          "sha256": "c75a69e28a550a7e93789579c22aa26b0f5b83b75dc4e08fe092980051e1090a"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/89/aa/ab0f7891a01eeb2d2e338ae8fecbe57fcebea1a24dbb64d45801bfab481d/attrs-24.3.0-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/fc/30/d4986a882011f9df997a55e6becd864812ccfcd821d64aac8570ee39f719/attrs-25.1.0-py3-none-any.whl"
         ]
       },
-      "version": "24.3.0"
+      "version": "25.1.0"
+    },
+    {
+      "dependencies": [
+        "numpy",
+        "torch"
+      ],
+      "enabled_extras": [],
+      "name": "bitsandbytes",
+      "source": {
+        "hashes": {
+          "sha256": "ba3a720187f518b172ebce4081049c682ae3fd8284947e22499b256ff99a2bc3"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/db/9d/9382259196d7ad7f3550702390081224e673a705e75b5660ee377b592fc0/bitsandbytes-0.45.2-py3-none-manylinux_2_24_x86_64.whl"
+        ]
+      },
+      "version": "0.45.2"
     },
     {
       "dependencies": [],
@@ -99,14 +117,14 @@
       "name": "certifi",
       "source": {
         "hashes": {
-          "sha256": "1275f7a45be9464efc1173084eaa30f866fe2e47d389406136d332ed4967ec56"
+          "sha256": "ca78db4565a652026a4db2bcdf68f2fb589ea80d0be70e03929ed730746b84fe"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/a5/32/8f6669fc4798494966bf446c8c4a162e0b5d893dff088afddf76414f70e1/certifi-2024.12.14-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/38/fc/bce832fd4fd99766c04d1ee0eead6b0ec6486fb100ae5e74c1d91292b982/certifi-2025.1.31-py3-none-any.whl"
         ]
       },
-      "version": "2024.12.14"
+      "version": "2025.1.31"
     },
     {
       "dependencies": [
@@ -142,6 +160,73 @@
     },
     {
       "dependencies": [
+        "ddt",
+        "docutils",
+        "imageio",
+        "numpy"
+      ],
+      "enabled_extras": [],
+      "name": "color-matcher",
+      "source": {
+        "hashes": {
+          "sha256": "ff91ad5f2e9c25d846abdadaa41efd6128c4fddc15842ef405c3f174bb44737e"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/a9/c8/92a93c27633843926d70a1966fb26dd0cce38a19557971300d9382f92e29/color_matcher-0.5.0-py3-none-any.whl"
+        ]
+      },
+      "version": "0.5.0"
+    },
+    {
+      "dependencies": [
+        "numpy"
+      ],
+      "enabled_extras": [],
+      "name": "contourpy",
+      "source": {
+        "hashes": {
+          "sha256": "efa874e87e4a647fd2e4f514d5e91c7d493697127beb95e77d2f7561f6905bd9"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/ba/99/6794142b90b853a9155316c8f470d2e4821fe6f086b03e372aca848227dd/contourpy-1.3.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        ]
+      },
+      "version": "1.3.1"
+    },
+    {
+      "dependencies": [],
+      "enabled_extras": [],
+      "name": "cycler",
+      "source": {
+        "hashes": {
+          "sha256": "85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/e7/05/c19819d5e3d95294a6f5947fb9b9629efb316b96de511b418c53d245aae6/cycler-0.12.1-py3-none-any.whl"
+        ]
+      },
+      "version": "0.12.1"
+    },
+    {
+      "dependencies": [],
+      "enabled_extras": [],
+      "name": "ddt",
+      "source": {
+        "hashes": {
+          "sha256": "6adcfaf9785f0a36f9e73a89b91e412de9ef8649e289b750e3683bc79d5e2354"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/61/7c/38d1aec205833096eddefcbb3492fbb2c886e74174c72bc160da9522b2f0/ddt-1.7.2-py2.py3-none-any.whl"
+        ]
+      },
+      "version": "1.7.2"
+    },
+    {
+      "dependencies": [
         "filelock",
         "huggingface-hub",
         "importlib-metadata",
@@ -155,14 +240,29 @@
       "name": "diffusers",
       "source": {
         "hashes": {
-          "sha256": "ab2ed6efe9dd2364db55b94fae453ff149dc06693ec99702cadfbeeaaa00c9c1"
+          "sha256": "d7f182b49c7f428737ee3bf6397d463ec03b85f4f3b2c9470bd1d73292b609ff"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/44/67/f9a02086faf52372ad36224c6d95616a867399e171e6919a5c326b75cd10/diffusers-0.32.1-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/88/c9/2b2e822d871b06605363e52555be5d7ff0996f4eeaf0f7e5fda15adedfbe/diffusers-0.32.2-py3-none-any.whl"
         ]
       },
-      "version": "0.32.1"
+      "version": "0.32.2"
+    },
+    {
+      "dependencies": [],
+      "enabled_extras": [],
+      "name": "docutils",
+      "source": {
+        "hashes": {
+          "sha256": "dafca5b9e384f0e419294eb4d2ff9fa826435bf15f15b7bd45723e8ad76811b2"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/8f/d7/9322c609343d929e75e7e5e6255e614fcc67572cfd083959cdef3b7aad79/docutils-0.21.2-py3-none-any.whl"
+        ]
+      },
+      "version": "0.21.2"
     },
     {
       "dependencies": [],
@@ -170,14 +270,14 @@
       "name": "einops",
       "source": {
         "hashes": {
-          "sha256": "9572fb63046264a862693b0a87088af3bdc8c068fde03de63453cbbde245465f"
+          "sha256": "919387eb55330f5757c6bea9165c5ff5cfe63a642682ea788a6d472576d81737"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/44/5a/f0b9ad6c0a9017e62d4735daaeb11ba3b6c009d69a26141b258cd37b5588/einops-0.8.0-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/87/62/9773de14fe6c45c23649e98b83231fffd7b9892b6cf863251dc2afa73643/einops-0.8.1-py3-none-any.whl"
         ]
       },
-      "version": "0.8.0"
+      "version": "0.8.1"
     },
     {
       "dependencies": [],
@@ -185,14 +285,29 @@
       "name": "filelock",
       "source": {
         "hashes": {
-          "sha256": "2082e5703d51fbf98ea75855d9d5527e33d8ff23099bec374a134febee6946b0"
+          "sha256": "533dc2f7ba78dc2f0f531fc6c4940addf7b70a481e269a5a3b93be94ffbe8338"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/b9/f8/feced7779d755758a52d1f6635d990b8d98dc0a29fa568bbe0625f18fdf3/filelock-3.16.1-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/89/ec/00d68c4ddfedfe64159999e5f8a98fb8442729a63e2077eb9dcd89623d27/filelock-3.17.0-py3-none-any.whl"
         ]
       },
-      "version": "3.16.1"
+      "version": "3.17.0"
+    },
+    {
+      "dependencies": [],
+      "enabled_extras": [],
+      "name": "fonttools",
+      "source": {
+        "hashes": {
+          "sha256": "661a8995d11e6e4914a44ca7d52d1286e2d9b154f685a4d1f69add8418961563"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/95/70/2a781bedc1c45a0c61d29c56425609b22ed7f971da5d7e5df2679488741b/fonttools-4.56.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        ]
+      },
+      "version": "4.56.0"
     },
     {
       "dependencies": [],
@@ -215,14 +330,14 @@
       "name": "fsspec",
       "source": {
         "hashes": {
-          "sha256": "b520aed47ad9804237ff878b504267a3b0b441e97508bd6d2d8774e3db85cee2"
+          "sha256": "9de2ad9ce1f85e1931858535bc882543171d197001a0a5eb2ddc04f1781ab95b"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/de/86/5486b0188d08aa643e127774a99bac51ffa6cf343e3deb0583956dca5b22/fsspec-2024.12.0-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/e2/94/758680531a00d06e471ef649e4ec2ed6bf185356a7f9fbfbb7368a40bd49/fsspec-2025.2.0-py3-none-any.whl"
         ]
       },
-      "version": "2024.12.0"
+      "version": "2025.2.0"
     },
     {
       "dependencies": [
@@ -238,14 +353,14 @@
       "name": "huggingface-hub",
       "source": {
         "hashes": {
-          "sha256": "1c5155ca7d60b60c2e2fc38cbb3ffb7f7c3adf48f824015b219af9061771daec"
+          "sha256": "aa6b9a3ffdae939b72c464dbb0d7f99f56e649b55c3d52406f49e0a5a620c0a7"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/6c/3f/50f6b25fafdcfb1c089187a328c95081abf882309afd86f4053951507cd1/huggingface_hub-0.27.1-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/ea/da/6c2bea5327b640920267d3bf2c9fc114cfbd0a5de234d81cda80cc9e33c8/huggingface_hub-0.28.1-py3-none-any.whl"
         ]
       },
-      "version": "0.27.1"
+      "version": "0.28.1"
     },
     {
       "dependencies": [],
@@ -264,20 +379,36 @@
     },
     {
       "dependencies": [
-        "setuptools"
+        "numpy",
+        "pillow"
       ],
+      "enabled_extras": [],
+      "name": "imageio",
+      "source": {
+        "hashes": {
+          "sha256": "11efa15b87bc7871b61590326b2d635439acc321cf7f8ce996f812543ce10eed"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/cb/bd/b394387b598ed84d8d0fa90611a90bee0adc2021820ad5729f7ced74a8e2/imageio-2.37.0-py3-none-any.whl"
+        ]
+      },
+      "version": "2.37.0"
+    },
+    {
+      "dependencies": [],
       "enabled_extras": [],
       "name": "imageio-ffmpeg",
       "source": {
         "hashes": {
-          "sha256": "5289f75c7f755b499653f3209fea4efd1430cba0e39831c381aad2d458f7a316"
+          "sha256": "c7e46fcec401dd990405049d2e2f475e2b397779df2519b544b8aab515195282"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/fe/44/c9e18a73dfd939b5b0ec843870ac72f1f6c17e31a03149b687a85465bff7/imageio_ffmpeg-0.5.1-py3-none-manylinux2010_x86_64.whl"
+          "https://files.pythonhosted.org/packages/a0/2d/43c8522a2038e9d0e7dbdf3a61195ecc31ca576fb1527a528c877e87d973/imageio_ffmpeg-0.6.0-py3-none-manylinux2014_x86_64.whl"
         ]
       },
-      "version": "0.5.1"
+      "version": "0.6.0"
     },
     {
       "dependencies": [
@@ -287,14 +418,54 @@
       "name": "importlib-metadata",
       "source": {
         "hashes": {
-          "sha256": "45e54197d28b7a7f1559e60b95e7c567032b602131fbd588f1497f47880aa68b"
+          "sha256": "02a89390c1e15fdfdc0d7c6b25cb3e62650d0494005c97d6f148bf5b9787525e"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/a0/d9/a1e041c5e7caa9a05c925f4bdbdfb7f006d1f74996af53467bc394c97be7/importlib_metadata-8.5.0-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/79/9d/0fb148dc4d6fa4a7dd1d8378168d9b4cd8d4560a6fbf6f0121c5fc34eb68/importlib_metadata-8.6.1-py3-none-any.whl"
         ]
       },
-      "version": "8.5.0"
+      "version": "8.6.1"
+    },
+    {
+      "dependencies": [
+        "jaxlib",
+        "ml-dtypes",
+        "numpy",
+        "opt-einsum",
+        "scipy"
+      ],
+      "enabled_extras": [],
+      "name": "jax",
+      "source": {
+        "hashes": {
+          "sha256": "b3907aa87ae2c340b39cdbf80c07a74550369cafcaf7398fb60ba58d167345ab"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/f4/58/cc0721a1030fcbab0984beea0bf3c4610ec103f738423cdfa9c4ceb40598/jax-0.5.0-py3-none-any.whl"
+        ]
+      },
+      "version": "0.5.0"
+    },
+    {
+      "dependencies": [
+        "ml-dtypes",
+        "numpy",
+        "scipy"
+      ],
+      "enabled_extras": [],
+      "name": "jaxlib",
+      "source": {
+        "hashes": {
+          "sha256": "f980c733e98c998a8da87c9a8cc61b6726d0be667a58bd664c1d717b4b4eae75"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/66/e9/211ba3e46ec22c722c4d61a739cfccf79b0618006d6f5fa53eb4eb93ed6d/jaxlib-0.5.0-cp312-cp312-manylinux2014_x86_64.whl"
+        ]
+      },
+      "version": "0.5.0"
     },
     {
       "dependencies": [
@@ -314,6 +485,21 @@
       "version": "3.1.5"
     },
     {
+      "dependencies": [],
+      "enabled_extras": [],
+      "name": "kiwisolver",
+      "source": {
+        "hashes": {
+          "sha256": "cc978a80a0db3a66d25767b03688f1147a69e6237175c0f4ffffaaedf744055a"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/bc/b3/9458adb9472e61a998c8c4d95cfdfec91c73c53a375b30b1428310f923e4/kiwisolver-1.4.8-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        ]
+      },
+      "version": "1.4.8"
+    },
+    {
       "dependencies": [
         "kornia-rs",
         "packaging",
@@ -323,14 +509,14 @@
       "name": "kornia",
       "source": {
         "hashes": {
-          "sha256": "1b816b4c45878a73531a500a46dbf61e646ec7a749bf8a4dd7a5833a04e28808"
+          "sha256": "028711b0902dd7c0c79ddd20b6299b96f280eb2e475e9717fc8e0a0aac629bc2"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/d8/cf/a61ef6f7faf98edadf4ce8094873d298f8582a3ec59b65c9174c516926e8/kornia-0.7.4-py2.py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/f2/33/7721a4f69dd5f020c30de456d7b948fea8d3897d9f29a51f7538948ee7e2/kornia-0.8.0-py2.py3-none-any.whl"
         ]
       },
-      "version": "0.7.4"
+      "version": "0.8.0"
     },
     {
       "dependencies": [],
@@ -363,6 +549,48 @@
       "version": "3.0.2"
     },
     {
+      "dependencies": [
+        "contourpy",
+        "cycler",
+        "fonttools",
+        "kiwisolver",
+        "numpy",
+        "packaging",
+        "pillow",
+        "pyparsing",
+        "python-dateutil"
+      ],
+      "enabled_extras": [],
+      "name": "matplotlib",
+      "source": {
+        "hashes": {
+          "sha256": "9b0558bae37f154fffda54d779a592bc97ca8b4701f1c710055b609a3bac44c8"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/a7/b2/d872fc3d753516870d520595ddd8ce4dd44fa797a240999f125f58521ad7/matplotlib-3.10.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        ]
+      },
+      "version": "3.10.0"
+    },
+    {
+      "dependencies": [
+        "numpy"
+      ],
+      "enabled_extras": [],
+      "name": "ml-dtypes",
+      "source": {
+        "hashes": {
+          "sha256": "ad4953c5eb9c25a56d11a913c2011d7e580a435ef5145f804d98efa14477d390"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/08/57/5d58fad4124192b1be42f68bd0c0ddaa26e44a730ff8c9337adade2f5632/ml_dtypes-0.5.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        ]
+      },
+      "version": "0.5.1"
+    },
+    {
       "dependencies": [],
       "enabled_extras": [],
       "name": "mpmath",
@@ -376,6 +604,21 @@
         ]
       },
       "version": "1.3.0"
+    },
+    {
+      "dependencies": [],
+      "enabled_extras": [],
+      "name": "mss",
+      "source": {
+        "hashes": {
+          "sha256": "82cf6460a53d09e79b7b6d871163c982e6c7e9649c426e7b7591b74956d5cb64"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/29/aa/b897ae9e1c1616e4df9fb319637ef6a9d07cca6d46de6b59c80209f006a4/mss-10.0.0-py3-none-any.whl"
+        ]
+      },
+      "version": "10.0.0"
     },
     {
       "dependencies": [],
@@ -413,14 +656,14 @@
       "name": "numpy",
       "source": {
         "hashes": {
-          "sha256": "5062dc1a4e32a10dc2b8b13cedd58988261416e811c1dc4dbdea4f57eea61b0d"
+          "sha256": "0349b025e15ea9d05c3d63f9657707a4e1d471128a3b1d876c095f328f8ff7f0"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/7f/a7/c1f1d978166eb6b98ad009503e4d93a8c1962d0eb14a885c352ee0276a54/numpy-2.2.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/5b/73/65d2f0b698df1731e851e3295eb29a5ab8aa06f763f7e4188647a809578d/numpy-2.2.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "2.2.1"
+      "version": "2.2.2"
     },
     {
       "dependencies": [],
@@ -568,6 +811,21 @@
     {
       "dependencies": [],
       "enabled_extras": [],
+      "name": "nvidia-cusparselt-cu12",
+      "source": {
+        "hashes": {
+          "sha256": "df2c24502fd76ebafe7457dbc4716b2fec071aabaed4fb7691a201cde03704d9"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/78/a8/bcbb63b53a4b1234feeafb65544ee55495e1bb37ec31b999b963cbccfd1d/nvidia_cusparselt_cu12-0.6.2-py3-none-manylinux2014_x86_64.whl"
+        ]
+      },
+      "version": "0.6.2"
+    },
+    {
+      "dependencies": [],
+      "enabled_extras": [],
       "name": "nvidia-nccl-cu12",
       "source": {
         "hashes": {
@@ -618,14 +876,29 @@
       "name": "opencv-python",
       "source": {
         "hashes": {
-          "sha256": "9ace140fc6d647fbe1c692bcb2abce768973491222c067c131d80957c595b71f"
+          "sha256": "6b02611523803495003bd87362db3e1d2a0454a6a63025dc6658a9830570aa0d"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/3f/a4/d2537f47fd7fcfba966bd806e3ec18e7ee1681056d4b0a9c8d983983e4d5/opencv_python-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/2c/8b/90eb44a40476fa0e71e05a0283947cfd74a5d36121a11d926ad6f3193cc4/opencv_python-4.11.0.86-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "4.10.0.84"
+      "version": "4.11.0.86"
+    },
+    {
+      "dependencies": [],
+      "enabled_extras": [],
+      "name": "opt-einsum",
+      "source": {
+        "hashes": {
+          "sha256": "69bb92469f86a1565195ece4ac0323943e83477171b91d24c35afe028a90d7cd"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/23/cd/066e86230ae37ed0be70aae89aabf03ca8d9f39c8aea0dec8029455b5540/opt_einsum-3.4.0-py3-none-any.whl"
+        ]
+      },
+      "version": "3.4.0"
     },
     {
       "dependencies": [],
@@ -731,6 +1004,38 @@
     {
       "dependencies": [],
       "enabled_extras": [],
+      "name": "pyparsing",
+      "source": {
+        "hashes": {
+          "sha256": "506ff4f4386c4cec0590ec19e6302d3aedb992fdc02c761e90416f158dacf8e1"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/1c/a7/c8a2d361bf89c0d9577c934ebb7421b25dc84bf3a8e3ac0a40aed9acc547/pyparsing-3.2.1-py3-none-any.whl"
+        ]
+      },
+      "version": "3.2.1"
+    },
+    {
+      "dependencies": [
+        "six"
+      ],
+      "enabled_extras": [],
+      "name": "python-dateutil",
+      "source": {
+        "hashes": {
+          "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl"
+        ]
+      },
+      "version": "2.9.0.post0"
+    },
+    {
+      "dependencies": [],
+      "enabled_extras": [],
       "name": "pyyaml",
       "source": {
         "hashes": {
@@ -801,14 +1106,14 @@
       "name": "scipy",
       "source": {
         "hashes": {
-          "sha256": "fe00169cf875bed0b3c40e4da45b57037dc21d7c7bf0c85ed75f210c281488f1"
+          "sha256": "0fb57b30f0017d4afa5fe5f5b150b8f807618819287c21cbe51130de7ccdaed2"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/fb/77/74a1ceecb205f5d46fe2cd10071383748ee8891a96b7824a372391a6291c/scipy-1.15.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/b0/3c/0de11ca154e24a57b579fb648151d901326d3102115bc4f9a7a86526ce54/scipy-1.15.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "1.15.0"
+      "version": "1.15.1"
     },
     {
       "dependencies": [],
@@ -841,6 +1146,21 @@
       "version": "75.8.0"
     },
     {
+      "dependencies": [],
+      "enabled_extras": [],
+      "name": "six",
+      "source": {
+        "hashes": {
+          "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl"
+        ]
+      },
+      "version": "1.17.0"
+    },
+    {
       "dependencies": [
         "cffi",
         "numpy"
@@ -849,14 +1169,14 @@
       "name": "soundfile",
       "source": {
         "hashes": {
-          "sha256": "5f2c7d389d6cde9af49ec73f5a32a06f7397a2add3808ceb94ebff4a116e3446"
+          "sha256": "03267c4e493315294834a0870f31dbb3b28a95561b80b134f0bd3cf2d5f0e618"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/21/2e/93c9283e6d8a95900e390d888f9f3e2ae3ce274d3a11bd79117eeb8f0879/soundfile-0.13.0-py2.py3-none-manylinux_2_28_x86_64.whl"
+          "https://files.pythonhosted.org/packages/57/5e/70bdd9579b35003a489fc850b5047beeda26328053ebadc1fb60f320f7db/soundfile-0.13.1-py2.py3-none-manylinux_2_28_x86_64.whl"
         ]
       },
-      "version": "0.13.0"
+      "version": "0.13.1"
     },
     {
       "dependencies": [
@@ -871,14 +1191,14 @@
       "name": "spandrel",
       "source": {
         "hashes": {
-          "sha256": "819f3f15fe944fe589f43ba33150458a00d0ed0c2e8ef1eef0198615320127b1"
+          "sha256": "49a39aa979769749a42203428355bc4840452854d6334ce0d465af46098dd448"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/5b/ad/e27e971a75deaaac7817e022174f88fae4db203216ac59c1ace99f3e56eb/spandrel-0.4.0-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/d3/1e/5dce7f0d3eb2aa418bd9cf3e84b2f5d2cf45b1c62488dd139fc93c729cfe/spandrel-0.4.1-py3-none-any.whl"
         ]
       },
-      "version": "0.4.0"
+      "version": "0.4.1"
     },
     {
       "dependencies": [
@@ -929,6 +1249,7 @@
         "nvidia-curand-cu12",
         "nvidia-cusolver-cu12",
         "nvidia-cusparse-cu12",
+        "nvidia-cusparselt-cu12",
         "nvidia-nccl-cu12",
         "nvidia-nvjitlink-cu12",
         "nvidia-nvtx-cu12",
@@ -941,14 +1262,14 @@
       "name": "torch",
       "source": {
         "hashes": {
-          "sha256": "ed231a4b3a5952177fafb661213d690a72caaad97d5824dd4fc17ab9e15cec03"
+          "sha256": "2bb8987f3bb1ef2675897034402373ddfc8f5ef0e156e2d8cfc47cacafdda4a9"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/8b/5c/36c114d120bfe10f9323ed35061bc5878cc74f3f594003854b0ea298942f/torch-2.5.1-cp312-cp312-manylinux1_x86_64.whl"
+          "https://files.pythonhosted.org/packages/e5/35/0c52d708144c2deb595cd22819a609f78fdd699b95ff6f0ebcd456e3c7c1/torch-2.6.0-cp312-cp312-manylinux1_x86_64.whl"
         ]
       },
-      "version": "2.5.1"
+      "version": "2.6.0"
     },
     {
       "dependencies": [
@@ -958,14 +1279,14 @@
       "name": "torchaudio",
       "source": {
         "hashes": {
-          "sha256": "9c8fb06fbd8d2016e7b7caf15a3231867c792a2e3b0f2f8f9013633e9c2ce412"
+          "sha256": "715aa21f6bdbd085454c313ae3a2c7cc07bf2e8cf05752f819afb5b4c57f4e6f"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/34/1c/345d11bf492a1414dced70a9572ff1eb2c73013578d24fb4d728a91a09d1/torchaudio-2.5.1-cp312-cp312-manylinux1_x86_64.whl"
+          "https://files.pythonhosted.org/packages/ed/aa/9082e715a673dd8e22b6a60cec7f301e897406023672b2090f8bcd8a5959/torchaudio-2.6.0-cp312-cp312-manylinux1_x86_64.whl"
         ]
       },
-      "version": "2.5.1"
+      "version": "2.6.0"
     },
     {
       "dependencies": [
@@ -997,14 +1318,14 @@
       "name": "torchvision",
       "source": {
         "hashes": {
-          "sha256": "17cd78adddf81dac57d7dccc9277a4d686425b1c55715f308769770cb26cad5c"
+          "sha256": "b578bcad8a4083b40d34f689b19ca9f7c63e511758d806510ea03c29ac568f7b"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/d4/75/00a852275ade58d3dc474530f7a7b6bc999a817148f0eb59d4fde12eb955/torchvision-0.20.1-cp312-cp312-manylinux1_x86_64.whl"
+          "https://files.pythonhosted.org/packages/36/63/0722e153fd27d64d5b0af45b5c8cb0e80b35a68cf0130303bc9a8bb095c7/torchvision-0.21.0-cp312-cp312-manylinux1_x86_64.whl"
         ]
       },
-      "version": "0.20.1"
+      "version": "0.21.0"
     },
     {
       "dependencies": [],
@@ -1063,21 +1384,19 @@
       "version": "4.47.1"
     },
     {
-      "dependencies": [
-        "filelock"
-      ],
+      "dependencies": [],
       "enabled_extras": [],
       "name": "triton",
       "source": {
         "hashes": {
-          "sha256": "c8182f42fd8080a7d39d666814fa36c5e30cc00ea7eeeb1a2983dbb4c99a0fdc"
+          "sha256": "8d9b215efc1c26fa7eefb9a157915c92d52e000d2bf83e5f69704047e63f125c"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/78/eb/65f5ba83c2a123f6498a3097746607e5b2f16add29e36765305e4ac7fdd8/triton-3.1.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/06/00/59500052cb1cf8cf5316be93598946bc451f14072c6ff256904428eaf03c/triton-3.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "3.1.0"
+      "version": "3.2.0"
     },
     {
       "dependencies": [],

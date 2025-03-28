@@ -143,6 +143,7 @@ rec {
   # Bytecode removal (thanks NVIDIA for shipping libraries with overlapping bytecode..)
   nvidia-nvjitlink-cu12 = propagateLib (removePythonBytecode prev.nvidia-nvjitlink-cu12);
   nvidia-cusparse-cu12 = propagateLib (removePythonBytecode prev.nvidia-cusparse-cu12);
+  nvidia-cusparselt-cu12 = propagateLib (removePythonBytecode prev.nvidia-cusparselt-cu12);
   nvidia-cusolver-cu12 = propagateLib (removePythonBytecode prev.nvidia-cusolver-cu12);
   nvidia-cudnn-cu12 = propagateLib (removePythonBytecode (withZlib prev.nvidia-cudnn-cu12));
   nvidia-cuda-cupti-cu12 = propagateLib (removePythonBytecode prev.nvidia-cuda-cupti-cu12);
