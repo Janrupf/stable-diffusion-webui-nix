@@ -28,6 +28,11 @@ pkgs.writeShellScriptBin "comfy-ui" ''
     mkdir -p "$baseDirOverride/custom_nodes"
   fi
 
+  # Triton is a bit special and absolutely wants to run GCC at runtime...
+  export TRITON_LIBCUDA_PATH="/run/opengl-driver/lib/libcuda.so"
+  export LIBRARY_PATH="$LIBRARY_PATH:/run/opengl-driver/lib/"
+  export PATH="''${PATH}:${pkgs.lib.makeBinPath [pkgs.gcc]}"
+
   export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/opengl-driver/lib:/run/opengl-driver-32/lib:${pkgs.lib.makeLibraryPath [python]}"
 
   cd ${webuiPkgs.source}
