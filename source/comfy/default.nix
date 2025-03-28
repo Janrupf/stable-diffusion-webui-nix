@@ -11,11 +11,11 @@ let
     src = fetchFromGitHub {
       owner = "comfyanonymous";
       repo = "ComfyUI";
-      rev = "d0f3752e332ad9b2d8ee6f9c4317868aa685a62e";
-      hash = "sha256-KP/ICZ0aMt7ViRD2L9dsvx9eLmaW7COYLrqhcurTZSc=";
+      rev = "75c1c757d90ca891eff823893248ef8b51d31d01";
+      hash = "sha256-UGM2nrxveSEPuZAFY+Os0R1z/eWzlm8viG7sobis498=";
     };
 
-    patches = [ ./0001-Use-XDG-data-home-as-additional-base-path.patch ];
+    patches = [];
 
     installPhase = ''
       cp -r . "$out"

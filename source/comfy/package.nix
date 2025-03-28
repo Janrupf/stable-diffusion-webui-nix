@@ -8,22 +8,24 @@ let
   python = requirements.requirementPkgs.webui-python-env;
 in
 pkgs.writeShellScriptBin "comfy-ui" ''
-  prog_args=()
-  dataDirOverride=""
+  prog_args=("$@")
 
-  for (( i=1; i <= "$#"; i++ ))
-  do
-    arg="''${!i}"
-    if [[ "$arg" == "--data-dir" ]]; then
-      i=$(( $i + 1 ))
-      dataDirOverride="''${!i}"
-    else
-      prog_args+=("$arg")
+  baseDirOverride="$HOME/.local/share/comfy-ui"
+
+  for arg in "$@"; do
+    if [[ "$arg" == "--base-directory" ]]; then
+      baseDirOverride=""
+      break
     fi
   done
 
-  if [[ -n "$dataDirOverride" ]]; then
-    export NIX_COMFYUI_BASE_PATH="$dataDirOverride"
+  if [[ -n "$baseDirOverride" ]]; then
+    echo "Automatically overwriting base directory to '$baseDirOverride'"
+
+    prog_args+=("--base-directory" "$baseDirOverride")
+
+    mkdir -p "$baseDirOverride"
+    mkdir -p "$baseDirOverride/custom_nodes"
   fi
 
   export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/run/opengl-driver/lib:/run/opengl-driver-32/lib:${pkgs.lib.makeLibraryPath [python]}"

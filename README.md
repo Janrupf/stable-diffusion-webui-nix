@@ -41,8 +41,7 @@ overwritten by using the `--data-dir /another/path` argument when starting the W
 #### Where is my ComfyUI data?
 
 Data is by default stored in `$HOME/.local/share/comfy-ui`, this can be ovewritten
-by using `--data-dir /another/path` argument or setting the `NIX_COMFYUI_BASE_PATH`
-environment variable. The argument takes precedence over the environment variable.
+by using `--base-directory /another/path` argument.
 
 #### This takes ages to compile...
 

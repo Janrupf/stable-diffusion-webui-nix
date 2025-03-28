@@ -67,6 +67,7 @@ rec {
   llvmlite = withZlib prev.llvmlite;
   tokenizers = withZlib prev.tokenizers;
   pillow = withZlib prev.pillow;
+  av = withZlib prev.av;
   triton = withZlib (prev.triton.overridePythonAttrs (prev: {
     # https://github.com/NixOS/nixpkgs/issues/96654
     dontStrip = 1;
