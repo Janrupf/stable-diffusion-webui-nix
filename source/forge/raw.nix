@@ -54,8 +54,8 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "lllyasviel";
     repo = "stable-diffusion-webui-forge";
-    rev = "f53307881bfd824dbdce6ac0d4bba04d9a74ab36";
-    hash = "sha256-51ZQwiRrduRDKQgymlOh41L4ia8aS1GhSUL1Z3LSxrs=";
+    rev = "c055f2d43b07cbfd87ac3da4899a6d7ee52ebab9";
+    hash = "sha256-8AUn+X5PtMmR4cgZQpzSO/8E50/cu1yLnAWOM+P1eMg=";
   };
 
   patches = [

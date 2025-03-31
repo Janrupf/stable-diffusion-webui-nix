@@ -10,7 +10,7 @@ in
 {
   cuda = mkWebuiDistrib {
     source = raw;
-    python = pkgs.python310;
+    python = pkgs.python311;
 
     additionalRequirements = raw.additionalRequirements ++ [
       # Acceleration on CUDA
@@ -24,7 +24,7 @@ in
 
   rocm = mkWebuiDistrib {
     source = raw;
-    python = pkgs.python310;
+    python = pkgs.python311;
     additionalRequirements = raw.additionalRequirements ++ [
       { name = "torch"; spec = "https://download.pytorch.org/whl/nightly/rocm6.0/torch-2.5.0.dev20240802%2Brocm6.0-cp310-cp310-linux_x86_64.whl"; }
       { name = "torchvision"; spec = "https://download.pytorch.org/whl/nightly/rocm6.0/torchvision-0.20.0.dev20240822%2Brocm6.0-cp310-cp310-linux_x86_64.whl"; }
