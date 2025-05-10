@@ -1,4 +1,5 @@
 { pkgs
+, lib
 , python-flexseal
 
 # Extra configuration
@@ -26,6 +27,7 @@ let
     inherit pkgs;
     inherit python;
     inherit pythonPkgs;
+    inherit lib;
   };
 
   # The helper which can import flexsealed data

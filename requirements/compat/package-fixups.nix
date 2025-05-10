@@ -6,6 +6,7 @@
 { pkgs
 , python
 , pythonPkgs
+, lib
 }: final: prev: 
 let
   hipblaslt = pkgs.callPackage ./hipblaslt { inherit python; inherit pythonPkgs; };
@@ -88,8 +89,6 @@ rec {
     # Will be added by pkgs.autoAddDriverRunpath
     autoPatchelfIgnoreMissingDeps = [ "libcuda.so.1" ];
     nativeBuildInputs = (prev.nativeBuildInputs or []) ++ [ pkgs.autoAddDriverRunpath ];
-
-    dependencies = (prev.dependencies or []) ++ [ nvidia-cufile-cu12 ];
 
     # TODO: This is ROCm only!
     # dependencies = (prev.dependencies or []) ++ [ hipblaslt ];
