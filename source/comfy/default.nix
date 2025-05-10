@@ -31,10 +31,11 @@ in {
     additionalRequirements = [
       # Required for most video extensions, common enough to be included
       # here
-      { name = "diffusers"; op = ">="; spec = "0.31.0"; }
+      { name = "diffusers"; op = ">="; spec = "0.32.0"; }
       { name = "accelerate"; op = ">="; spec = "1.2.1"; }
-      { name = "transformers"; op = "=="; spec = "4.47.1"; }
+      { name = "transformers"; op = ">="; spec = "4.49.1"; }
       { name = "jax"; op = ">="; spec = "0.4.28"; }
+      { name = "sentencepiece"; op = ">="; spec = "0.2.0"; }
       { name = "huggingface_hub"; }
       { name = "einops"; }
       { name = "peft"; }
@@ -44,6 +45,10 @@ in {
       { name = "matplotlib"; }
       { name = "mss"; }
       { name = "color-matcher"; }
+      { name = "ftfy"; }
+      { name = "protobuf"; }
+      { name = "sageattention"; }
+      { name = "timm"; }
     ];
 
     installInstructions = ./install-instructions-cuda.json;
