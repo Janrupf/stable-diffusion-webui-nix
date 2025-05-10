@@ -89,6 +89,8 @@ rec {
     autoPatchelfIgnoreMissingDeps = [ "libcuda.so.1" ];
     nativeBuildInputs = (prev.nativeBuildInputs or []) ++ [ pkgs.autoAddDriverRunpath ];
 
+    dependencies = (prev.dependencies or []) ++ [ nvidia-cufile-cu12 ];
+
     # TODO: This is ROCm only!
     # dependencies = (prev.dependencies or []) ++ [ hipblaslt ];
   }));
@@ -155,6 +157,9 @@ rec {
   nvidia-cufft-cu12 = propagateLib (removePythonBytecode prev.nvidia-cufft-cu12);
   nvidia-nccl-cu12 = propagateLib (removePythonBytecode prev.nvidia-nccl-cu12);
   nvidia-nvtx-cu12 = propagateLib (removePythonBytecode prev.nvidia-nvtx-cu12);
+  nvidia-cufile-cu12 = propagateLib (withExtraDependencies (removePythonBytecode prev.nvidia-cufile-cu12) [
+    pkgs.rdma-core
+  ]);
 
   # ROCm specific stuff
   pytorch-triton-rocm = withExtraDependencies prev.pytorch-triton-rocm [

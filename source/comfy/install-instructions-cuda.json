@@ -52,14 +52,14 @@
       "name": "aiohttp",
       "source": {
         "hashes": {
-          "sha256": "1ce63ae04719513dd2651202352a2beb9f67f55cb8490c40f056cea3c5c355ce"
+          "sha256": "40fbf91f6a0ac317c0a07eb328a1384941872f6761f2e6f7208b63c4cc0a7ff6"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/86/b3/f61f8492fa6569fa87927ad35a40c159408862f7e8e70deaaead349e2fba/aiohttp-3.11.16-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/23/06/4203ffa2beb5bedb07f0da0f79b7d9039d1c33f522e0d1a2d5b6218e6f2e/aiohttp-3.11.18-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "3.11.16"
+      "version": "3.11.18"
     },
     {
       "dependencies": [
@@ -77,6 +77,21 @@
         ]
       },
       "version": "1.3.2"
+    },
+    {
+      "dependencies": [],
+      "enabled_extras": [],
+      "name": "annotated-types",
+      "source": {
+        "hashes": {
+          "sha256": "1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/78/b6/6307fbef88d9b5ee7421e68d78a9f162e0da4900bc5f5793f6d3d0e34fb8/annotated_types-0.7.0-py3-none-any.whl"
+        ]
+      },
+      "version": "0.7.0"
     },
     {
       "dependencies": [],
@@ -132,14 +147,14 @@
       "name": "certifi",
       "source": {
         "hashes": {
-          "sha256": "ca78db4565a652026a4db2bcdf68f2fb589ea80d0be70e03929ed730746b84fe"
+          "sha256": "30350364dfe371162649852c63336a15c70c6510c2ad5015b21c2345311805f3"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/38/fc/bce832fd4fd99766c04d1ee0eead6b0ec6486fb100ae5e74c1d91292b982/certifi-2025.1.31-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/4a/7e/3db2bd1b1f9e95f7cddca6d6e75e2f2bd9f51b1246e546d88addca0106bd/certifi-2025.4.26-py3-none-any.whl"
         ]
       },
-      "version": "2025.1.31"
+      "version": "2025.4.26"
     },
     {
       "dependencies": [
@@ -164,14 +179,14 @@
       "name": "charset-normalizer",
       "source": {
         "hashes": {
-          "sha256": "bc2722592d8998c870fa4e290c2eec2c1569b87fe58618e67d38b4665dfa680d"
+          "sha256": "4e594135de17ab3866138f496755f302b72157d115086d100c3f19370839dd3a"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/3e/a2/513f6cbe752421f16d969e32f3583762bfd583848b763913ddab8d9bfd4f/charset_normalizer-3.4.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/8c/73/6ede2ec59bce19b3edf4209d70004253ec5f4e319f9a2e3f2f15601ed5f7/charset_normalizer-3.4.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "3.4.1"
+      "version": "3.4.2"
     },
     {
       "dependencies": [
@@ -201,14 +216,29 @@
       "name": "comfyui-frontend-package",
       "source": {
         "hashes": {
-          "sha256": "b6e1be18a6c78c476f41b5bb3fe98a0d48cc7c63f8c34d891e25464652849986"
+          "sha256": "a81242d10a8494ddbdf57c809b271507ea181b8ed284503682b4b1699f8ff9ff"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/b6/03/feaccb0d611194e9f03490851889b2caf55dc91a2bbdf9a73bc0104cb243/comfyui_frontend_package-1.14.5-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/b0/b7/c903a94f0a4e37f9c167218f3c8f38d5b2e440735b5c685fca081486e2ff/comfyui_frontend_package-1.18.9-py3-none-any.whl"
         ]
       },
-      "version": "1.14.5"
+      "version": "1.18.9"
+    },
+    {
+      "dependencies": [],
+      "enabled_extras": [],
+      "name": "comfyui-workflow-templates",
+      "source": {
+        "hashes": {
+          "sha256": "75e0f4a825a8880f2daa354b24ce5141abc51944a2a3461812ad685f97b890ce"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/3b/0e/802c5aeb10e8442c8f04a1d9b350da377494a561a96fc05b0a272f59a68c/comfyui_workflow_templates-0.1.11-py3-none-any.whl"
+        ]
+      },
+      "version": "0.1.11"
     },
     {
       "dependencies": [
@@ -218,14 +248,14 @@
       "name": "contourpy",
       "source": {
         "hashes": {
-          "sha256": "efa874e87e4a647fd2e4f514d5e91c7d493697127beb95e77d2f7561f6905bd9"
+          "sha256": "f26b383144cf2d2c29f01a1e8170f50dacf0eac02d64139dcd709a8ac4eb3cfe"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/ba/99/6794142b90b853a9155316c8f470d2e4821fe6f086b03e372aca848227dd/contourpy-1.3.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/a8/32/b8a1c8965e4f72482ff2d1ac2cd670ce0b542f203c8e1d34e7c3e6925da7/contourpy-1.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "1.3.1"
+      "version": "1.3.2"
     },
     {
       "dependencies": [],
@@ -347,14 +377,14 @@
       "name": "frozenlist",
       "source": {
         "hashes": {
-          "sha256": "000a77d6034fbad9b6bb880f7ec073027908f1b40254b5d6f26210d2dab1240e"
+          "sha256": "4e1be9111cb6756868ac242b3c2bd1f09d9aea09846e4f5c23715e7afb647103"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/af/f2/64b73a9bb86f5a89fb55450e97cd5c1f84a862d4ff90d9fd1a73ab0f64a5/frozenlist-1.5.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/2b/a6/564ecde55ee633270a793999ef4fd1d2c2b32b5a7eec903b1012cb7c5143/frozenlist-1.6.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "1.5.0"
+      "version": "1.6.0"
     },
     {
       "dependencies": [],
@@ -389,9 +419,25 @@
       "version": "6.3.1"
     },
     {
+      "dependencies": [],
+      "enabled_extras": [],
+      "name": "hf-xet",
+      "source": {
+        "hashes": {
+          "sha256": "995eeffb119636ea617b96c7d7bf3c3f5ea8727fa57974574e25d700b8532d48"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/83/9a/d40d2a57b132d609d8a4ccc29e59ed69749021610616749cabcda2532158/hf_xet-1.1.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        ]
+      },
+      "version": "1.1.0"
+    },
+    {
       "dependencies": [
         "filelock",
         "fsspec",
+        "hf-xet",
         "packaging",
         "pyyaml",
         "requests",
@@ -402,14 +448,14 @@
       "name": "huggingface-hub",
       "source": {
         "hashes": {
-          "sha256": "68ff05969927058cfa41df4f2155d4bb48f5f54f719dd0390103eefa9b191e28"
+          "sha256": "43f73124819b48b42d140cbc0d7a2e6bd15b2853b1b9d728d4d55ad1750cac5b"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/93/27/1fb384a841e9661faad1c31cbfa62864f59632e876df5d795234da51c395/huggingface_hub-0.30.2-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/3a/bf/6002da17ec1c7a47bedeb216812929665927c70b6e7500b3c7bf36f01bdd/huggingface_hub-0.31.1-py3-none-any.whl"
         ]
       },
-      "version": "0.30.2"
+      "version": "0.31.1"
     },
     {
       "dependencies": [],
@@ -467,14 +513,14 @@
       "name": "importlib-metadata",
       "source": {
         "hashes": {
-          "sha256": "02a89390c1e15fdfdc0d7c6b25cb3e62650d0494005c97d6f148bf5b9787525e"
+          "sha256": "e5dd1551894c77868a30651cef00984d50e1002d06942a7101d34870c5f02afd"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/79/9d/0fb148dc4d6fa4a7dd1d8378168d9b4cd8d4560a6fbf6f0121c5fc34eb68/importlib_metadata-8.6.1-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/20/b0/36bd937216ec521246249be3bf9855081de4c5e06a0c9b4219dbeda50373/importlib_metadata-8.7.0-py3-none-any.whl"
         ]
       },
-      "version": "8.6.1"
+      "version": "8.7.0"
     },
     {
       "dependencies": [
@@ -488,14 +534,14 @@
       "name": "jax",
       "source": {
         "hashes": {
-          "sha256": "1483dc237b4f47e41755d69429e8c3c138736716147cd43bb2b99b259d4e3c41"
+          "sha256": "22b21827597c6d6b46e88543b4fc372fcddf1cc1247660452de020cc4bda1afc"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/86/bb/fdc6513a9aada13fd21e9860e2adee5f6eea2b4f0a145b219288875acb26/jax-0.5.3-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/31/25/32c5e2c919da4faaea9ef5088437ab6e01738c49402e4ec8a6c7b49e30ef/jax-0.6.0-py3-none-any.whl"
         ]
       },
-      "version": "0.5.3"
+      "version": "0.6.0"
     },
     {
       "dependencies": [
@@ -507,14 +553,14 @@
       "name": "jaxlib",
       "source": {
         "hashes": {
-          "sha256": "5a5e88ab1cd6fdf78d69abe3544e8f09cce200dd339bb85fbe3c2ea67f2a5e68"
+          "sha256": "b6d85b8d1fd79248b04503517201e72fcbcd3980cf791d37e814709ea50a3c82"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/3e/03/bace4acec295febca9329b3d2dd927b8ac74841e620e0d675f76109b805b/jaxlib-0.5.3-cp312-cp312-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/a7/c4/1a252f12e3ed0a3986cfb36bbdc38ff33e358f58ee7a0ddb5d6bb126cb31/jaxlib-0.6.0-cp312-cp312-manylinux2014_x86_64.whl"
         ]
       },
-      "version": "0.5.3"
+      "version": "0.6.0"
     },
     {
       "dependencies": [
@@ -558,14 +604,14 @@
       "name": "kornia",
       "source": {
         "hashes": {
-          "sha256": "028711b0902dd7c0c79ddd20b6299b96f280eb2e475e9717fc8e0a0aac629bc2"
+          "sha256": "5dcb00faa795dfb45a3630d771387290bc4f40473451352ca250e5bcc81af3d1"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/f2/33/7721a4f69dd5f020c30de456d7b948fea8d3897d9f29a51f7538948ee7e2/kornia-0.8.0-py2.py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/80/95/a2e359cd08ea24498be59dcd5980e290cdf658ce534bcb7ae13b8ef694e6/kornia-0.8.1-py2.py3-none-any.whl"
         ]
       },
-      "version": "0.8.0"
+      "version": "0.8.1"
     },
     {
       "dependencies": [],
@@ -573,14 +619,14 @@
       "name": "kornia-rs",
       "source": {
         "hashes": {
-          "sha256": "297e48f800c93e7cc8b089e472b77a272f9887509ce9d8756fab0fa7714f8439"
+          "sha256": "e74a8901843e8e5e47f495927462288c7b7b8dc8a253495051c72a5fbda5f664"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/0a/84/3bd78e98468665be72087b5669c4e02991b0ba82e5ec0c5bcbe0142f02d2/kornia_rs-0.1.8-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/37/43/fd431c4278101dd25c44ae4c04166905671280f3d6b50d28dc062df544dc/kornia_rs-0.1.9-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "0.1.8"
+      "version": "0.1.9"
     },
     {
       "dependencies": [],
@@ -613,14 +659,14 @@
       "name": "matplotlib",
       "source": {
         "hashes": {
-          "sha256": "c96f2c2f825d1257e437a1482c5a2cf4fee15db4261bd6fc0750f81ba2b4ba3d"
+          "sha256": "ed70453fd99733293ace1aec568255bc51c6361cb0da94fa5ebf0649fdb2150a"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/63/23/c0615001f67ce7c96b3051d856baedc0c818a2ed84570b9bf9bde200f85d/matplotlib-3.10.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/c4/91/ba0ae1ff4b3f30972ad01cd4a8029e70a0ec3b8ea5be04764b128b66f763/matplotlib-3.10.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "3.10.1"
+      "version": "3.10.3"
     },
     {
       "dependencies": [
@@ -705,14 +751,14 @@
       "name": "numpy",
       "source": {
         "hashes": {
-          "sha256": "4f92084defa704deadd4e0a5ab1dc52d8ac9e8a8ef617f3fbb853e79b0ea3592"
+          "sha256": "3a801fef99668f309b88640e28d261991bfad9617c27beda4a3aec4f217ea073"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/02/e2/e2cbb8d634151aab9528ef7b8bab52ee4ab10e076509285602c2a3a686e0/numpy-2.2.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/b0/d9/7c338b923c53d431bc837b5b787052fef9ae68a56fe91e325aac0d48226e/numpy-2.2.5-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "2.2.4"
+      "version": "2.2.5"
     },
     {
       "dependencies": [],
@@ -720,14 +766,14 @@
       "name": "nvidia-cublas-cu12",
       "source": {
         "hashes": {
-          "sha256": "2fc8da60df463fdefa81e323eef2e36489e1c94335b5358bcb38360adf75ac9b"
+          "sha256": "08ed2686e9875d01b58e3cb379c6896df8e76c75e0d4a7f7dace3d7b6d9ef8eb"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/ae/71/1c91302526c45ab494c23f61c7a84aa568b8c1f9d196efa5993957faf906/nvidia_cublas_cu12-12.4.5.8-py3-none-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/af/eb/ff4b8c503fa1f1796679dce648854d58751982426e4e4b37d6fce49d259c/nvidia_cublas_cu12-12.6.4.1-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
         ]
       },
-      "version": "12.4.5.8"
+      "version": "12.6.4.1"
     },
     {
       "dependencies": [],
@@ -735,14 +781,14 @@
       "name": "nvidia-cuda-cupti-cu12",
       "source": {
         "hashes": {
-          "sha256": "9dec60f5ac126f7bb551c055072b69d85392b13311fcc1bcda2202d172df30fb"
+          "sha256": "6768bad6cab4f19e8292125e5f1ac8aa7d1718704012a0e3272a6f61c4bce132"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/67/42/f4f60238e8194a3106d06a058d494b18e006c10bb2b915655bd9f6ea4cb1/nvidia_cuda_cupti_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/49/60/7b6497946d74bcf1de852a21824d63baad12cd417db4195fc1bfe59db953/nvidia_cuda_cupti_cu12-12.6.80-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
         ]
       },
-      "version": "12.4.127"
+      "version": "12.6.80"
     },
     {
       "dependencies": [],
@@ -750,14 +796,14 @@
       "name": "nvidia-cuda-nvrtc-cu12",
       "source": {
         "hashes": {
-          "sha256": "a178759ebb095827bd30ef56598ec182b85547f1508941a3d560eb7ea1fbf338"
+          "sha256": "35b0cc6ee3a9636d5409133e79273ce1f3fd087abb0532d2d2e8fff1fe9efc53"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/2c/14/91ae57cd4db3f9ef7aa99f4019cfa8d54cb4caa7e00975df6467e9725a9f/nvidia_cuda_nvrtc_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/75/2e/46030320b5a80661e88039f59060d1790298b4718944a65a7f2aeda3d9e9/nvidia_cuda_nvrtc_cu12-12.6.77-py3-none-manylinux2014_x86_64.whl"
         ]
       },
-      "version": "12.4.127"
+      "version": "12.6.77"
     },
     {
       "dependencies": [],
@@ -765,14 +811,14 @@
       "name": "nvidia-cuda-runtime-cu12",
       "source": {
         "hashes": {
-          "sha256": "64403288fa2136ee8e467cdc9c9427e0434110899d07c779f25b5c068934faa5"
+          "sha256": "ba3b56a4f896141e25e19ab287cd71e52a6a0f4b29d0d31609f60e3b4d5219b7"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/ea/27/1795d86fe88ef397885f2e580ac37628ed058a92ed2c39dc8eac3adf0619/nvidia_cuda_runtime_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/e1/23/e717c5ac26d26cf39a27fbc076240fad2e3b817e5889d671b67f4f9f49c5/nvidia_cuda_runtime_cu12-12.6.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
         ]
       },
-      "version": "12.4.127"
+      "version": "12.6.77"
     },
     {
       "dependencies": [
@@ -782,29 +828,46 @@
       "name": "nvidia-cudnn-cu12",
       "source": {
         "hashes": {
-          "sha256": "165764f44ef8c61fcdfdfdbe769d687e06374059fbb388b6c89ecb0e28793a6f"
+          "sha256": "30ac3869f6db17d170e0e556dd6cc5eee02647abc31ca856634d5a40f82c15b2"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/9f/fd/713452cd72343f682b1c7b9321e23829f00b842ceaedcda96e742ea0b0b3/nvidia_cudnn_cu12-9.1.0.70-py3-none-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/2a/78/4535c9c7f859a64781e43c969a3a7e84c54634e319a996d43ef32ce46f83/nvidia_cudnn_cu12-9.5.1.17-py3-none-manylinux_2_28_x86_64.whl"
         ]
       },
-      "version": "9.1.0.70"
+      "version": "9.5.1.17"
     },
     {
-      "dependencies": [],
+      "dependencies": [
+        "nvidia-nvjitlink-cu12"
+      ],
       "enabled_extras": [],
       "name": "nvidia-cufft-cu12",
       "source": {
         "hashes": {
-          "sha256": "f083fc24912aa410be21fa16d157fed2055dab1cc4b6934a0e03cba69eb242b9"
+          "sha256": "ccba62eb9cef5559abd5e0d54ceed2d9934030f51163df018532142a8ec533e5"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/27/94/3266821f65b92b3138631e9c8e7fe1fb513804ac934485a8d05776e1dd43/nvidia_cufft_cu12-11.2.1.3-py3-none-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/8f/16/73727675941ab8e6ffd86ca3a4b7b47065edcca7a997920b831f8147c99d/nvidia_cufft_cu12-11.3.0.4-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
         ]
       },
-      "version": "11.2.1.3"
+      "version": "11.3.0.4"
+    },
+    {
+      "dependencies": [],
+      "enabled_extras": [],
+      "name": "nvidia-cufile-cu12",
+      "source": {
+        "hashes": {
+          "sha256": "cc23469d1c7e52ce6c1d55253273d32c565dd22068647f3aa59b3c6b005bf159"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/b2/66/cc9876340ac68ae71b15c743ddb13f8b30d5244af344ec8322b449e35426/nvidia_cufile_cu12-1.11.1.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+        ]
+      },
+      "version": "1.11.1.6"
     },
     {
       "dependencies": [],
@@ -812,14 +875,14 @@
       "name": "nvidia-curand-cu12",
       "source": {
         "hashes": {
-          "sha256": "a88f583d4e0bb643c49743469964103aa59f7f708d862c3ddb0fc07f851e3b8b"
+          "sha256": "a42cd1344297f70b9e39a1e4f467a4e1c10f1da54ff7a85c12197f6c652c8bdf"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/8a/6d/44ad094874c6f1b9c654f8ed939590bdc408349f137f9b98a3a23ccec411/nvidia_curand_cu12-10.3.5.147-py3-none-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/73/1b/44a01c4e70933637c93e6e1a8063d1e998b50213a6b65ac5a9169c47e98e/nvidia_curand_cu12-10.3.7.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
         ]
       },
-      "version": "10.3.5.147"
+      "version": "10.3.7.77"
     },
     {
       "dependencies": [
@@ -831,14 +894,14 @@
       "name": "nvidia-cusolver-cu12",
       "source": {
         "hashes": {
-          "sha256": "19e33fa442bcfd085b3086c4ebf7e8debc07cfe01e11513cc6d332fd918ac260"
+          "sha256": "e9e49843a7707e42022babb9bcfa33c29857a93b88020c4e4434656a655b698c"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/3a/e1/5b9089a4b2a4790dfdea8b3a006052cfecff58139d5a4e34cb1a51df8d6f/nvidia_cusolver_cu12-11.6.1.9-py3-none-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/f0/6e/c2cf12c9ff8b872e92b4a5740701e51ff17689c4d726fca91875b07f655d/nvidia_cusolver_cu12-11.7.1.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
         ]
       },
-      "version": "11.6.1.9"
+      "version": "11.7.1.2"
     },
     {
       "dependencies": [
@@ -848,14 +911,14 @@
       "name": "nvidia-cusparse-cu12",
       "source": {
         "hashes": {
-          "sha256": "ea4f11a2904e2a8dc4b1833cc1b5181cde564edd0d5cd33e3c168eff2d1863f1"
+          "sha256": "7556d9eca156e18184b94947ade0fba5bb47d69cec46bf8660fd2c71a4b48b73"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/db/f7/97a9ea26ed4bbbfc2d470994b8b4f338ef663be97b8f677519ac195e113d/nvidia_cusparse_cu12-12.3.1.170-py3-none-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/06/1e/b8b7c2f4099a37b96af5c9bb158632ea9e5d9d27d7391d7eb8fc45236674/nvidia_cusparse_cu12-12.5.4.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
         ]
       },
-      "version": "12.3.1.170"
+      "version": "12.5.4.2"
     },
     {
       "dependencies": [],
@@ -863,14 +926,14 @@
       "name": "nvidia-cusparselt-cu12",
       "source": {
         "hashes": {
-          "sha256": "df2c24502fd76ebafe7457dbc4716b2fec071aabaed4fb7691a201cde03704d9"
+          "sha256": "e5c8a26c36445dd2e6812f1177978a24e2d37cacce7e090f297a688d1ec44f46"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/78/a8/bcbb63b53a4b1234feeafb65544ee55495e1bb37ec31b999b963cbccfd1d/nvidia_cusparselt_cu12-0.6.2-py3-none-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/3b/9a/72ef35b399b0e183bc2e8f6f558036922d453c4d8237dab26c666a04244b/nvidia_cusparselt_cu12-0.6.3-py3-none-manylinux2014_x86_64.whl"
         ]
       },
-      "version": "0.6.2"
+      "version": "0.6.3"
     },
     {
       "dependencies": [],
@@ -878,14 +941,14 @@
       "name": "nvidia-nccl-cu12",
       "source": {
         "hashes": {
-          "sha256": "8579076d30a8c24988834445f8d633c697d42397e92ffc3f63fa26766d25e0a0"
+          "sha256": "694cf3879a206553cc9d7dbda76b13efaf610fdb70a50cba303de1b0d1530ac6"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/df/99/12cd266d6233f47d00daf3a72739872bdc10267d0383508b0b9c84a18bb6/nvidia_nccl_cu12-2.21.5-py3-none-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/67/ca/f42388aed0fddd64ade7493dbba36e1f534d4e6fdbdd355c6a90030ae028/nvidia_nccl_cu12-2.26.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
         ]
       },
-      "version": "2.21.5"
+      "version": "2.26.2"
     },
     {
       "dependencies": [],
@@ -893,14 +956,14 @@
       "name": "nvidia-nvjitlink-cu12",
       "source": {
         "hashes": {
-          "sha256": "06b3b9b25bf3f8af351d664978ca26a16d2c5127dbd53c0497e28d1fb9611d57"
+          "sha256": "eedc36df9e88b682efe4309aa16b5b4e78c2407eac59e8c10a6a47535164369a"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/ff/ff/847841bacfbefc97a00036e0fce5a0f086b640756dc38caea5e1bb002655/nvidia_nvjitlink_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/9d/d7/c5383e47c7e9bf1c99d5bd2a8c935af2b6d705ad831a7ec5c97db4d82f4f/nvidia_nvjitlink_cu12-12.6.85-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl"
         ]
       },
-      "version": "12.4.127"
+      "version": "12.6.85"
     },
     {
       "dependencies": [],
@@ -908,14 +971,14 @@
       "name": "nvidia-nvtx-cu12",
       "source": {
         "hashes": {
-          "sha256": "781e950d9b9f60d8241ccea575b32f5105a5baf4c2351cab5256a24869f12a1a"
+          "sha256": "b90bed3df379fa79afbd21be8e04a0314336b8ae16768b58f2d34cb1d04cd7d2"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/87/20/199b8713428322a2f22b722c62b8cc278cc53dffa9705d744484b5035ee9/nvidia_nvtx_cu12-12.4.127-py3-none-manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/56/9a/fff8376f8e3d084cd1530e1ef7b879bb7d6d265620c95c1b322725c694f4/nvidia_nvtx_cu12-12.6.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
         ]
       },
-      "version": "12.4.127"
+      "version": "12.6.77"
     },
     {
       "dependencies": [
@@ -955,14 +1018,14 @@
       "name": "packaging",
       "source": {
         "hashes": {
-          "sha256": "09abb1bccd265c01f4a3aa3f7a7db064b36514d2cba19a2f694fe6150451a759"
+          "sha256": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/88/ef/eb23f262cca3c0c4eb7ab1933c3b1f03d021f2c48f54763065b6f0e321be/packaging-24.2-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl"
         ]
       },
-      "version": "24.2"
+      "version": "25.0"
     },
     {
       "dependencies": [
@@ -981,14 +1044,14 @@
       "name": "peft",
       "source": {
         "hashes": {
-          "sha256": "5fb3960beb518f00668f2cdc53424a5cc495c78281697821ce24609c90ca0a10"
+          "sha256": "0dfc942b03b7af4b7267cd4e30b15e3a4a1d277adc581ce6245fc13f1f93d0a0"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/d5/47/f2938c20b1c6d7b738ca2a129cf73cd1453cea76d5c9a2f2bbf6199bf037/peft-0.15.1-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/68/85/8e6ea3d1089f2b6de3c1cd34bbbd7560912af9d34b057be3b8b8fefe1da3/peft-0.15.2-py3-none-any.whl"
         ]
       },
-      "version": "0.15.1"
+      "version": "0.15.2"
     },
     {
       "dependencies": [],
@@ -996,14 +1059,14 @@
       "name": "pillow",
       "source": {
         "hashes": {
-          "sha256": "9aa9aeddeed452b2f616ff5507459e7bab436916ccb10961c4a382cd3e03f47f"
+          "sha256": "b2dbea1012ccb784a65349f57bbc93730b96e85b42e9bf7b01ef40443db720b4"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/38/0d/84200ed6a871ce386ddc82904bfadc0c6b28b0c0ec78176871a4679e40b3/pillow-11.1.0-cp312-cp312-manylinux_2_28_x86_64.whl"
+          "https://files.pythonhosted.org/packages/fe/7c/d8b1330458e4d2f3f45d9508796d7caf0c0d3764c00c823d10f6f1a3b76d/pillow-11.2.1-cp312-cp312-manylinux_2_28_x86_64.whl"
         ]
       },
-      "version": "11.1.0"
+      "version": "11.2.1"
     },
     {
       "dependencies": [],
@@ -1064,6 +1127,43 @@
         ]
       },
       "version": "2.22"
+    },
+    {
+      "dependencies": [
+        "annotated-types",
+        "pydantic-core",
+        "typing-extensions",
+        "typing-inspection"
+      ],
+      "enabled_extras": [],
+      "name": "pydantic",
+      "source": {
+        "hashes": {
+          "sha256": "d9615eaa9ac5a063471da949c8fc16376a84afb5024688b3ff885693506764eb"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/e7/12/46b65f3534d099349e38ef6ec98b1a5a81f42536d17e0ba382c28c67ba67/pydantic-2.11.4-py3-none-any.whl"
+        ]
+      },
+      "version": "2.11.4"
+    },
+    {
+      "dependencies": [
+        "typing-extensions"
+      ],
+      "enabled_extras": [],
+      "name": "pydantic-core",
+      "source": {
+        "hashes": {
+          "sha256": "8f57a69461af2a5fa6e6bbd7a5f60d3b7e6cebb687f55106933188e79ad155c1"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/f9/41/4b043778cf9c4285d59742281a769eac371b9e47e35f98ad321349cc5d61/pydantic_core-2.33.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+        ]
+      },
+      "version": "2.33.2"
     },
     {
       "dependencies": [],
@@ -1185,14 +1285,14 @@
       "name": "scipy",
       "source": {
         "hashes": {
-          "sha256": "2b871df1fe1a3ba85d90e22742b93584f8d2b8e6124f8372ab15c71b73e428b8"
+          "sha256": "271e3713e645149ea5ea3e97b57fdab61ce61333f97cfae392c28ba786f9bb49"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/c0/53/eaada1a414c026673eb983f8b4a55fe5eb172725d33d62c1b21f63ff6ca4/scipy-1.15.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/0b/1f/03f52c282437a168ee2c7c14a1a0d0781a9a4a8962d84ac05c06b4c5b555/scipy-1.15.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "1.15.2"
+      "version": "1.15.3"
     },
     {
       "dependencies": [],
@@ -1215,14 +1315,14 @@
       "name": "setuptools",
       "source": {
         "hashes": {
-          "sha256": "3e386e96793c8702ae83d17b853fb93d3e09ef82ec62722e61da5cd22376dcd8"
+          "sha256": "6cdc8cb9a7d590b237dbe4493614a9b75d0559b888047c1f67d49ba50fc3edb2"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/54/21/f43f0a1fa8b06b32812e0975981f4677d28e0f3271601dc88ac5a5b83220/setuptools-78.1.0-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/b1/93/dba5ed08c2e31ec7cdc2ce75705a484ef0be1a2fecac8a58272489349de8/setuptools-80.4.0-py3-none-any.whl"
         ]
       },
-      "version": "78.1.0"
+      "version": "80.4.0"
     },
     {
       "dependencies": [],
@@ -1287,14 +1387,35 @@
       "name": "sympy",
       "source": {
         "hashes": {
-          "sha256": "db36cdc64bf61b9b24578b6f7bab1ecdd2452cf008f34faa33776680c26d66f8"
+          "sha256": "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/b2/fe/81695a1aa331a842b582453b605175f419fe8540355886031328089d840a/sympy-1.13.1-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl"
         ]
       },
-      "version": "1.13.1"
+      "version": "1.14.0"
+    },
+    {
+      "dependencies": [
+        "huggingface-hub",
+        "pyyaml",
+        "safetensors",
+        "torch",
+        "torchvision"
+      ],
+      "enabled_extras": [],
+      "name": "timm",
+      "source": {
+        "hashes": {
+          "sha256": "5a3dc460c24e322ecc7fd1f3e3eb112423ddee320cb059cc1956fbc9731748ef"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/6c/d0/179abca8b984b3deefd996f362b612c39da73b60f685921e6cd58b6125b4/timm-1.0.15-py3-none-any.whl"
+        ]
+      },
+      "version": "1.0.15"
     },
     {
       "dependencies": [
@@ -1325,6 +1446,7 @@
         "nvidia-cuda-runtime-cu12",
         "nvidia-cudnn-cu12",
         "nvidia-cufft-cu12",
+        "nvidia-cufile-cu12",
         "nvidia-curand-cu12",
         "nvidia-cusolver-cu12",
         "nvidia-cusparse-cu12",
@@ -1341,14 +1463,14 @@
       "name": "torch",
       "source": {
         "hashes": {
-          "sha256": "2bb8987f3bb1ef2675897034402373ddfc8f5ef0e156e2d8cfc47cacafdda4a9"
+          "sha256": "15aab3e31c16feb12ae0a88dba3434a458874636f360c567caa6a91f6bfba481"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/e5/35/0c52d708144c2deb595cd22819a609f78fdd699b95ff6f0ebcd456e3c7c1/torch-2.6.0-cp312-cp312-manylinux1_x86_64.whl"
+          "https://files.pythonhosted.org/packages/9c/58/2d245b6f1ef61cf11dfc4aceeaacbb40fea706ccebac3f863890c720ab73/torch-2.7.0-cp312-cp312-manylinux_2_28_x86_64.whl"
         ]
       },
-      "version": "2.6.0"
+      "version": "2.7.0"
     },
     {
       "dependencies": [
@@ -1358,14 +1480,14 @@
       "name": "torchaudio",
       "source": {
         "hashes": {
-          "sha256": "715aa21f6bdbd085454c313ae3a2c7cc07bf2e8cf05752f819afb5b4c57f4e6f"
+          "sha256": "a6f03494075bcdd62e7fade7baf50a0ef107aa809d02b5e1786391adced451a3"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/ed/aa/9082e715a673dd8e22b6a60cec7f301e897406023672b2090f8bcd8a5959/torchaudio-2.6.0-cp312-cp312-manylinux1_x86_64.whl"
+          "https://files.pythonhosted.org/packages/78/98/ec8c7aba67b44cdc59717d4b43d02023ded5da180d33c6469d20bf5bfa3c/torchaudio-2.7.0-cp312-cp312-manylinux_2_28_x86_64.whl"
         ]
       },
-      "version": "2.6.0"
+      "version": "2.7.0"
     },
     {
       "dependencies": [
@@ -1397,14 +1519,14 @@
       "name": "torchvision",
       "source": {
         "hashes": {
-          "sha256": "b578bcad8a4083b40d34f689b19ca9f7c63e511758d806510ea03c29ac568f7b"
+          "sha256": "ce4dc334ebd508de2c534817c9388e928bc2500cf981906ae8d6e2ca3bf4727a"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/36/63/0722e153fd27d64d5b0af45b5c8cb0e80b35a68cf0130303bc9a8bb095c7/torchvision-0.21.0-cp312-cp312-manylinux1_x86_64.whl"
+          "https://files.pythonhosted.org/packages/7c/48/5f7617f6c60d135f86277c53f9d5682dfa4e66f4697f505f1530e8b69fb1/torchvision-0.22.0-cp312-cp312-manylinux_2_28_x86_64.whl"
         ]
       },
-      "version": "0.21.0"
+      "version": "0.22.0"
     },
     {
       "dependencies": [],
@@ -1453,29 +1575,31 @@
       "name": "transformers",
       "source": {
         "hashes": {
-          "sha256": "d2f5d19bb6283cd66c893ec7e6d931d6370bbf1cc93633326ff1f41a40046c9c"
+          "sha256": "fd3279633ceb2b777013234bbf0b4f5c2d23c4626b05497691f00cfda55e8a83"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/f2/3a/8bdab26e09c5a242182b7ba9152e216d5ab4ae2d78c4298eb4872549cd35/transformers-4.47.1-py3-none-any.whl"
+          "https://files.pythonhosted.org/packages/a9/b6/5257d04ae327b44db31f15cce39e6020cc986333c715660b1315a9724d82/transformers-4.51.3-py3-none-any.whl"
         ]
       },
-      "version": "4.47.1"
+      "version": "4.51.3"
     },
     {
-      "dependencies": [],
+      "dependencies": [
+        "setuptools"
+      ],
       "enabled_extras": [],
       "name": "triton",
       "source": {
         "hashes": {
-          "sha256": "8d9b215efc1c26fa7eefb9a157915c92d52e000d2bf83e5f69704047e63f125c"
+          "sha256": "b68c778f6c4218403a6bd01be7484f6dc9e20fe2083d22dd8aef33e3b87a10a3"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/06/00/59500052cb1cf8cf5316be93598946bc451f14072c6ff256904428eaf03c/triton-3.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/11/53/ce18470914ab6cfbec9384ee565d23c4d1c55f0548160b1c7b33000b11fd/triton-3.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
         ]
       },
-      "version": "3.2.0"
+      "version": "3.3.0"
     },
     {
       "dependencies": [],
@@ -1491,6 +1615,23 @@
         ]
       },
       "version": "4.13.2"
+    },
+    {
+      "dependencies": [
+        "typing-extensions"
+      ],
+      "enabled_extras": [],
+      "name": "typing-inspection",
+      "source": {
+        "hashes": {
+          "sha256": "50e72559fcd2a6367a19f7a7e610e6afcb9fac940c650290eed893d61386832f"
+        },
+        "is_wheel": true,
+        "urls": [
+          "https://files.pythonhosted.org/packages/31/08/aa4fdfb71f7de5176385bd9e90852eaf6b5d622735020ad600f2bab54385/typing_inspection-0.4.0-py3-none-any.whl"
+        ]
+      },
+      "version": "0.4.0"
     },
     {
       "dependencies": [],
@@ -1532,14 +1673,14 @@
       "name": "yarl",
       "source": {
         "hashes": {
-          "sha256": "5684e7ff93ea74e47542232bd132f608df4d449f8968fde6b05aaf9e08a140f9"
+          "sha256": "bf099e2432131093cc611623e0b0bcc399b8cddd9a91eded8bfb50402ec35018"
         },
         "is_wheel": true,
         "urls": [
-          "https://files.pythonhosted.org/packages/ad/c7/cd0fd1de581f1c2e8f996e704c9fd979e00106f18eebd91b0173cf1a13c6/yarl-1.19.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+          "https://files.pythonhosted.org/packages/15/45/212604d3142d84b4065d5f8cab6582ed3d78e4cc250568ef2a36fe1cf0a5/yarl-1.20.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
         ]
       },
-      "version": "1.19.0"
+      "version": "1.20.0"
     },
     {
       "dependencies": [],

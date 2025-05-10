@@ -11,8 +11,8 @@ let
     src = fetchFromGitHub {
       owner = "comfyanonymous";
       repo = "ComfyUI";
-      rev = "75c1c757d90ca891eff823893248ef8b51d31d01";
-      hash = "sha256-UGM2nrxveSEPuZAFY+Os0R1z/eWzlm8viG7sobis498=";
+      rev = "02a1b01aad28470f06c8b4f95b90914413d3e4c8";
+      hash = "sha256-nqYVrkkog4We6DmnV2Qb+xncHqpSnFGQnSQjZUBb33Y=";
     };
 
     patches = [];
