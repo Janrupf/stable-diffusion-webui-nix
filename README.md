@@ -66,3 +66,16 @@ NOTE: If you get an error that you have run out of disk space during step 2, you
 set to a different directory. Generally, if step 2 fails the temporary directory 
 may not be deleted, you are free to `rm -rf` it, but it can be useful for inspecting
 why it failed.
+
+## What if I want to install extensions using the UI's?
+
+This flake provides a FHS (`nix run .#fhs.cuda`) and `pkgs.stable-diffusion-webui.fhs.cuda`
+(as command `stable-diffusion-fhs-cuda`) which can be used to provide an FHS which (hopefully...) has the
+packages installed required to run with upstream python environments.
+
+**NOTE:** The FHS is unmanaged - you don't get ComfyUI/StableDiffusionWebUI/Something pre-installed! It only
+provides you a standard Linux environment, in which you can follow the upstream instructions to install
+your UI of choice.
+
+Due to being unmanaged, you should be able to install custom python packages just fine (provided you have
+set up your python venv!).

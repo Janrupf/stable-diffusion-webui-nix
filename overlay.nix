@@ -26,10 +26,12 @@ let
     (as: !(as ? "type" && as.type == "stable-diffusion-webui-derivation"))
     (path: x: constructPackage x)
     sources;
+
+  fhs = final.callPackage ./fhs {};
 in
 {
   # Final packages
-  stable-diffusion-webui = mappedPackages // (let
+  stable-diffusion-webui = mappedPackages // { inherit fhs; } // (let
     error = throw "stable-diffusion-webui has been split into multiple packages! Use stable-diffusion-webui.forge.cuda or similar.";
   in {
     type = "derivation";
