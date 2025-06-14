@@ -5,6 +5,7 @@
 ## Using this flake
 
 Add the following to your inputs:
+
 ```nix
 stable-diffusion-webui-nix = {
   url = "github:Janrupf/stable-diffusion-webui-nix/main";
@@ -13,8 +14,9 @@ stable-diffusion-webui-nix = {
 ```
 
 Then add the overlay to your system configuration:
+
 ```nix
-{ 
+{
   nixpkgs.overlays = [ stable-diffusion-webui-nix.overlays.default ];
 }
 ```
@@ -31,6 +33,25 @@ environment.systemPackages = [
 Afterwards you should have the command `stable-diffusion-webui` or `comfy-ui`
 available which launches the server.
 
+### Running as service
+
+This flake exposes the module `services.sd-webui-forge` that runs the forge webui as a systemd service.
+
+The available options are:
+
+```nix
+services.sd-webui-forge = {
+    enable = true;
+    user = "sd-webui-forge"; # The user that runs the service.
+    group = "sd-webui-forge"; # The group that runs the service.
+    dataDir = "/var/lib/sd-webui-forge"; # The directory that the webUI stores models and images in.
+    package = pkgs.stable-diffusion-webui.forge.cuda; # The package (cuda/rocm) that you want to use.
+    listen = true; # Whether to listen on all interfaces or only localhost.
+    port = 7860; # The port for the webUI.
+    extraArgs = "--cuda-malloc"; # Extra CLI args for the server.
+};
+```
+
 ### Quirks
 
 #### Where is my WebUI (for Forge) data?
@@ -46,9 +67,9 @@ by using `--base-directory /another/path` argument.
 #### This takes ages to compile...
 
 Running Stable Diffusion models requires CUDA and thus depends on packages which are
-by default not available in the NixOS cache. Add the 
-[cuda-maintainers](https://app.cachix.org/cache/cuda-maintainers) Cachix as a 
-substituter to your Nix configuration. See the 
+by default not available in the NixOS cache. Add the
+[cuda-maintainers](https://app.cachix.org/cache/cuda-maintainers) Cachix as a
+substituter to your Nix configuration. See the
 [NixOS Wiki](https://nixos.wiki/wiki/CUDA) for more information.
 
 ## Developing this flake/updating packages to a new version
@@ -61,9 +82,9 @@ Due to the nature of python package management, this flake is quite complex.
    to update the requirements metadata
 3. try running the package using `nix run .#package` (for example `nix run .#comfy.cuda`) and test everything
 
-NOTE: If you get an error that you have run out of disk space during step 2, your 
-`/tmp` is too small. Either increase the tmpfs size or run the command with `TMPDIR` 
-set to a different directory. Generally, if step 2 fails the temporary directory 
+NOTE: If you get an error that you have run out of disk space during step 2, your
+`/tmp` is too small. Either increase the tmpfs size or run the command with `TMPDIR`
+set to a different directory. Generally, if step 2 fails the temporary directory
 may not be deleted, you are free to `rm -rf` it, but it can be useful for inspecting
 why it failed.
 

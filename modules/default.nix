@@ -3,6 +3,7 @@
 {
   imports = [
     ./comfy.nix
+    ./forge.nix
   ];
 
   config = {
