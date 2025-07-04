@@ -118,7 +118,7 @@ in
         export HF_HOME="$CACHE_DIRECTORY/huggingface/hub"
 
         exec ${cfg.package}/bin/comfy-ui \
-          --data-dir ${lib.strings.escapeShellArg cfg.dataDir} \
+          --base-directory ${lib.strings.escapeShellArg cfg.dataDir} \
           ${lib.strings.optionalString (cfg.listenHost != null) "--listen ${lib.strings.escapeShellArg cfg.listenHost}"} \
           --port ${builtins.toString cfg.listenPort}
       '';
