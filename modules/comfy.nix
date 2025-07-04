@@ -117,6 +117,9 @@ in
       script = ''
         export HF_HOME="$CACHE_DIRECTORY/huggingface/hub"
 
+        # comfy-ui will not start if this directory is not present.
+        mkdir -p ${cfg.dataDir}/custom_nodes
+
         exec ${cfg.package}/bin/comfy-ui \
           --base-directory ${lib.strings.escapeShellArg cfg.dataDir} \
           ${lib.strings.optionalString (cfg.listenHost != null) "--listen ${lib.strings.escapeShellArg cfg.listenHost}"} \
