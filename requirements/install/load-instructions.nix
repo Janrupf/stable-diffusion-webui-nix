@@ -56,7 +56,7 @@ let
     version = packageData.version;
 
     # Some packages are not wheels and have to be built, detect that here
-    format = if packageData.source.is_wheel then "wheel" else null;
+    format = if packageData.source.is_wheel then "wheel" else "setuptools";
 
     # Use fetchurl for wheels since they are auto extracted by nix,
     # for everything else extract the source

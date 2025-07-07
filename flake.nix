@@ -18,10 +18,6 @@
     localOverlay = import ./overlay.nix;
 
     pkgsForSystem = system: 
-    let
-      # TODO: This should be an overlay in python-flexseal
-      python-flexseal-pkg = python-flexseal.packages.${system}.python-flexseal;
-    in
     import nixpkgs {
       config = {
         allowUnfree = true;
@@ -29,7 +25,7 @@
       };
 
       overlays = [
-        (prev: final: { python-flexseal = python-flexseal-pkg; })
+        python-flexseal.overlays.default
         localOverlay
       ];
       inherit system;
