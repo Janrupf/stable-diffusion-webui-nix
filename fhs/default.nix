@@ -32,6 +32,7 @@
       ffmpeg_6
       sox
       rdma-core
+      stdenv.cc
     ]);
 
     runScript = "$SHELL";
