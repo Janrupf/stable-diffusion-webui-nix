@@ -88,15 +88,29 @@ set to a different directory. Generally, if step 2 fails the temporary directory
 may not be deleted, you are free to `rm -rf` it, but it can be useful for inspecting
 why it failed.
 
-## What if I want to install extensions using the UI's?
+ ## What if I want to install extensions using the UI's?
 
-This flake provides a FHS (`nix run .#fhs.cuda`) and `pkgs.stable-diffusion-webui.fhs.cuda`
-(as command `stable-diffusion-fhs-cuda`) which can be used to provide an FHS which (hopefully...) has the
-packages installed required to run with upstream python environments.
+The Nix packages provided by this flake have fixed dependencies and don't allow installing additional Python packages or extensions through the web interface. If you need this functionality, you can use the FHS (Filesystem Hierarchy Standard) environment instead.
 
-**NOTE:** The FHS is unmanaged - you don't get ComfyUI/StableDiffusionWebUI/Something pre-installed! It only
-provides you a standard Linux environment, in which you can follow the upstream instructions to install
-your UI of choice.
+### Using the FHS Environment
 
-Due to being unmanaged, you should be able to install custom python packages just fine (provided you have
-set up your python venv!).
+The FHS environment provides a standard Linux environment with Python and CUDA, where you can manually install WebUI software andextensions:
+
+1. **Add the FHS package to your system:**
+   ```nix
+   environment.systemPackages = [
+     pkgs.stable-diffusion-webui.fhs.cuda
+   ];
+
+2. Enter the FHS environment: In a shell run `stable-diffusion-fhs-cuda`
+3. Inside the FHS environment, manually install your preferred WebUI:
+  - Follow the upstream installation instructions for AUTOMATIC1111, Forge, or ComfyUI
+  - Use pip or the WebUI's built-in package managers to install extensions
+  - Set up Python virtual environments as needed
+
+Important Limitations
+
+- No pre-installed software: The FHS environment only provides the base system (Python, CUDA, libraries) - you must install the WebUIsoftware yourself
+- Manual management: You're responsible for updates, dependency conflicts, and troubleshooting
+- No reproducibility: Unlike the Nix packages, your FHS setup won't be reproducible across systems
+  
