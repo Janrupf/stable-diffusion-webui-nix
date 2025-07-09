@@ -155,7 +155,11 @@ rec {
     })
   );
 
-  numba = withExtraDependencies prev.numba [ tbb_2021 ];
+  numba = withExtraDependencies prev.numba (let
+    tbb = if pkgs ? tbb_2021 then pkgs.tbb_2021 else pkgs.tbb_2021_11;
+  in [
+    tbb
+  ]);
 
   filterpy = prev.filterpy.overridePythonAttrs (prev: {
     # Fails for some reason
