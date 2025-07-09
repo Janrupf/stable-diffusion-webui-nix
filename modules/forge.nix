@@ -124,7 +124,7 @@ in
       script = ''
         exec ${cfg.package}/bin/stable-diffusion-webui \
           --data-dir ${escapeShellArg cfg.dataDir} \
-          ${optionalString cfg.listen "--listen"} \
+          ${optionalString cfg.listen "--listen 0.0.0.0"} \
           --port ${toString cfg.port} \
           ${cfg.extraArgs}
       '';

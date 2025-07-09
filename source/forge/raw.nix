@@ -44,7 +44,13 @@ let
     { name = "timm"; spec = "0.9.16"; }
 
     # Installed from modules_forge/bnb_installer.py
-    { name = "bitsandbytes"; spec = "0.43.3"; }
+    { name = "bitsandbytes"; spec = "0.45.3"; }
+
+    # Reported as missing in https://github.com/Janrupf/stable-diffusion-webui-nix/issues/7
+    { name = "ultralytics"; }
+
+    # Required by ControlNet
+    { name = "joblib"; }
   ];
 in
 stdenv.mkDerivation {
