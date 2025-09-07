@@ -68,7 +68,7 @@ by using `--base-directory /another/path` argument.
 
 Running Stable Diffusion models requires CUDA and thus depends on packages which are
 by default not available in the NixOS cache. Add the
-[cuda-maintainers](https://app.cachix.org/cache/cuda-maintainers) Cachix as a
+[nix-community](https://app.cachix.org/cache/nix-community) Cachix as a
 substituter to your Nix configuration. See the
 [NixOS Wiki](https://nixos.wiki/wiki/CUDA) for more information.
 
