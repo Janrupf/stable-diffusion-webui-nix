@@ -156,7 +156,12 @@ rec {
   );
 
   numba = withExtraDependencies prev.numba (let
-    tbb = if pkgs ? tbb_2021 then pkgs.tbb_2021 else pkgs.tbb_2021_11;
+    tbb = 
+      if pkgs ? tbb_2022
+        then pkgs.tbb_2022
+      else if pkgs ? tbb_2021
+        then pkgs.tbb_2021
+      else pkgs.tbb_2021_11;
   in [
     tbb
   ]);
