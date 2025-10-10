@@ -20,16 +20,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1756303887,
-        "narHash": "sha256-czqHq9eZN4s8wW2nqkFG+37hTiU6k5E4UCzp6dOWTGs=",
-        "owner": "lunnova",
+        "lastModified": 1760038930,
+        "narHash": "sha256-Oncbh0UmHjSlxO7ErQDM3KM0A5/Znfofj2BSzlHLeVw=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "7b3ae900139520a81449b88cae3f1d2134d2155f",
+        "rev": "0b4defa2584313f3b781240b29d61f6f9f7e0df3",
         "type": "github"
       },
       "original": {
-        "owner": "lunnova",
-        "ref": "lunnova/rocm-6.4.x",
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }

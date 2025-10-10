@@ -2,8 +2,7 @@
   description = "Flake for running upstream stable diffusion webui on Nix";
 
   inputs = {
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs.url = "github:lunnova/nixpkgs/lunnova/rocm-6.4.x";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     python-flexseal = {
       url = "github:Janrupf/python-flexseal";
