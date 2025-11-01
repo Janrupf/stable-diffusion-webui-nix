@@ -13,11 +13,15 @@ stable-diffusion-webui-nix = {
 };
 ```
 
-Then add the overlay to your system configuration:
+Then add the default module to your flake outputs:
 
 ```nix
 {
-  nixpkgs.overlays = [ stable-diffusion-webui-nix.overlays.default ];
+  modules =
+  [
+    inputs.stable-diffusion-webui-nix.nixosModules.default
+    ./configuration.nix
+  ];
 }
 ```
 
