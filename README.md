@@ -78,6 +78,14 @@ substituter to your Nix configuration. See the
 
 ## Developing this flake/updating packages to a new version
 
+For purposes of development, the package overlay can be added directly to nixpkgs via:
+
+```nix
+{
+  nixpkgs.overlays = [ stable-diffusion-webui-nix.overlays.default ];
+}
+```
+
 Due to the nature of python package management, this flake is quite complex.
 
 1. update the commit hashes in `source/package` (file depends on which package you want to change).
@@ -87,7 +95,7 @@ Due to the nature of python package management, this flake is quite complex.
 3. try running the package using `nix run .#package` (for example `nix run .#comfy.cuda`) and test everything
 
 NOTE: If you get an error that you have run out of disk space during step 2, your
-`/tmp` is too small. Either increase the tmpfs size or run the command with `TMPDIR`
+`/tmp` is too small. Either increase the tmpfs size or run the command with `TMPDIR` 
 set to a different directory. Generally, if step 2 fails the temporary directory
 may not be deleted, you are free to `rm -rf` it, but it can be useful for inspecting
 why it failed.
