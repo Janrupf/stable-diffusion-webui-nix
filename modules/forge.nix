@@ -67,6 +67,19 @@ in
       '';
     };
 
+    dataPermissions = lib.mkOption {
+      type = lib.types.str;
+      default = "0700";
+      description = ''
+        The permissions to set on the data directory.
+
+        ::: {.note}
+        Permissions for the data directory will be set to `rwx------` (0700) by default.
+        Only works for `/var/lib/sd-webui-forge` at this time.
+        :::
+      '';
+    };
+
     package = mkOption {
       type = package;
       default = pkgs.stable-diffusion-webui.forge.cuda;
@@ -166,7 +179,7 @@ in
         }
         (lib.mkIf (cfg.dataDir == "/var/lib/sd-webui-forge") {
           StateDirectory = "sd-webui-forge";
-          StateDirectoryMode = "0700";
+          StateDirectoryMode = cfg.dataPermissions;
           CacheDirectory = "sd-webui-forge";
         })
       ];

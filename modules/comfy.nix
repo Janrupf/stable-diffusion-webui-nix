@@ -30,7 +30,7 @@ in
           :::
         '';
       };
-      
+
       group = lib.mkOption {
         type = lib.types.str;
         default = "comfy-ui";
@@ -55,6 +55,19 @@ in
           ::: {.note}
           If left as the default value of `/var/lib/comfy-ui` this directory will automatically be created before the web
           server starts, otherwise you are responsible for ensuring the directory exists with appropriate ownership and permissions.
+          :::
+        '';
+      };
+
+      dataPermissions = lib.mkOption {
+        type = lib.types.str;
+        default = "0700";
+        description = ''
+          The permissions to set on the data directory.
+
+          ::: {.note}
+          Permissions for the data directory will be set to `rwx------` (0700) by default.
+          Only works for `/var/lib/comfy-ui` at this time.
           :::
         '';
       };
@@ -111,7 +124,7 @@ in
 
       after = [ "network.target" ];
       wantedBy = [ "multi-user.target" ];
-      
+
       unitConfig.RequiresMountsFor = cfg.dataDir;
 
       script = ''
@@ -139,7 +152,7 @@ in
 
           CapabilityBoundingSet = "";
           NoNewPrivileges = true;
- 
+
           ProtectSystem = "strict";
           ProtectHome = true;
           PrivateTmp = true;
@@ -153,14 +166,13 @@ in
           RestrictRealtime = true;
           RestrictSUIDSGID = true;
           PrivateMounts = true;
- 
+
           SystemCallArchitectures = "native";
           SystemCallFilter = "@system-service";
         }
         (lib.mkIf (cfg.dataDir == "/var/lib/comfy-ui") {
           StateDirectory = "comfy-ui";
-          StateDirectoryMode = "0700";
-
+          StateDirectoryMode = cfg.dataPermissions;
           CacheDirectory = "comfy-ui";
         })
       ];

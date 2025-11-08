@@ -49,6 +49,7 @@ services.sd-webui-forge = {
     user = "sd-webui-forge"; # The user that runs the service.
     group = "sd-webui-forge"; # The group that runs the service.
     dataDir = "/var/lib/sd-webui-forge"; # The directory that the webUI stores models and images in.
+    dataPermissions = "0700" # presmissions for the dataDir directory
     package = pkgs.stable-diffusion-webui.forge.cuda; # The package (cuda/rocm) that you want to use.
     listen = true; # Whether to listen on all interfaces or only localhost.
     port = 7860; # The port for the webUI.
