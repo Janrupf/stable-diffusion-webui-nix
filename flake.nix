@@ -59,7 +59,7 @@
       overlays.default = final: prev:
         {
           # For now we need to pollute with python-flexseal, not sure how to prevent this
-          python-flexseal = python-flexseal.packages.${prev.stdenv.system}.python-flexseal;
+          python-flexseal = python-flexseal.packages.${prev.stdenv.hostPlatform.system}.python-flexseal;
         }
         // (localOverlay final prev);
 
