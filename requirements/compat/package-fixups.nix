@@ -165,6 +165,7 @@ rec {
       # ignore these dependencies
       autoPatchelfIgnoreMissingDeps = [
         "libcudart.so.11.0"
+        "libcudart.so.12"
         "libcublas.so.11"
         "libcublas.so.12"
         "libcusparse.so.11"
